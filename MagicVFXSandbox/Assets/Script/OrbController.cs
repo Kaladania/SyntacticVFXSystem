@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 //using System.Numerics;
 using UnityEngine;
@@ -17,10 +18,11 @@ public class OrbController : MonoBehaviour
         FIRE,
         EARTH,
         WATER,
-        LIGHTNING
+        LIGHTNING,
+        NONE
     }
     public const int MAX_COMBO_LIMIT = 5; //states the maximum number of elements that can be added to a combination
-    public const int NUM_ELEMENTS = 4; //states the maximum number of elements that can be added to a combination
+    public const int NUM_ELEMENTS = 5; //states the maximum number of elements that can be added to a combination
     private int _nextComboIndex = 0; //holds the position of the next element to be added
     private List<Elements> _currentCombo = new List<Elements>(); //holds the current combination of elements
 
@@ -84,6 +86,11 @@ public class OrbController : MonoBehaviour
             AddElementToCombination(Elements.LIGHTNING);
         }
 
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            LoadCombination();
+        }
+
     }
 
 
@@ -94,7 +101,27 @@ public class OrbController : MonoBehaviour
         _uiIconPositions[_nextComboIndex].gameObject.SetActive(true);
 
         _nextComboIndex++;
-        _nextComboIndex = _nextComboIndex > MAX_COMBO_LIMIT - 1 ? 0 : _nextComboIndex;
+
+        if (_nextComboIndex >= MAX_COMBO_LIMIT)
+        {
+            LoadCombination();
+        }
+    }
+
+    void LoadCombination()
+    {
+        Debug.Log("Combination Loaded");
+
+        //empties combination and resets counters
+        _nextComboIndex = 0;
+        _currentCombo.Clear();
+
+        //resets icon images and visibility
+        foreach (Image icon in _uiIconPositions)
+        {
+            icon.sprite = _uiIcons[Elements.NONE];
+            icon.gameObject.SetActive(false);
+        }
     }
 
 }
