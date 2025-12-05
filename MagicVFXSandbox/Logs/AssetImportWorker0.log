@@ -1,0 +1,510 @@
+Using pre-set license
+Built from 'trunk' branch; Version is '6000.0.19f1 (302b264628f9) revision 3156774'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 14188 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53525
+-job-worker-count
+7
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
+C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [27360]  Target information:
+
+Player connection [27360]  * "[IP] 169.254.83.107 [Port] 0 [Flags] 2 [Guid] 1674438617 [EditorId] 1674438617 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [27360]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 1674438617 [EditorId] 1674438617 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [27360] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [27360] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Library Redirect Path: Library/
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+Refreshing native plugins compatible for Editor in 4.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.19f1 (302b264628f9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Laptop GPU (ID=0x24dd)
+    Vendor:   NVIDIA
+    VRAM:     8020 MB
+    Driver:   32.0.15.7602
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003339 seconds.
+- Loaded All Assemblies, in  0.477 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.301 seconds
+Domain Reload Profiling: 776ms
+	BeginReloadAssembly (204ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (170ms)
+		LoadAssemblies (198ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (167ms)
+			TypeCache.Refresh (165ms)
+				TypeCache.ScanAssembly (150ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (301ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (256ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (164ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.819 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.935 seconds
+Domain Reload Profiling: 2751ms
+	BeginReloadAssembly (1067ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (663ms)
+		LoadAssemblies (469ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (300ms)
+			TypeCache.Refresh (204ms)
+				TypeCache.ScanAssembly (189ms)
+			BuildScriptInfoCaches (80ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (936ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (635ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (469ms)
+			ProcessInitializeOnLoadMethodAttributes (82ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 218 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6606 unused Assets / (5.6 MB). Loaded Objects now: 7413.
+Memory consumption went from 207.3 MB to 201.7 MB.
+Total: 22.793600 ms (FindLiveObjects: 2.047800 ms CreateObjectMapping: 2.417100 ms MarkObjects: 11.537100 ms  DeleteObjects: 6.566000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2559722.587944 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(ae8ef08b40c3fd647992c4900246604f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(ae8ef08b40c3fd647992c4900246604f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '23c3899457dca104984b791e087b4e4c') in 0.0075693 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.144141 seconds.
+  path: Assets/Textures/New Shader Graph 2.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/New Shader Graph 2.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '12f595dc47fdf55f998aa2b3c9d164b5') in 0.9336337 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.141182 seconds.
+  path: Assets/Textures/ShaderWater.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/ShaderWater.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '16255c343a6d0da1373678bf788f8f13') in 0.3377847 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.806288 seconds.
+  path: Assets/Textures/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '33cdbf77d34b87321a665a69d9fca800') in 0.3996367 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.268915 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '5e7c0a6ca10f4cbc0b72d6d91b031e9c') in 0.4343473 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 92.935224 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '2c559ad284e772d034b542c3e791527b') in 0.0393576 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.972716 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '0a875b64aae1f76fa9ce054863c7cd05') in 0.2614221 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 247.423248 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '11c372d3b9a4879959f2ad0cb1b0d44a') in 0.1869939 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.191162 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '5cca441726abe65fdfe760096933c616') in 0.227427 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 149.673566 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '115e5eb9dc00137a491fd3ae9abe33d5') in 0.3873951 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.872944 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '257ba62d84fc4e672028bffa3a6c85f1') in 0.4178627 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 173.221905 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'c169005f3fe93028d8523069de0bf587') in 0.2135404 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 1168.312227 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3d2b99c2c1e1fe3da5065f96893227bb') in 0.4638427 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 191.671604 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3b61ba74d4ca48e69ac80503e6865c89') in 0.3987592 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.405744 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7c8da882592aa61332a0371ad2b9cc62') in 0.4191865 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.051045 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '31d772a997c0633d342ffa42c8a92b5c') in 0.4516465 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.288193 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '9bbde95522831a9471f7dd47d71a0d6d') in 0.2438858 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 95.594335 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1475786e46a752fbdac201eafcafdc29') in 0.4124128 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.943918 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '44d10c0a42db6ceb16b94c483cec91fd') in 0.2239934 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.413 seconds
+Refreshing native plugins compatible for Editor in 1.36 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.272 seconds
+Domain Reload Profiling: 3695ms
+	BeginReloadAssembly (1134ms)
+		ExecutionOrderSort (1ms)
+		DisableScriptedObjects (276ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (2ms)
+		CreateAndSetChildDomain (451ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (1197ms)
+		LoadAssemblies (1038ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (320ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (279ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1278ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (726ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (499ms)
+			ProcessInitializeOnLoadMethodAttributes (110ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (3ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 1.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6603 unused Assets / (5.4 MB). Loaded Objects now: 7491.
+Memory consumption went from 198.5 MB to 193.1 MB.
+Total: 25.208500 ms (FindLiveObjects: 1.814300 ms CreateObjectMapping: 2.267800 ms MarkObjects: 14.715900 ms  DeleteObjects: 6.405300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 83.140720 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'cc7e4f8320ffd61eb055ae1e5a0ec75e') in 0.968937 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 65.550617 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7ed6e708611ef0941b1041fa8355f8e0') in 0.0216163 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 133.820672 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1a44385da1911e34fff31e487eb56935') in 0.3343017 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 372.960195 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4100c275cf629eebb564df9adea62107') in 0.2225373 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.302881 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '5083d60316ad802bb82ceee94d78413a') in 0.030718 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.780172 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3228325d940abe500319c1c076859835') in 0.0313256 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.634793 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '9e51e9cb1448747ee4ec7980a384fc41') in 0.2071652 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.122773 seconds.
+  path: Assets/Shaders/Shader_Water.shadergraph
+  artifactKey: Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Shader_Water.shadergraph using Guid(412f72ef92cc79247aca554674b24d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '5a8b9d6072db3e1a5db03e0e76eec5af') in 0.2027491 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.356713 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'fbf8fbc0590f1e84f116fcaf3946a83c') in 0.0060028 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.610210 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'ec5e35c8cd4175b47714e582b642849b') in 0.0063763 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 772.734252 seconds.
+  path: Assets/Systems/Particle - Water.vfx
+  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Particle - Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '9c6323323dac266207c6ee2cf8e28156') in 0.0192582 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 7
+
