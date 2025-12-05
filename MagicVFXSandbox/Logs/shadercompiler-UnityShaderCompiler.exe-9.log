@@ -111,3 +111,4 @@ Cmd: compileSnippet
   error: 1 plat 4 at /(1884): implicit truncation of vector type
  ok=1 outsize=1406
 
+Cmd: shutdown
