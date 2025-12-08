@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 421b4737ac4bc7049a517f02410308ab
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 938fda42dc00a202f7b845f058ac8fd2
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -50,10 +50,10 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: d72f438e60f4112408086a20e2f9f594
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: d1a7983bb83d63c42b2dd91ce51335c1
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
@@ -101,6 +101,8 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - SNSElements.json
+    - Particle_Head_Fire
+    - Particle_Head_Water
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 88bcb9e1e9e75734aae0bd87602ceca7, type: 2}

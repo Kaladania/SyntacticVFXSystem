@@ -15,16 +15,6 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 421b4737ac4bc7049a517f02410308ab
   m_SerializeEntries:
-  - m_GUID: 00e7839096a13124ea03c4ff6686a433
-    m_Address: Assets/Systems/Particle_Water.vfx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7112376b7edd5204891bf7318044a415
-    m_Address: Assets/Systems/Particle_Fire.vfx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8258f5f1342807e4ba6ce2ed33220195
     m_Address: Assets/SNSData/SNSElementJSON.json
     m_ReadOnly: 0

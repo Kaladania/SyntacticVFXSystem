@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: VFXSystems
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: VFXSystems
   m_GUID: 4b5d36fc1ea201448acf2eb816a28e23
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 00e7839096a13124ea03c4ff6686a433
+    m_Address: Base_Head_Water
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle_Head_Water
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7112376b7edd5204891bf7318044a415
+    m_Address: Base_Head_Fire
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle_Head_Fire
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 54454927a4c3c4944a991b6d29f9cf71, type: 2}
   m_SchemaSet:
