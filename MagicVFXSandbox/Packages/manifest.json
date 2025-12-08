@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.addressables": "2.2.2",
     "com.unity.ai.navigation": "2.0.4",
     "com.unity.collab-proxy": "2.4.4",
     "com.unity.entities": "1.2.4",

@@ -15,4 +15,4 @@ public struct SnSSpawnComponent : IComponentData
     //public VisualEffectAsset _generatedEffectAsset; //holds the generated syntactic particle system
 
 
-}
+} 

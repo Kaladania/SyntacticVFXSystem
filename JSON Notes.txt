@@ -1,0 +1,94 @@
+public struct SNSParticleComponent
+{
+	public seedID = [ID]
+	public head = [VFX system]
+	//public trail = [VFX system]
+	//public ambience = [VFX system]
+} 
+
+
+- Create JSON reader (for local addressables) to import VFX assets into the scripts
+	- Reader should specify element type, base/extra specifier, and asset file path.
+
+
+{
+  "Fire": { 			//element type
+    "Base": {			//The type of assets to spawn if element is a base
+      "head": 0.8,			//projectile head
+      "trail": 0.8,			//projectile trail
+    },
+
+ "Extra": { 			//Type of assets to spawn if element is extra
+   "head": 0.8,				//projectile head
+   "trail": 0.8				//projectile trail
+ },
+
+ "ambient" :  0.8		//projectile ambient effects
+}
+
+
+[JSON serialisation is done automatically. Lay the class/struct out the way the JSON file is layed out]
+
+- IN THE SNS SYSTEM GLOBAL MANAGER/START-UP, CALL:  AddressableAssetSettings.BuildPlayerContent()
+	- Main game needs a game manager anyways to control the sphere game object
+	- Have it call the above function OnStart/Awake
+
+	- "Addressables.LoadAssetAsync<GameObject>("AssetAddress");" loads an asset into the game to allow it to be referenced by a script
+		- Function is done asynchronously. If asset needs to be reference (e.g. to be altered), a callback function needs to be used (see how callbacks are used for the JSON file as follows same steps)
+		- NEEDS TO BE DONE DURING THE 'GENERATE PHASE'
+			- Components are containers for data. It's not preset
+				- Therefore loading needs to be done when determining which component to populate
+
+			- Load JSON file
+				- Gives you a list of EVERY single VFX asset address
+
+				- Can either
+					- Store these as default values in a component type
+						- Would have to use a class then reference the class when updating the component
+				- Or, load a component specific JSON
+
+			- Should just have a basic 'ElementComponent' class to use as a template for all elements
+				- Can have a 'LoadElement()' system that basically attaches a new element component and populates it with the nessicary data (the type of data added is specified by the passed in Element Enum
+	
+		- Need to ask Kieran what considerations need to be taken into account for code quality
+			- Constantly reloading the JSON information feels unnessicary and redundant due to the information not changing at run time
+			- In OOP, would preferable cache it in class attributes
+			- Unusure if there is a good way to do it in ECS aside from having 'cache' entites (entities who's only purpose is to hold stored data).
+			
+			- Additionally, ask if such flexibilities should be implemented
+				- Could easily by pass difficulties with JSON loading by just manually specifying the asset address in code rather than relying on an external JSON file.
+					- E.g. specifying the component data in a struct constructer instead of doing it in a system
+			
+			- Also ask Kieran if it's wise to isolate ECS usage ONLY to the SNS, or should the entire project be made on an ECS
+		
+
+
+			- Current best plan of action is:
+				- Create a basic template class to hold element component data
+				- Create a 'LOADELEMENT' system to add a component to an entity and populate it with the data corresponding to the passed in Element Enum
+				- Create a 'GENERATEEFFECT' system to generate an SNS an add it to a spawn component (or add a new spawn component and populate it if one doesn't already exist)
+				- Create a 'SPAWNENTITY' system (can just alter the pre-existing one) that spawns the entity with it's current assigned VFX system.
+
+				- THINK OF THE PROJECTILE AS THE ENTITY. It starts of as a blank, empty object. Then gets data assigned to it. Then gets customised and created with the data. Then gets spawned into the scene through instantiation.
+
+			
+
+
+
+
+
+
+
+
+	- "Addressables.InstantiateAsync("AssetAddress");" will instatate an asset into the scene
+		- Probably unneeded as it's a VFX asset that's added as a compoent
+
+- Components are setup with the required data loaded from the JSON file
+
+
+- When a combo is passed through, all the required components are loaded into an entity
+
+- A 'Generator' system is used to combine and generate the final particle
+	- System also adds a 'SNSParticleComponent' which holds the generate particle
+
+- A 'Spawner' system then spawns the

@@ -1,6 +1,13 @@
-using UnityEngine;
+using Unity.Entities;
+using Unity.Mathematics;
+using UnityEngine.VFX;
 
-public class SNSEffectComponent
+namespace SnSECS
 {
-    
+    public class SNSEffectComponent
+    {
+        public int _seedID;
+        public VisualEffectAsset _head;
+    }
+
 }

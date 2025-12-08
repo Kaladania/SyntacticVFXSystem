@@ -33,7 +33,13 @@ namespace SnSECS
 
             //spawns an entity with the passed in prefab as it's game object
             Entity entity = state.EntityManager.Instantiate(spawnerComponent.ValueRO._particlePrefab);
-           
+            
+            
+            if (state.EntityManager.AddComponent<SNSEffectComponent>(entity))
+            {
+                RefRW<SNSEffectComponent> effectComponent = SystemAPI.GetComponentRW<SNSEffectComponent>(entity);
+                //TODO: UPDATE ENTITY VALUES HERE
+            }
 
             /*state.EntityManager.Instantiate()
             spawnerComponent.ValueRO._particlePrefab;
