@@ -1,0 +1,3 @@
+-define:UNITY_DEBUG;
+-define:VERSION_DEFAULT;
+-define:VERSION_SNS;

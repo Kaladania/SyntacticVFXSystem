@@ -7,19 +7,12 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.VFX;
 using static UnityEngine.Rendering.DebugUI;
-
+using Unity.Entities;
+using SnSECS;
 
 
 public class OrbController : MonoBehaviour
 {
-    enum Elements
-    {
-        FIRE,
-        EARTH,
-        WATER,
-        LIGHTNING,
-        NONE
-    }
     public const int MAX_COMBO_LIMIT = 5; //states the maximum number of elements that can be added to a combination
     public const int NUM_ELEMENTS = 5; //states the maximum number of elements that can be added to a combination
     private int _nextComboIndex = 0; //holds the position of the next element to be added
@@ -29,7 +22,6 @@ public class OrbController : MonoBehaviour
     private Image[] _uiIconPositions = new Image[MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
 
     private Dictionary<Elements, Sprite> _uiIcons = new Dictionary<Elements, Sprite>();
-    //private Sprite[] _uiIcons = new Sprite[NUM_ELEMENTS];
 
     [SerializeField]
     private List<Elements> _keys = new List<Elements>();
@@ -45,10 +37,15 @@ public class OrbController : MonoBehaviour
 
     [SerializeField]
     private GameObject _projectile; //holds a prefab for a basic projectile
+
+
+/*#if VERSION_SNS
+    private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
+#endif*/
+
     void Start()
     {
-        //GameObject object = new GameObject();
-        //_projectile = new GameObject();
+        //Create Icon Dictionary
         _uiIcons.Clear();
 
         if (_keys.Count != _values.Count)
@@ -57,6 +54,14 @@ public class OrbController : MonoBehaviour
 
         for (int i = 0; i < _keys.Count; i++)
             _uiIcons.Add(_keys[i], _values[i]);
+
+
+        //Create SNS Element Entity Archetype
+
+#if VERSION_SNS
+        VisualEffectAsset vfx = GenerateVFX();
+        SpawnVFX(vfx);
+#endif
     }
 
     // Update is called once per frame
@@ -121,7 +126,13 @@ public class OrbController : MonoBehaviour
     {
         Debug.Log("Combination Loaded");
 
+#if VERSION_SNS
+        VisualEffectAsset vfx = GenerateVFX();
+        SpawnVFX(vfx);
+
+#else
         SpawnVFX(_vfx);
+#endif
 
         //empties combination and resets counters
         _nextComboIndex = 0;
@@ -133,6 +144,18 @@ public class OrbController : MonoBehaviour
             icon.sprite = _uiIcons[Elements.NONE];
             icon.gameObject.SetActive(false);
         }
+    }
+
+    private VisualEffectAsset GenerateVFX()
+    {
+
+        //Create an Entity with a correct amount (and type) of element components
+        SnSLoadElementsSystem.LoadElement(_currentCombo);
+
+        // VisualEffectAsset generatedVFX = Generate effect (generate effect and returns the final result)
+        //above function was written to return an entity. So function call should be SNSGenerateEffect.GenerateEffect(SnSLoadElementsSystem.LoadElement(_currentCombo))
+        //the entity returned from 'load element' gets passed into 'generate effect'
+        return _vfx; //return the generated effect
     }
 
     /// <summary>
