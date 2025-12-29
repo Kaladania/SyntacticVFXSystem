@@ -6,7 +6,7 @@ using Unity.Collections;
 namespace SnSECS
 {
     //[BurstCompile]
-    public partial struct SnSSpawnerSystem : ISystem
+    /*public partial struct SnSSpawnerSystem : ISystem
     {
         /// <summary>
         /// Runs every update frame
@@ -25,11 +25,11 @@ namespace SnSECS
             //grabs a (read and writeable (RW)) reference to the spawn component held in the spawner singleton entity
             RefRW<SnSSpawnComponent> spawnerComponent = SystemAPI.GetComponentRW<SnSSpawnComponent>(spawnerEntity);
 
-            /*EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
+            *//*EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
 
             Entity entity = ecb.Instantiate(spawnerComponent.ValueRO._particlePrefab);
 
-            ecb.Playback(state.EntityManager);*/
+            ecb.Playback(state.EntityManager);*//*
 
             //spawns an entity with the passed in prefab as it's game object
             Entity entity = state.EntityManager.Instantiate(spawnerComponent.ValueRO._particlePrefab);
@@ -37,16 +37,19 @@ namespace SnSECS
             
             if (state.EntityManager.AddComponent<SNSEffectComponent>(entity))
             {
-                RefRW<SNSEffectComponent> effectComponent = SystemAPI.GetComponentRW<SNSEffectComponent>(entity);
+                //creates a new template effect component
+                var newEffectComponent = new SNSEffectComponent { };
+
+                //RefRW<SNSEffectComponent> effectComponent = SystemAPI.GetComponentRW<SNSEffectComponent>(entity);
                 //TODO: UPDATE ENTITY VALUES HERE
             }
 
-            /*state.EntityManager.Instantiate()
+            *//*state.EntityManager.Instantiate()
             spawnerComponent.ValueRO._particlePrefab;
-            entity.*/
+            entity.*//*
 
                 //create an entity and assign it a mesh (render compent?) to render a cube (in tutorial)
         }
 
-    }
+    }*/
 }

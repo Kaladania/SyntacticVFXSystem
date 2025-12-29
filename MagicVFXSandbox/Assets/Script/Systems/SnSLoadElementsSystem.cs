@@ -10,7 +10,8 @@ namespace SnSECS
     public enum ElementType
     {
         BASE,
-        EXTRA
+        EXTRA,
+        AMBIENCE
     }
 
     public enum Elements

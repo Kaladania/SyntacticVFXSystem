@@ -9,6 +9,8 @@ namespace SnSECS
     public class SNSTransformComponent
     {
         public float3 _position;
+        public float3 _rotation;
+        public float3 _scale;
     }
 
 }

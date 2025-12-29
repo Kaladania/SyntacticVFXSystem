@@ -59,8 +59,8 @@ public class OrbController : MonoBehaviour
         //Create SNS Element Entity Archetype
 
 #if VERSION_SNS
-        VisualEffectAsset vfx = GenerateVFX();
-        SpawnVFX(vfx);
+        //VisualEffectAsset vfx = GenerateVFX();
+        SpawnVFX(GenerateVFX());
 #endif
     }
 
@@ -127,6 +127,10 @@ public class OrbController : MonoBehaviour
         Debug.Log("Combination Loaded");
 
 #if VERSION_SNS
+        GameObject gameObject = GenerateVFX();
+        SpawnVFX(gameObject);
+#elif VERSION_SNS_PROC
+
         VisualEffectAsset vfx = GenerateVFX();
         SpawnVFX(vfx);
 
@@ -146,29 +150,68 @@ public class OrbController : MonoBehaviour
         }
     }
 
-    private VisualEffectAsset GenerateVFX()
+    private GameObject GenerateVFX()
     {
 
         //Create an Entity with a correct amount (and type) of element components
-        SnSLoadElementsSystem.LoadElement(_currentCombo);
+        Entity entity = SnSLoadElementsSystem.LoadElement(_currentCombo);
+        GameObject gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+        SnSGenerateEffectSystem.GenerateSnS(entity, gameObject);
 
         // VisualEffectAsset generatedVFX = Generate effect (generate effect and returns the final result)
         //above function was written to return an entity. So function call should be SNSGenerateEffect.GenerateEffect(SnSLoadElementsSystem.LoadElement(_currentCombo))
         //the entity returned from 'load element' gets passed into 'generate effect'
-        return _vfx; //return the generated effect
+        return gameObject; //return the generated effect
     }
 
+#if VERSION_SNS
     /// <summary>
     /// Spawns the particle system in-game
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    void SpawnVFX(VisualEffectAsset vfxToSpawn)
+    void SpawnVFX(List<VisualEffectAsset> generatedVFXs)
+    {
+        GameObject gameObject;
+        VisualEffect vfxComponent;
+
+        if (_spawnPoint != null && generatedVFXs != null)
+        {
+            gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+
+            foreach (VisualEffectAsset asset in generatedVFXs)
+            {
+                //creates a vfx component for each asset so they can all be spawned
+                vfxComponent = gameObject.AddComponent<VisualEffect>();
+                vfxComponent.visualEffectAsset = asset;
+            }
+
+            /*VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
+
+            if (baseVfx == null)
+            {
+                Debug.LogError("WARNING! Failed to find Visual Effect Component");
+            }
+            else
+            {
+                //Adds the particle system to the loaded projectile prefab
+                baseVfx.visualEffectAsset = vfxToSpawn;
+            }*/
+   
+
+
+        }
+    }
+
+#endif
+
+#if VERSION_SNS_PROC
+    void SpawnVFX(Entity vfxToSpawn)
     {
         GameObject gameObject;
 
         if (_spawnPoint != null && _vfx != null)
         {
-            gameObject = Instantiate(_projectile,  _spawnPoint.position, UnityEngine.Quaternion.identity);
+            gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
 
             VisualEffect vfx = gameObject.GetComponent<VisualEffect>();
 
@@ -181,10 +224,9 @@ public class OrbController : MonoBehaviour
                 //Adds the particle system to the loaded projectile prefab
                 vfx.visualEffectAsset = vfxToSpawn;
             }
+
         }
-
-        
-
     }
+#endif
 
 }
