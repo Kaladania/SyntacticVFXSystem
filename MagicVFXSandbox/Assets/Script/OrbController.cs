@@ -182,12 +182,44 @@ public class OrbController : MonoBehaviour
         {
             gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
 
-            foreach (VisualEffectAsset asset in generatedVFXs)
+            VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
+
+            //Adds the base VFX for the head of the particle
+           if (baseVfx == null)
+           {
+               Debug.LogError("WARNING! Failed to find Visual Effect Component");
+           }
+           else
+           {
+               //Adds the particle system to the loaded projectile prefab
+               baseVfx.visualEffectAsset = generatedVFXs[0];
+           }
+
+           //loops through the rest of the array and adds the child VFX (trial + ambience)
+            for (int i = 1; i < generatedVFXs.Count; i++)
+            {
+                GameObject childObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+                childObject.transform.parent = gameObject.transform;
+
+                VisualEffect childVFX = gameObject.GetComponent<VisualEffect>();
+
+                if (childVFX == null)
+                {
+                    Debug.LogError("WARNING! Failed to find Visual Effect Component");
+                }
+                else
+                {
+                    //Adds the particle system to the loaded projectile prefab
+                    childVFX.visualEffectAsset = generatedVFXs[i];
+                }
+            }
+
+           /* foreach (VisualEffectAsset asset in generatedVFXs)
             {
                 //creates a vfx component for each asset so they can all be spawned
                 vfxComponent = gameObject.AddComponent<VisualEffect>();
                 vfxComponent.visualEffectAsset = asset;
-            }
+            }*/
 
             /*VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
 
