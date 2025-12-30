@@ -1,0 +1,56 @@
+SNS System Notes:
+
+
+- Instead of passing in a visual effect asset via components, just pass the enum (think of it like a JSON file)
+- Then, when generating the particle system, the enums can be used to load the correct VFX assests
+
+
+Element Component (e.g. Water Component)
+- Type: Element (enum)
+- Role: Base/Extra (enum)
+- Scale: int
+- Speed: int
+- Colour: colour
+- …
+
+
+- Side note - When loading elements, have the impact of the element decrease by 20% each level (e.g. element 2 is 100%, element 3 is 80%, …)
+- Scale is automatically updated (e.g. if element place is 4th, scale = 0.6)
+	- Add them all together during the generation stage (e.g if water element is 2nd (100%) and 4th (60%) total scale of water element contributions will be x1.6
+
+
+
+
+Instead of trying to access the component type to know what data to load, just spawn all the VFX assets by assuming each component hold the correct data
+
+
+ - - -- - - - 
+
+-define:UNITY_DEBUG;
+-define:VERSION_DEFAULT;
+-define:VERSION_SNS;
+-define:VERSION_SNS_PROC;
+
+- - - - 
+
+Demo game envirmonent:
+
+- Shoot the colours
+	- Colour Rectangle enemies spawn and try to approach you
+		- Enemies just move in a straight line
+		- You're restricted and can only rotate to launch a projectile
+	- A specific colour can only be killed by a specific element
+	- The purpose of combining elements is that the projectile doesn't despawn till offscreen
+		- multiple elements means it can kill multiple colours
+
+
+IF wanting to be more complex
+	- More powerful enemies are bigger
+		- Increase in scale numerically: x1, x1.25, x1.5
+		- When an enemy is hit, it shrinks
+			- x1 is their last life. The next hit kills the enemy
+	- Have the elements change how the spell works
+		- Fire is direct single impact (more fire, more impact: e.g. 3 element = 3 impact)
+		- Earth is AOE (more earth, wider range: e.g. 3 element = 3x the area of impact)
+		- Electric is speed (more electric, faster projectile: e.g. 3 element = 3x the speed)
+		- Water is number of projectiles (more water, more projectiles spawned simultaneously: e.g. 3 element = 3x the projectiles).

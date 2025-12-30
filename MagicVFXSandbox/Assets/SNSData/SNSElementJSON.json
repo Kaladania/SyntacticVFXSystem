@@ -1,0 +1,31 @@
+{
+  "Fire": {
+    "Base": {
+      "head": "Base_Head_Fire.vfx",
+      "trail": "Base_Trail_Fire.vfx"
+    },
+
+    "Extra": {
+      "head": "Extra_Head_Fire.vfx",
+      "trail": "Extra_Trail_Fire.vfx"
+
+    },
+
+    "ambient": "Ambient_Fire.vfx"
+  },
+
+  "Water": {
+    "Base": {
+      "head": "Base_Head_Water.vfx",
+      "trail": "Base_Trail_Water.vfx"
+    },
+
+    "Extra": {
+      "head": "Extra_Head_Water.vfx",
+      "trail": "Extra_Trail_Water.vfx"
+
+    },
+
+    "ambient": "Ambient_Water.vfx"
+  }
+}
