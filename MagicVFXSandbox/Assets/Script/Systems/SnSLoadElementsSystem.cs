@@ -43,7 +43,7 @@ namespace SnSECS
                     switch (elements[i])
                     {
                         case Elements.FIRE:
-                            SNSFireComponent newFireComponent = new SNSFireComponent(ElementType.BASE);
+                            
                             entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.BASE));
                             break;
                         case Elements.EARTH:
@@ -70,7 +70,7 @@ namespace SnSECS
                         case Elements.EARTH:
                             break;
                         case Elements.WATER:
-                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
+                            entityManager.AddSharedComponentManaged(entity, new SNSWaterComponet(ElementType.EXTRA));
                             break;
                         case Elements.LIGHTNING:
                             break;

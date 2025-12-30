@@ -33,25 +33,22 @@ namespace SnSECS
                     _type = elementType;
                     _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
                     _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
-                    /*_head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;*/
                     break;
                 case ElementType.EXTRA:
 
                     _type = elementType;
-                    _head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
                     break;
                 default:
                     //defaults to spawning the 'EXTRA' VFXs
                     _type = elementType;
-                    _head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
                     break;
             }
 
-            _ambience = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
+            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
         }
 
         public override bool Equals(object obj)

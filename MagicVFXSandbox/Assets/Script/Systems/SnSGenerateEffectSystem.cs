@@ -65,6 +65,7 @@ namespace SnSECS
                     }
                     else
                     {
+                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._trail);
                         //TODO: TYPE-EXTRA stuff
                     }
                 }
@@ -91,6 +92,7 @@ namespace SnSECS
                     }
                     else
                     {
+                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._trail);
                         //TODO: TYPE-EXTRA stuff
                     }
                 }

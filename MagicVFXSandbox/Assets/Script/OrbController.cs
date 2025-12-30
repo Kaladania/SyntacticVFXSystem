@@ -60,7 +60,7 @@ public class OrbController : MonoBehaviour
 
 #if VERSION_SNS
         //VisualEffectAsset vfx = GenerateVFX();
-        SpawnVFX(GenerateVFX());
+        //SpawnVFX(GenerateVFX());
 #endif
     }
 
@@ -176,7 +176,6 @@ public class OrbController : MonoBehaviour
     void SpawnVFX(List<VisualEffectAsset> generatedVFXs)
     {
         GameObject gameObject;
-        VisualEffect vfxComponent;
 
         if (_spawnPoint != null && generatedVFXs != null)
         {

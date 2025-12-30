@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.Entities;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.VFX;
@@ -29,25 +30,25 @@ namespace SnSECS
                 case ElementType.BASE:
 
                     _type = elementType;
-                    _head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
                     break;
                 case ElementType.EXTRA:
 
                     _type = elementType;
-                    _head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
                     break;
                 default:
                     //defaults to spawning the 'EXTRA' VFXs
                     _type = elementType;
-                    _head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
 
                     break;
             }
 
-            _ambience = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
+            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
         }
 
         public override bool Equals(object obj)
