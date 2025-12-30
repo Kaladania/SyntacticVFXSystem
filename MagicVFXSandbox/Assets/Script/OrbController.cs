@@ -100,7 +100,7 @@ public class OrbController : MonoBehaviour
         }
 
         //Manually generates a new particle system if 'Enter' is pressed or the Mouse button is clicked (and there is a valid combo)
-        if ((Keyboard.current.enterKey.wasPressedThisFrame || Input.GetMouseButton(0)) && _currentCombo.Count > 0)
+        if ((Keyboard.current.enterKey.wasPressedThisFrame || Input.GetMouseButtonDown(0)) && _currentCombo.Count > 0)
         {
             LoadCombination();
         }
