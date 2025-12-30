@@ -200,7 +200,7 @@ public class OrbController : MonoBehaviour
                 GameObject childObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
                 childObject.transform.parent = gameObject.transform;
 
-                VisualEffect childVFX = gameObject.GetComponent<VisualEffect>();
+                VisualEffect childVFX = childObject.GetComponent<VisualEffect>();
 
                 if (childVFX == null)
                 {
