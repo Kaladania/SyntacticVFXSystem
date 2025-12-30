@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.Entities;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.VFX;
@@ -29,8 +31,10 @@ namespace SnSECS
                 case ElementType.BASE:
 
                     _type = elementType;
-                    _head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    /*_head = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
+                    _trail = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;*/
                     break;
                 case ElementType.EXTRA:
 

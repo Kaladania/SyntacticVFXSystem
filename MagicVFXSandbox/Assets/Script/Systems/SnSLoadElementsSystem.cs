@@ -58,26 +58,29 @@ namespace SnSECS
                         default:
                             break;
                     }
+
                 }
-
-
-                switch (elements[i])
+                else
                 {
-                    case Elements.FIRE:
-                        entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
-                        break;
-                    case Elements.EARTH:
-                        break;
-                    case Elements.WATER:
-                        entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
-                        break;
-                    case Elements.LIGHTNING:
-                        break;
-                    case Elements.NONE:
-                        break;
-                    default:
-                        break;
+                    switch (elements[i])
+                    {
+                        case Elements.FIRE:
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
+                            break;
+                        case Elements.EARTH:
+                            break;
+                        case Elements.WATER:
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
+                            break;
+                        case Elements.LIGHTNING:
+                            break;
+                        case Elements.NONE:
+                            break;
+                        default:
+                            break;
+                    }
                 }
+
             }
 
             return entity;

@@ -29,20 +29,21 @@ namespace SnSECS
             var basicFireComponent = new SNSFireComponent { };
 
             //grabs an array full of the type of components attached to the entity
-            var elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
+            NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
 
             List<VisualEffectAsset> generatedVFXs = new List<VisualEffectAsset>();
 
-            for (int i = 0; i < elementArray.Length; i++)
+            //Starts at 1 because Unity stores automatically stores a 'simulate' flag at index 0
+            for (int i = 1; i < elementArray.Length; i++)
             {
                 /*EntityArchetype chunk = entityManager.GetChunk(entity).Archetype;
                 chunk.GetComponentTypes();*/
 
                 //assumes that the hashcodes of each type matches
                 //CHECK DEBUG - if not, find another way to compare the components
-                if (elementArray[0].GetHashCode() == basicFireComponent.GetHashCode())
+                if (elementArray[1].TypeIndex == TypeManager.GetTypeIndex<SNSFireComponent>())
                 {
-                    if (i == 0)
+                    if (i == 1)
                     {
                         //newEffectComponent._head = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head;
 
@@ -67,9 +68,9 @@ namespace SnSECS
                         //TODO: TYPE-EXTRA stuff
                     }
                 }
-                else if (Equals(elementArray[0], basicWaterComponent))  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                else if (elementArray[1].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
                 {
-                    if (i == 0)
+                    if (i == 1)
                     {
                         //newEffectComponent._head = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head;
 
@@ -93,7 +94,7 @@ namespace SnSECS
                         //TODO: TYPE-EXTRA stuff
                     }
                 }
-                    ///TRY TO FIND A WAY TO GET THE COMPONENT TYPE OF THE CURRENT COMPONENT BEING ACCESSED IN THE ARRAY
+                    
                     /// IF COMPONENT TYPE IS FOUND, SPAWN THE SYSTEM ATTACHED [CURRENT PLAN IS TO USE A VISUAL EFFECT COMPONENT FOR EACH ELEMENT]
                     /// TRY AND SEE IF THERES A WAY TO ADD A NODE CHAIN TO A VFX ASSET INSTEAD OF HAVING TO STORE THE ENTIRE ASSET
                         /// (LIKE HOW YOU CAN REFERENCE A SPECIFIC CHAIN IN NIAGARA)
