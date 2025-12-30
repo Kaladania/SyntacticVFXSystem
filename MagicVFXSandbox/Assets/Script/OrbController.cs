@@ -38,10 +38,13 @@ public class OrbController : MonoBehaviour
     [SerializeField]
     private GameObject _projectile; //holds a prefab for a basic projectile
 
+    [SerializeField]
+    private GameObject _childProjectile; //holds a prefab for a basic projectile
 
-/*#if VERSION_SNS
-    private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
-#endif*/
+
+    /*#if VERSION_SNS
+        private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
+    #endif*/
 
     void Start()
     {
@@ -197,7 +200,7 @@ public class OrbController : MonoBehaviour
            //loops through the rest of the array and adds the child VFX (trial + ambience)
             for (int i = 1; i < generatedVFXs.Count; i++)
             {
-                GameObject childObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+                GameObject childObject = Instantiate(_childProjectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
                 childObject.transform.parent = gameObject.transform;
 
                 VisualEffect childVFX = childObject.GetComponent<VisualEffect>();
