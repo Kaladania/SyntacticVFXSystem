@@ -127,8 +127,7 @@ public class OrbController : MonoBehaviour
         Debug.Log("Combination Loaded");
 
 #if VERSION_SNS
-        GameObject gameObject = GenerateVFX();
-        SpawnVFX(gameObject);
+        SpawnVFX(GenerateVFX());
 #elif VERSION_SNS_PROC
 
         VisualEffectAsset vfx = GenerateVFX();
@@ -150,21 +149,26 @@ public class OrbController : MonoBehaviour
         }
     }
 
-    private GameObject GenerateVFX()
+#if VERSION_SNS
+    /// <summary>
+    /// Re
+    /// </summary>
+    /// <returns></returns>
+    private List<VisualEffectAsset> GenerateVFX()
     {
 
         //Create an Entity with a correct amount (and type) of element components
         Entity entity = SnSLoadElementsSystem.LoadElement(_currentCombo);
-        GameObject gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
-        SnSGenerateEffectSystem.GenerateSnS(entity, gameObject);
+        //GameObject gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+        
 
         // VisualEffectAsset generatedVFX = Generate effect (generate effect and returns the final result)
         //above function was written to return an entity. So function call should be SNSGenerateEffect.GenerateEffect(SnSLoadElementsSystem.LoadElement(_currentCombo))
         //the entity returned from 'load element' gets passed into 'generate effect'
-        return gameObject; //return the generated effect
+        return SnSGenerateEffectSystem.GenerateSnS(entity); ; //returns the generated effect
     }
 
-#if VERSION_SNS
+
     /// <summary>
     /// Spawns the particle system in-game
     /// </summary>

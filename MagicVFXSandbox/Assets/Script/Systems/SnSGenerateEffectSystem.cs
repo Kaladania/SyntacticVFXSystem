@@ -17,7 +17,7 @@ namespace SnSECS
     public struct SnSGenerateEffectSystem
     {
          
-        public static List<VisualEffectAsset> GenerateSnS(Entity entity, GameObject gameObject)
+        public static List<VisualEffectAsset> GenerateSnS(Entity entity)
         {
             var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
             //spawns an entity with the passed in prefab as it's game object
@@ -46,7 +46,7 @@ namespace SnSECS
                     {
                         //newEffectComponent._head = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head;
 
-                        VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
+                        //VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
 
                         /*if (baseVfx == null)
                         {
@@ -67,13 +67,13 @@ namespace SnSECS
                         //TODO: TYPE-EXTRA stuff
                     }
                 }
-                else if (elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                else if (Equals(elementArray[0], basicWaterComponent))  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
                 {
                     if (i == 0)
                     {
                         //newEffectComponent._head = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head;
 
-                        VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
+                        //VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
 
                         /*if (baseVfx == null)
                         {

@@ -43,12 +43,13 @@ namespace SnSECS
                     switch (elements[i])
                     {
                         case Elements.FIRE:
-                            entityManager.AddComponentObject(entity, new SNSFireComponent(ElementType.BASE));
+                            SNSFireComponent newFireComponent = new SNSFireComponent(ElementType.BASE);
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.BASE));
                             break;
                         case Elements.EARTH:
                             break;
                         case Elements.WATER:
-                            entityManager.AddComponentObject(entity, new SNSWaterComponet(ElementType.BASE));
+                            entityManager.AddSharedComponentManaged(entity, new SNSWaterComponet(ElementType.BASE));
                             break;
                         case Elements.LIGHTNING:
                             break;
@@ -63,12 +64,12 @@ namespace SnSECS
                 switch (elements[i])
                 {
                     case Elements.FIRE:
-                        entityManager.AddComponentObject(entity, new SNSFireComponent(ElementType.EXTRA));
+                        entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
                         break;
                     case Elements.EARTH:
                         break;
                     case Elements.WATER:
-                        entityManager.AddComponentObject(entity, new SNSFireComponent(ElementType.EXTRA));
+                        entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
                         break;
                     case Elements.LIGHTNING:
                         break;

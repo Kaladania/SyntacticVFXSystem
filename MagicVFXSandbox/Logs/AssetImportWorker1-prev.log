@@ -15,7 +15,7 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61113
+61464
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,18 +59,18 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [28204]  Target information:
+Player connection [688]  Target information:
 
-Player connection [28204]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 591115895 [EditorId] 591115895 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [688]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 714503461 [EditorId] 714503461 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [28204]  * "[IP] 192.168.0.44 [Port] 0 [Flags] 2 [Guid] 591115895 [EditorId] 591115895 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [688]  * "[IP] 192.168.0.44 [Port] 0 [Flags] 2 [Guid] 714503461 [EditorId] 714503461 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [28204] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [28204] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [688] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [688] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 3.26 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.55 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.19f1 (302b264628f9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Resources/UnitySubsystems
@@ -86,44 +86,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56404
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002122 seconds.
-- Loaded All Assemblies, in  0.372 seconds
+Registered in 0.003363 seconds.
+- Loaded All Assemblies, in  0.560 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.361 seconds
-Domain Reload Profiling: 732ms
-	BeginReloadAssembly (126ms)
+- Finished resetting the current domain, in  0.467 seconds
+Domain Reload Profiling: 1026ms
+	BeginReloadAssembly (205ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (148ms)
-		LoadAssemblies (123ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (221ms)
+		LoadAssemblies (202ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (145ms)
-			TypeCache.Refresh (143ms)
-				TypeCache.ScanAssembly (131ms)
+		AnalyzeDomain (217ms)
+			TypeCache.Refresh (215ms)
+				TypeCache.ScanAssembly (196ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (361ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (468ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (325ms)
+		SetupLoadedEditorAssemblies (396ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (8ms)
-			ProcessInitializeOnLoadAttributes (202ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			InitializePlatformSupportModulesInManaged (38ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (9ms)
+			ProcessInitializeOnLoadAttributes (264ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -134,190 +134,354 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.565 seconds
+- Loaded All Assemblies, in  1.812 seconds
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 2.54 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 598ms
+TypeManager.Initialize took: 346ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.219 seconds
-Domain Reload Profiling: 3776ms
-	BeginReloadAssembly (522ms)
+- Finished resetting the current domain, in  1.404 seconds
+Domain Reload Profiling: 3213ms
+	BeginReloadAssembly (741ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (51ms)
-	RebuildCommonClasses (39ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (935ms)
-		LoadAssemblies (486ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (983ms)
+		LoadAssemblies (535ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (569ms)
-			TypeCache.Refresh (391ms)
-				TypeCache.ScanAssembly (365ms)
-			BuildScriptInfoCaches (149ms)
-			ResolveRequiredComponents (22ms)
-	FinalizeReload (2220ms)
+		AnalyzeDomain (563ms)
+			TypeCache.Refresh (380ms)
+				TypeCache.ScanAssembly (358ms)
+			BuildScriptInfoCaches (156ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (1405ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1830ms)
+		SetupLoadedEditorAssemblies (1102ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (12ms)
-			BeforeProcessingInitializeOnLoad (332ms)
-			ProcessInitializeOnLoadAttributes (1262ms)
-			ProcessInitializeOnLoadMethodAttributes (210ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (168ms)
+			ProcessInitializeOnLoadAttributes (791ms)
+			ProcessInitializeOnLoadMethodAttributes (129ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 4.53 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 223 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8603 unused Assets / (6.1 MB). Loaded Objects now: 9381.
-Memory consumption went from 206.5 MB to 200.4 MB.
-Total: 35.367400 ms (FindLiveObjects: 2.535700 ms CreateObjectMapping: 4.959300 ms MarkObjects: 20.831600 ms  DeleteObjects: 7.035500 ms)
+Unloading 8604 unused Assets / (6.6 MB). Loaded Objects now: 9382.
+Memory consumption went from 208.1 MB to 201.5 MB.
+Total: 14.570100 ms (FindLiveObjects: 1.186200 ms CreateObjectMapping: 1.282000 ms MarkObjects: 8.154200 ms  DeleteObjects: 3.943800 ms)
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 2.21 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 6.87 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8588 unused Assets / (5.1 MB). Loaded Objects now: 9381.
-Memory consumption went from 172.0 MB to 166.9 MB.
-Total: 652.532500 ms (FindLiveObjects: 2.500600 ms CreateObjectMapping: 1.266700 ms MarkObjects: 642.112100 ms  DeleteObjects: 6.568000 ms)
+Unloading 8589 unused Assets / (5.5 MB). Loaded Objects now: 9382.
+Memory consumption went from 173.5 MB to 168.0 MB.
+Total: 564.932200 ms (FindLiveObjects: 6.830500 ms CreateObjectMapping: 2.408400 ms MarkObjects: 545.715800 ms  DeleteObjects: 9.970800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 3.02 ms, found 4 plugins.
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  3.483 seconds
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 1.41 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+ArgumentException: type SnSECS.SNSElementComponent is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.BindingRegistry:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:83)
+Unity.Entities.BindingRegistry:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:76)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+ArgumentException: type SnSECS.SNSWaterComponet is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.BindingRegistry:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:83)
+Unity.Entities.BindingRegistry:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:76)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+ArgumentException: type SnSECS.SNSFireComponent is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.BindingRegistry:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:83)
+Unity.Entities.BindingRegistry:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:76)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+ArgumentException: type SnSECS.SNSEffectComponent is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.BindingRegistry:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:83)
+Unity.Entities.BindingRegistry:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:76)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+TypeManager.Initialize took: 407ms
+System.ArgumentException: TypeManager initialization failed. Please fix all exceptions logged above before continuing.
+  at Unity.Entities.TypeManager.InitializeAllComponentTypes () [0x00220] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2650 
+  at Unity.Entities.TypeManager.Initialize () [0x001ff] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1516 
+  at Unity.Entities.BindingRegistry.Initialize () [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:83 
+  at Unity.Entities.BindingRegistry..cctor () [0x00028] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:76 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+ArgumentException: type SnSECS.SNSElementComponent is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.AttachToEntityClonerInjection:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:23)
+Unity.Entities.AttachToEntityClonerInjection:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:17)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+ArgumentException: type SnSECS.SNSWaterComponet is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.AttachToEntityClonerInjection:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:23)
+Unity.Entities.AttachToEntityClonerInjection:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:17)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+ArgumentException: type SnSECS.SNSFireComponent is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.AttachToEntityClonerInjection:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:23)
+Unity.Entities.AttachToEntityClonerInjection:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:17)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+ArgumentException: type SnSECS.SNSEffectComponent is a ISharedComponentData and has managed references, you must implement IEquatable<T>
+  at Unity.Entities.FastEquality.CreateManagedTypeInfo (System.Type t) [0x001e7] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:220 
+  at Unity.Entities.FastEquality.CreateTypeInfo (System.Type type, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x00008] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\FastEquality.cs:125 
+  at Unity.Entities.TypeManager.AddFastEqualityInfo (System.Type type, System.Boolean isUnityEngineObject, System.Collections.Generic.Dictionary`2[TKey,TValue] cache) [0x0001e] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3341 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeIndex[] writeGroups, Unity.Entities.TypeManager+BuildComponentCache caches) [0x003a8] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3239 
+  at Unity.Entities.TypeManager.BuildComponentType (System.Type type, Unity.Entities.TypeManager+BuildComponentCache caches) [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:3091 
+  at Unity.Entities.TypeManager.AddAllComponentTypes (System.Type[] componentTypes, System.Int32 startTypeIndex, System.Collections.Generic.Dictionary`2[TKey,TValue] writeGroupByType, System.Collections.Generic.Dictionary`2[TKey,TValue] descendantCountByType) [0x0006a] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2763 
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+Unity.Debug:LogException(Exception) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Stubs\Unity\Debug.cs:17)
+Unity.Entities.TypeManager:AddAllComponentTypes(Type[], Int32, Dictionary`2, Dictionary`2) (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2786)
+Unity.Entities.TypeManager:InitializeAllComponentTypes() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2642)
+Unity.Entities.TypeManager:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1496)
+Unity.Entities.AttachToEntityClonerInjection:Initialize() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:23)
+Unity.Entities.AttachToEntityClonerInjection:.cctor() (at .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:17)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[])
+
+(Filename: ./Library/PackageCache/com.unity.entities/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
+
+TypeManager.Initialize took: 190ms
+System.ArgumentException: TypeManager initialization failed. Please fix all exceptions logged above before continuing.
+  at Unity.Entities.TypeManager.InitializeAllComponentTypes () [0x00220] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2650 
+  at Unity.Entities.TypeManager.Initialize () [0x001ff] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1516 
+  at Unity.Entities.AttachToEntityClonerInjection.Initialize () [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:23 
+  at Unity.Entities.AttachToEntityClonerInjection..cctor () [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:17 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Unity.Entities.BindingRegistry' threw an exception. ---> System.ArgumentException: TypeManager initialization failed. Please fix all exceptions logged above before continuing.
+  at Unity.Entities.TypeManager.InitializeAllComponentTypes () [0x00220] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:2650 
+  at Unity.Entities.TypeManager.Initialize () [0x001ff] in .\Library\PackageCache\com.unity.entities\Unity.Entities\Types\TypeManager.cs:1516 
+  at Unity.Entities.BindingRegistry.Initialize () [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:83 
+  at Unity.Entities.BindingRegistry..cctor () [0x00028] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Hybrid\Bindings\BindingRegistry.cs:76 
+   --- End of inner exception stack trace ---
+  at Unity.Entities.Editor.BindingRegistryLiveProperties.RegisterBindingsFromBuiltinTypes () [0x00000] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Editor\LiveProperties\BindingRegistryLiveProperties.cs:283 
+  at Unity.Entities.Editor.BindingRegistryLiveProperties..cctor () [0x00010] in .\Library\PackageCache\com.unity.entities\Unity.Entities.Editor\LiveProperties\BindingRegistryLiveProperties.cs:20 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.840 seconds
+Domain Reload Profiling: 5325ms
+	BeginReloadAssembly (1267ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (150ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (426ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (2105ms)
+		LoadAssemblies (1901ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (557ms)
+			TypeCache.Refresh (84ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (417ms)
+			ResolveRequiredComponents (22ms)
+	FinalizeReload (1841ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1412ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (1063ms)
+			ProcessInitializeOnLoadMethodAttributes (152ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 1.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8588 unused Assets / (6.1 MB). Loaded Objects now: 9381.
-Memory consumption went from 172.0 MB to 165.8 MB.
-Total: 55.843200 ms (FindLiveObjects: 2.084600 ms CreateObjectMapping: 3.028900 ms MarkObjects: 41.608100 ms  DeleteObjects: 9.118300 ms)
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8603 unused Assets / (6.1 MB). Loaded Objects now: 9397.
+Memory consumption went from 185.7 MB to 179.6 MB.
+Total: 13.649700 ms (FindLiveObjects: 1.006700 ms CreateObjectMapping: 0.805200 ms MarkObjects: 7.419800 ms  DeleteObjects: 4.415600 ms)
 
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.37 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (6.1 MB). Loaded Objects now: 9382.
-Memory consumption went from 172.0 MB to 165.8 MB.
-Total: 260.040300 ms (FindLiveObjects: 5.086600 ms CreateObjectMapping: 3.074200 ms MarkObjects: 244.529200 ms  DeleteObjects: 7.102800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.69 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (7.5 MB). Loaded Objects now: 9382.
-Memory consumption went from 172.0 MB to 164.5 MB.
-Total: 50.873200 ms (FindLiveObjects: 2.282000 ms CreateObjectMapping: 6.133700 ms MarkObjects: 25.677300 ms  DeleteObjects: 16.777000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 4620882.732641 seconds.
-  path: Assets/Script/Systems/SnSGenerateEffectSystem.cs
-  artifactKey: Guid(d171b9d491ea11643b89b1689807ed33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/Systems/SnSGenerateEffectSystem.cs using Guid(d171b9d491ea11643b89b1689807ed33) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'f215bb3edc20b12e9f89c8956e3bad4f') in 0.5301399 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 3408.619276 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ab997a58a3b82c0a26c833c11cabf965') in 2.8387083 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.11 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (4.8 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 182.5 MB.
-Total: 712.418600 ms (FindLiveObjects: 3.690500 ms CreateObjectMapping: 1.551200 ms MarkObjects: 699.547200 ms  DeleteObjects: 7.436500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 5.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (6.0 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 181.3 MB.
-Total: 634.237600 ms (FindLiveObjects: 4.654000 ms CreateObjectMapping: 3.032300 ms MarkObjects: 620.046400 ms  DeleteObjects: 6.301800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.66 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (5.7 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 181.5 MB.
-Total: 37.286300 ms (FindLiveObjects: 2.618300 ms CreateObjectMapping: 3.194600 ms MarkObjects: 24.724000 ms  DeleteObjects: 6.746200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.34 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (5.7 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 181.6 MB.
-Total: 55.389200 ms (FindLiveObjects: 2.776700 ms CreateObjectMapping: 2.579000 ms MarkObjects: 44.910800 ms  DeleteObjects: 5.119100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.40 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (6.5 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 180.8 MB.
-Total: 36.075800 ms (FindLiveObjects: 2.151100 ms CreateObjectMapping: 2.578500 ms MarkObjects: 22.745900 ms  DeleteObjects: 8.596600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.59 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (5.9 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 181.4 MB.
-Total: 45.509600 ms (FindLiveObjects: 2.314700 ms CreateObjectMapping: 3.030700 ms MarkObjects: 33.573100 ms  DeleteObjects: 6.588100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.37 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (7.0 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 180.3 MB.
-Total: 37.460000 ms (FindLiveObjects: 2.030300 ms CreateObjectMapping: 2.354100 ms MarkObjects: 23.142500 ms  DeleteObjects: 9.928800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.36 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8589 unused Assets / (6.1 MB). Loaded Objects now: 9533.
-Memory consumption went from 187.3 MB to 181.1 MB.
-Total: 32.721600 ms (FindLiveObjects: 2.036600 ms CreateObjectMapping: 2.183200 ms MarkObjects: 20.296900 ms  DeleteObjects: 8.201400 ms)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (5.6 MB). Loaded Objects now: 9397.
+Memory consumption went from 179.5 MB to 174.0 MB.
+Total: 10.365800 ms (FindLiveObjects: 0.572000 ms CreateObjectMapping: 0.251100 ms MarkObjects: 7.782900 ms  DeleteObjects: 1.757500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
