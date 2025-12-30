@@ -1,14 +1,15 @@
+using SnSECS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.VFX;
+using static UnityEditor.Rendering.FilterWindow;
 using static UnityEngine.Rendering.DebugUI;
-using Unity.Entities;
-using SnSECS;
 
 
 public class OrbController : MonoBehaviour
@@ -93,11 +94,18 @@ public class OrbController : MonoBehaviour
             AddElementToCombination(Elements.LIGHTNING);
         }
 
-        //Manually generates a new particle system if 'Enter' is pressed
-        if (Keyboard.current.enterKey.wasPressedThisFrame && _currentCombo.Count > 0)
+        if (Keyboard.current.backspaceKey.wasPressedThisFrame)
+        {
+            RemoveLastElementFromCombination();
+        }
+
+        //Manually generates a new particle system if 'Enter' is pressed or the Mouse button is clicked (and there is a valid combo)
+        if ((Keyboard.current.enterKey.wasPressedThisFrame || Input.GetMouseButton(0)) && _currentCombo.Count > 0)
         {
             LoadCombination();
         }
+
+
 
     }
 
@@ -107,18 +115,49 @@ public class OrbController : MonoBehaviour
     /// <param name="element">An enum detailing the type of 'element' paramter to add</param>
     void AddElementToCombination(Elements element)
     {
-        _currentCombo.Add(element); //adds the paramter to the combination list
 
-        //Updates the UI to show the icon for the current added element
-        _uiIconPositions[_nextComboIndex].sprite = _uiIcons[element];
-        _uiIconPositions[_nextComboIndex].gameObject.SetActive(true);
+        
+        if (_nextComboIndex >= MAX_COMBO_LIMIT)
+        {
+            _nextComboIndex = MAX_COMBO_LIMIT;
+            //LoadCombination(); //Automatically generates a system once all the combination slots have been filled
+        }
+        else
+        {
+            _currentCombo.Add(element); //adds the paramter to the combination list
 
-        _nextComboIndex++;
+            //Updates the UI to show the icon for the current added element
+            _uiIconPositions[_nextComboIndex].sprite = _uiIcons[element];
+            _uiIconPositions[_nextComboIndex].gameObject.SetActive(true);
 
+            _nextComboIndex++;
+        }
+            
+/*
         //Automatically generates a system once all the combination slots have been filled
         if (_nextComboIndex >= MAX_COMBO_LIMIT)
         {
             LoadCombination();
+        }*/
+    }
+
+    void RemoveLastElementFromCombination()
+    {
+        if (_nextComboIndex <= 0)
+        {
+            _nextComboIndex = 0;
+            //LoadCombination();
+        }
+        else
+        {
+            int lastIndex = _currentCombo.Count - 1;
+            _currentCombo.RemoveAt(lastIndex); //removes the last element in the list
+
+            //Updates the UI to hide the icon for the last added element
+            _uiIconPositions[lastIndex].sprite = _uiIcons[Elements.NONE];
+            _uiIconPositions[lastIndex].gameObject.SetActive(false);
+
+            _nextComboIndex--;
         }
     }
 
