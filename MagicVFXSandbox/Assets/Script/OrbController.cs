@@ -69,7 +69,7 @@ public class OrbController : MonoBehaviour
     /*private float _AOELevel = 0; //altered by Earth
     private float _projectileTargets = 1; //altered by Fire*/
 
-    private int[] _duplicateElementCounts; //keeps a count of the number of duplicate elements in a combo
+    private int[] _uniqueElementCounts; //keeps a count of the number of duplicate elements in a combo
 
 
     /*#if VERSION_SNS
@@ -88,12 +88,12 @@ public class OrbController : MonoBehaviour
         for (int i = 0; i < _keys.Count; i++)
             _uiIcons.Add(_keys[i], _values[i]);
 
-        _duplicateElementCounts = new int[NUM_ELEMENTS];
+        _uniqueElementCounts = new int[NUM_ELEMENTS - 1];
 
-        _duplicateElementCounts[(int)Elements.FIRE] = 0; //number of extra targets a projectile can hit
-        _duplicateElementCounts[(int)Elements.WATER] = 0; //number of extra projectiles to spawn
-        _duplicateElementCounts[(int)Elements.EARTH] = 0; //density level of AOE
-        _duplicateElementCounts[(int)Elements.LIGHTNING] = 0; //level of speed increase
+        _uniqueElementCounts[(int)Elements.FIRE] = 0; //number of extra targets a projectile can hit
+        _uniqueElementCounts[(int)Elements.WATER] = 0; //number of extra projectiles to spawn
+        _uniqueElementCounts[(int)Elements.EARTH] = 0; //density level of AOE
+        _uniqueElementCounts[(int)Elements.LIGHTNING] = 0; //level of speed increase
 
 
 
@@ -219,12 +219,21 @@ public class OrbController : MonoBehaviour
         //empties combination and resets counters
         _nextComboIndex = 0;
         _currentCombo.Clear();
+        ClearDuplicateArray();
 
         //resets icon images and visibility
         foreach (Image icon in _uiIconPositions)
         {
             icon.sprite = _uiIcons[Elements.NONE];
             icon.gameObject.SetActive(false);
+        }
+    }
+
+    private void ClearDuplicateArray()
+    {
+        for (int i = 0; i < _uniqueElementCounts.Length; i++)
+        {
+            _uniqueElementCounts[i] = 0;
         }
     }
 
@@ -238,7 +247,7 @@ public class OrbController : MonoBehaviour
         //records a count of the number of duplicate elements in a combo
         foreach (Elements element in _currentCombo)
         {
-            _duplicateElementCounts[(int)element]++;
+            _uniqueElementCounts[(int)element]++;
         }
 
         //Create an Entity with a correct amount (and type) of element components
@@ -256,7 +265,7 @@ public class OrbController : MonoBehaviour
     {
         foreach (Elements element in _currentCombo)
         {
-            _duplicateElementCounts[(int)element.]++;
+            _uniqueElementCounts[(int)element.]++;
         }
 
     }*/
@@ -269,18 +278,18 @@ public class OrbController : MonoBehaviour
         if (projectile != null)
         {
             ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
-            int targetCount = 1;
-            int projectileSpeed = 1;
+            int targetCount = 0;
+            int projectileSpeed = 0;
 
 
             if (controller != null)
             {
                 //number of fire elements in combo states how many enemies the projectile can hit before being destroyed
-                targetCount = _duplicateElementCounts[(int)Elements.FIRE];
+                targetCount = _uniqueElementCounts[(int)Elements.FIRE];
                 controller.Targets += targetCount;
 
                 //number of lightning elements in combo states how fast the projectile moves
-                projectileSpeed = _duplicateElementCounts[(int)Elements.LIGHTNING];
+                projectileSpeed = _uniqueElementCounts[(int)Elements.LIGHTNING];
                 controller.Speed += (_projectileSpeedIncrease * projectileSpeed);
             }
 
@@ -288,13 +297,13 @@ public class OrbController : MonoBehaviour
             //Determines if a mass amount of projectiles should be spawned for an AOE attack
             float spawnAngle, spawnRadians;
             Vector3 newSpawnPosition = projectile.transform.position;
-            int numProjectiles = _duplicateElementCounts[(int)Elements.EARTH];
+            int numProjectiles = _uniqueElementCounts[(int)Elements.EARTH];
 
 
 
             //Determines if duplicate extra projectiles need to be spawned
             //number of duplicate water elements in combo states the number of additional projectiles to spawn
-            for (int i = 0; i < _duplicateElementCounts[(int)Elements.WATER]; i++)
+            for (int i = 0; i < _uniqueElementCounts[(int)Elements.WATER]; i++)
             {
                 newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
 
@@ -331,7 +340,7 @@ public class OrbController : MonoBehaviour
 
                 //Determines if duplicate extra projectiles need to be spawned
                 //number of duplicate water elements in combo states the number of additional projectiles to spawn
-                for (int j = 0; j < _duplicateElementCounts[(int)Elements.WATER]; j++)
+                for (int j = 0; j < _uniqueElementCounts[(int)Elements.WATER]; j++)
                 {
                     newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
 
