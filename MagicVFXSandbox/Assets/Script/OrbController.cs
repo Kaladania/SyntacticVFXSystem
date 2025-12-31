@@ -244,12 +244,7 @@ public class OrbController : MonoBehaviour
     /// <returns></returns>
     private List<VisualEffectAsset> GenerateVFX()
     {
-        //records a count of the number of duplicate elements in a combo
-        foreach (Elements element in _currentCombo)
-        {
-            _uniqueElementCounts[(int)element]++;
-        }
-
+        
         //Create an Entity with a correct amount (and type) of element components
         Entity entity = SnSLoadElementsSystem.LoadElement(_currentCombo);
         //GameObject gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
@@ -272,6 +267,21 @@ public class OrbController : MonoBehaviour
 
     private void CreateSpell(List<VisualEffectAsset> generatedVFXs)
     {
+        //records a count of the number of duplicate elements in a combo
+
+        //if there are more than 2 elements in the combination, water modifier gets an extra point
+        //improves logic perception because it feels weird to only have 1 projectile when only 1 water element is added
+        if (_currentCombo.Count >= 2)
+        {
+            _uniqueElementCounts[(int)Elements.WATER]++;
+        }
+
+        foreach (Elements element in _currentCombo)
+        {
+            _uniqueElementCounts[(int)element]++;
+        }
+
+
         //loads the SNS VFX and uses it to spawn a projectile used for the spell
         GameObject projectile = CreateProjectile(generatedVFXs);
 
