@@ -166,7 +166,7 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 6969413652577399156, guid: 08d913158e873b24ea1aa6c2ff1ebe87, type: 3}
   _playerSpawnPoint: {fileID: 2071756193}
   _maxLevel: 3
-  _spawnFrequency: 1
+  _spawnFrequency: 3
   _maximumPositionSearchCount: 5
 --- !u!1 &141334755
 GameObject:
@@ -1604,10 +1604,10 @@ MonoBehaviour:
   _turret: {fileID: 236451700}
   _turretSpawnPoint: {fileID: 1089325747}
   _buddyProjectileDistance: 1
-  _projectileSpeedIncrease: 1
-  _AOEBaseDensity: 1
+  _projectileSpeedIncrease: 10
+  _AOEBaseDensity: 3
   _AOEDensityIncrease: 1
-  _AOESpawnRadius: 1
+  _AOESpawnRadius: 5
 --- !u!54 &2071756196
 Rigidbody:
   m_ObjectHideFlags: 0
