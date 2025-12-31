@@ -20,6 +20,10 @@ namespace SnSECS
         public VisualEffectAsset _trail; //element projectile trail
         public VisualEffectAsset _ambience; //element projectile ambience
 
+        public float _scale; //the size of the effect
+        public float _speed; //speed of the effect
+        public Color _colour; //effect colour
+
         /// <summary>
         /// Constructs the component with it's default values
         /// </summary>
@@ -49,6 +53,10 @@ namespace SnSECS
             }
 
             _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+
+            _scale = 1;
+            _speed = 1;
+            _colour = Color.white;
         }
 
         public override bool Equals(object obj)

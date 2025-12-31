@@ -41,7 +41,7 @@ namespace SnSECS
 
                 //assumes that the hashcodes of each type matches
                 //CHECK DEBUG - if not, find another way to compare the components
-                if (elementArray[1].TypeIndex == TypeManager.GetTypeIndex<SNSFireComponent>())
+                if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSFireComponent>())
                 {
                     if (i == 1)
                     {
@@ -69,7 +69,7 @@ namespace SnSECS
                         //TODO: TYPE-EXTRA stuff
                     }
                 }
-                else if (elementArray[1].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
                 {
                     if (i == 1)
                     {
