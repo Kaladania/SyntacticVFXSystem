@@ -42,6 +42,12 @@ public class OrbController : MonoBehaviour
     [SerializeField]
     private GameObject _childProjectile; //holds a prefab for a basic projectile
 
+    [SerializeField]
+    private GameObject _turret;
+
+    [SerializeField]
+    private GameObject _turretSpawnPoint;
+
 
     /*#if VERSION_SNS
         private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
@@ -217,13 +223,13 @@ public class OrbController : MonoBehaviour
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
     void SpawnVFX(List<VisualEffectAsset> generatedVFXs)
     {
-        GameObject gameObject;
+        GameObject projectile;
 
         if (_spawnPoint != null && generatedVFXs != null)
         {
-            gameObject = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+            projectile = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
 
-            VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
+            VisualEffect baseVfx = projectile.GetComponent<VisualEffect>();
 
             //Adds the base VFX for the head of the particle
            if (baseVfx == null)
@@ -236,11 +242,44 @@ public class OrbController : MonoBehaviour
                baseVfx.visualEffectAsset = generatedVFXs[0];
            }
 
-           //loops through the rest of the array and adds the child VFX (trial + ambience)
+           /* RotateToMouse mouseRotator = _turretSpawnPoint.GetComponent<RotateToMouse>();
+            Vector3 turretDirection = Vector3.zero;
+
+            if (mouseRotator != null)
+            {
+                turretDirection = mouseRotator.Direction;
+            }
+            else
+            {
+                turretDirection = (_turret.transform.position - transform.position).normalized;
+            }*/
+
+            
+            /*if (_turret != null)
+            {
+                turretDirection = (_turret.transform.position - transform.position).normalized;
+            }
+            else
+            {
+                Debug.LogError("ERROR: Turret reference is null. Defaulting to the orb's forward vector");
+                turretDirection = new Vector3(1, 0, 0);
+            }*/
+           
+            //rotate the projectile to face the turret facing direction
+            projectile.transform.rotation = Quaternion.LookRotation(transform.forward);
+            
+            ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
+
+            if (controller != null)
+            {
+                controller.Direction = transform.forward;
+            }
+
+            //loops through the rest of the array and adds the child VFX (trial + ambience)
             for (int i = 1; i < generatedVFXs.Count; i++)
             {
                 GameObject childObject = Instantiate(_childProjectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
-                childObject.transform.parent = gameObject.transform;
+                childObject.transform.parent = projectile.transform;
 
                 VisualEffect childVFX = childObject.GetComponent<VisualEffect>();
 

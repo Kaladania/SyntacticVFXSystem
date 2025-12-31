@@ -12,11 +12,15 @@ public class RotateToMouse : MonoBehaviour
     [SerializeField]
     private Camera _cameraToLookAt;
 
+    private Vector3 _direction;
+
+    public Vector3 Direction { get { return _direction; } set { _direction = value; } }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _direction = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -45,6 +49,8 @@ public class RotateToMouse : MonoBehaviour
                     //calucates the quanternion rotation needed to get the turret to face the mouse
                     Quaternion rotation = Quaternion.LookRotation(direction);
                     transform.rotation = Quaternion.Euler(0f, rotation.eulerAngles.y, 0f);
+
+                    _direction = direction;
                 }
             }
            /* else

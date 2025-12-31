@@ -5,6 +5,13 @@ public class ProjectileMovement : MonoBehaviour
     [SerializeField]
     private float _projectileSpeed = 20.0f;
 
+    [SerializeField]
+    private Vector3 _direction = Vector3.forward;
+
+    public Vector3 Direction { get { return _direction; } set { _direction = value; } }
+
+    private bool _destroyProjectile = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,9 +23,9 @@ public class ProjectileMovement : MonoBehaviour
     {
         if (_projectileSpeed > 0)
         {
-            float newX = transform.position.x; 
-            newX += (new Vector3(1, 0, 0) * (_projectileSpeed * Time.deltaTime)).x;
-            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+            Vector3 newPosition = transform.position; 
+            newPosition += (_direction * (_projectileSpeed * Time.deltaTime));
+            transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
         }
         else
         {
@@ -26,9 +33,17 @@ public class ProjectileMovement : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (_destroyProjectile)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         _projectileSpeed = 0;
-        Destroy(this.gameObject);
+        _destroyProjectile = true;
     }
 }
