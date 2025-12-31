@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Entities;
+using Unity.Entities.UniversalDelegates;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -48,6 +50,27 @@ public class OrbController : MonoBehaviour
     [SerializeField]
     private GameObject _turretSpawnPoint;
 
+    //projectile modifiers
+    [SerializeField]
+    private float _buddyProjectileDistance = 1f; //states how far apart duplicate projectiles should be spawned (for water modifier)
+
+    //projectile modifiers
+    [SerializeField]
+    private float _projectileSpeedIncrease = 0.25f; //states how far apart duplicate projectiles should be spawned (for water modifier)
+
+    [SerializeField]
+    private int _AOEBaseDensity = 1; //states how many projectiles should be spawned in the circular AOE attack
+
+    [SerializeField]
+    private int _AOEDensityIncrease = 1; //states how many additional projectiles should be spawned in the circular AOE attack
+
+    [SerializeField]
+    private float _AOESpawnRadius = 1f; //spawn radius of AOE attack
+    /*private float _AOELevel = 0; //altered by Earth
+    private float _projectileTargets = 1; //altered by Fire*/
+
+    private int[] _duplicateElementCounts; //keeps a count of the number of duplicate elements in a combo
+
 
     /*#if VERSION_SNS
         private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
@@ -64,6 +87,14 @@ public class OrbController : MonoBehaviour
 
         for (int i = 0; i < _keys.Count; i++)
             _uiIcons.Add(_keys[i], _values[i]);
+
+        _duplicateElementCounts = new int[NUM_ELEMENTS];
+
+        _duplicateElementCounts[(int)Elements.FIRE] = 0; //number of extra targets a projectile can hit
+        _duplicateElementCounts[(int)Elements.WATER] = 0; //number of extra projectiles to spawn
+        _duplicateElementCounts[(int)Elements.EARTH] = 0; //density level of AOE
+        _duplicateElementCounts[(int)Elements.LIGHTNING] = 0; //level of speed increase
+
 
 
         //Create SNS Element Entity Archetype
@@ -175,7 +206,7 @@ public class OrbController : MonoBehaviour
         Debug.Log("Combination Loaded");
 
 #if VERSION_SNS
-        SpawnVFX(GenerateVFX());
+        CreateSpell(GenerateVFX());
 #elif VERSION_SNS_PROC
 
         VisualEffectAsset vfx = GenerateVFX();
@@ -204,6 +235,11 @@ public class OrbController : MonoBehaviour
     /// <returns></returns>
     private List<VisualEffectAsset> GenerateVFX()
     {
+        //records a count of the number of duplicate elements in a combo
+        foreach (Elements element in _currentCombo)
+        {
+            _duplicateElementCounts[(int)element]++;
+        }
 
         //Create an Entity with a correct amount (and type) of element components
         Entity entity = SnSLoadElementsSystem.LoadElement(_currentCombo);
@@ -216,14 +252,116 @@ public class OrbController : MonoBehaviour
         return SnSGenerateEffectSystem.GenerateSnS(entity); ; //returns the generated effect
     }
 
+   /* private void RecordDuplicates()
+    {
+        foreach (Elements element in _currentCombo)
+        {
+            _duplicateElementCounts[(int)element.]++;
+        }
+
+    }*/
+
+    private void CreateSpell(List<VisualEffectAsset> generatedVFXs)
+    {
+        //loads the SNS VFX and uses it to spawn a projectile used for the spell
+        GameObject projectile = CreateProjectile(generatedVFXs);
+
+        if (projectile != null)
+        {
+            ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
+            int targetCount = 1;
+            int projectileSpeed = 1;
+
+
+            if (controller != null)
+            {
+                //number of fire elements in combo states how many enemies the projectile can hit before being destroyed
+                targetCount = _duplicateElementCounts[(int)Elements.FIRE];
+                controller.Targets += targetCount;
+
+                //number of lightning elements in combo states how fast the projectile moves
+                projectileSpeed = _duplicateElementCounts[(int)Elements.LIGHTNING];
+                controller.Speed += (_projectileSpeedIncrease * projectileSpeed);
+            }
+
+
+            //Determines if a mass amount of projectiles should be spawned for an AOE attack
+            float spawnAngle, spawnRadians;
+            Vector3 newSpawnPosition = projectile.transform.position;
+            int numProjectiles = _duplicateElementCounts[(int)Elements.EARTH];
+
+
+
+            //Determines if duplicate extra projectiles need to be spawned
+            //number of duplicate water elements in combo states the number of additional projectiles to spawn
+            for (int i = 0; i < _duplicateElementCounts[(int)Elements.WATER]; i++)
+            {
+                newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
+
+                /*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
+                     projectile.transform.position.z);*/
+                GameObject childProjectile = Instantiate(projectile, newSpawnPosition, Quaternion.identity);
+
+                controller = childProjectile.GetComponent<ProjectileMovement>();
+
+                //updates modifers for the child projectiles
+                if (controller != null)
+                {
+                    controller.Targets += targetCount;
+                    controller.Speed += (_projectileSpeedIncrease * projectileSpeed);
+                }
+
+
+
+            }
+
+
+
+            //Spawn extra projectiles if the spell is becoming an AOE attack
+
+            for (int i = 0; i < numProjectiles; i++)
+            {
+                //calculates the angle of the spawn and converts it to radians
+                spawnAngle = i * (360 / numProjectiles);
+                spawnRadians = spawnAngle * Mathf.Deg2Rad;
+
+                //calculates
+                newSpawnPosition.x = transform.position.x + (_AOESpawnRadius * Mathf.Cos(spawnRadians));
+                newSpawnPosition.z = transform.position.z + (_AOESpawnRadius * Mathf.Sin(spawnRadians));
+
+                //Determines if duplicate extra projectiles need to be spawned
+                //number of duplicate water elements in combo states the number of additional projectiles to spawn
+                for (int j = 0; j < _duplicateElementCounts[(int)Elements.WATER]; j++)
+                {
+                    newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
+
+                    /*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
+                         projectile.transform.position.z);*/
+                    GameObject childProjectile = Instantiate(projectile, newSpawnPosition, Quaternion.identity);
+
+                    controller = childProjectile.GetComponent<ProjectileMovement>();
+
+                    //updates modifers for the child projectiles
+                    if (controller != null)
+                    {
+                        controller.Targets += targetCount;
+                        controller.Speed += (_projectileSpeedIncrease * projectileSpeed);
+                    }
+
+                    
+
+                }
+            }
+        }
+    }
 
     /// <summary>
     /// Spawns the particle system in-game
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    void SpawnVFX(List<VisualEffectAsset> generatedVFXs)
+    private GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
     {
-        GameObject projectile;
+        GameObject projectile = null;
 
         if (_spawnPoint != null && generatedVFXs != null)
         {
@@ -242,29 +380,6 @@ public class OrbController : MonoBehaviour
                baseVfx.visualEffectAsset = generatedVFXs[0];
            }
 
-           /* RotateToMouse mouseRotator = _turretSpawnPoint.GetComponent<RotateToMouse>();
-            Vector3 turretDirection = Vector3.zero;
-
-            if (mouseRotator != null)
-            {
-                turretDirection = mouseRotator.Direction;
-            }
-            else
-            {
-                turretDirection = (_turret.transform.position - transform.position).normalized;
-            }*/
-
-            
-            /*if (_turret != null)
-            {
-                turretDirection = (_turret.transform.position - transform.position).normalized;
-            }
-            else
-            {
-                Debug.LogError("ERROR: Turret reference is null. Defaulting to the orb's forward vector");
-                turretDirection = new Vector3(1, 0, 0);
-            }*/
-           
             //rotate the projectile to face the turret facing direction
             projectile.transform.rotation = Quaternion.LookRotation(transform.forward);
             
@@ -294,28 +409,9 @@ public class OrbController : MonoBehaviour
                 }
             }
 
-           /* foreach (VisualEffectAsset asset in generatedVFXs)
-            {
-                //creates a vfx component for each asset so they can all be spawned
-                vfxComponent = gameObject.AddComponent<VisualEffect>();
-                vfxComponent.visualEffectAsset = asset;
-            }*/
-
-            /*VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
-
-            if (baseVfx == null)
-            {
-                Debug.LogError("WARNING! Failed to find Visual Effect Component");
-            }
-            else
-            {
-                //Adds the particle system to the loaded projectile prefab
-                baseVfx.visualEffectAsset = vfxToSpawn;
-            }*/
-   
-
-
         }
+
+        return projectile;
     }
 
 #endif

@@ -8,10 +8,15 @@ public class ProjectileMovement : MonoBehaviour
     [SerializeField]
     private Vector3 _direction = Vector3.forward;
 
-    public Vector3 Direction { get { return _direction; } set { _direction = value; } }
+    
 
     private bool _destroyProjectile = false;
+    private int _targets = 1;
 
+    public Vector3 Direction { get { return _direction; } set { _direction = value; } }
+    public int Targets { get { return _targets; } set { _targets = value; } }
+
+    public float Speed { get { return _projectileSpeed; } set { _projectileSpeed = value; } }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
