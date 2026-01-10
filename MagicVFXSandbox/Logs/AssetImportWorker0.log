@@ -15,7 +15,7 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55671
+56406
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,18 +59,18 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23232]  Target information:
+Player connection [27980]  Target information:
 
-Player connection [23232]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 1280263395 [EditorId] 1280263395 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [27980]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 720150483 [EditorId] 720150483 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [23232]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 1280263395 [EditorId] 1280263395 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [27980]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 720150483 [EditorId] 720150483 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [23232] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [23232] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [27980] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [27980] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 494.81 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.19f1 (302b264628f9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Resources/UnitySubsystems
@@ -86,44 +86,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.352673 seconds.
-- Loaded All Assemblies, in  1.594 seconds
+Registered in 0.004484 seconds.
+- Loaded All Assemblies, in  0.576 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.536 seconds
-Domain Reload Profiling: 2130ms
-	BeginReloadAssembly (536ms)
+- Finished resetting the current domain, in  0.391 seconds
+Domain Reload Profiling: 966ms
+	BeginReloadAssembly (271ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (320ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (511ms)
-	LoadAllAssembliesAndSetupDomain (212ms)
-		LoadAssemblies (524ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (177ms)
+		LoadAssemblies (264ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (207ms)
-			TypeCache.Refresh (205ms)
-				TypeCache.ScanAssembly (180ms)
+		AnalyzeDomain (174ms)
+			TypeCache.Refresh (172ms)
+				TypeCache.ScanAssembly (156ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (537ms)
+	FinalizeReload (392ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (465ms)
+		SetupLoadedEditorAssemblies (336ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (33ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (10ms)
-			ProcessInitializeOnLoadAttributes (282ms)
-			ProcessInitializeOnLoadMethodAttributes (129ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (8ms)
+			ProcessInitializeOnLoadAttributes (219ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -134,595 +134,235 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.437 seconds
+- Loaded All Assemblies, in  1.987 seconds
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 3.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.16 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 542ms
+TypeManager.Initialize took: 441ms
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.156 seconds
-Domain Reload Profiling: 4577ms
-	BeginReloadAssembly (953ms)
+- Finished resetting the current domain, in  2.005 seconds
+Domain Reload Profiling: 3985ms
+	BeginReloadAssembly (831ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (57ms)
-	RebuildCommonClasses (49ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (1342ms)
-		LoadAssemblies (866ms)
+		CreateAndSetChildDomain (50ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (1052ms)
+		LoadAssemblies (666ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (648ms)
-			TypeCache.Refresh (497ms)
-				TypeCache.ScanAssembly (460ms)
-			BuildScriptInfoCaches (132ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (2157ms)
+		AnalyzeDomain (517ms)
+			TypeCache.Refresh (377ms)
+				TypeCache.ScanAssembly (352ms)
+			BuildScriptInfoCaches (124ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (2006ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1681ms)
+		SetupLoadedEditorAssemblies (1504ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (278ms)
-			ProcessInitializeOnLoadAttributes (1144ms)
-			ProcessInitializeOnLoadMethodAttributes (238ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (255ms)
+			ProcessInitializeOnLoadAttributes (1051ms)
+			ProcessInitializeOnLoadMethodAttributes (178ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 18.57 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.25 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 223 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8616 unused Assets / (4.4 MB). Loaded Objects now: 9395.
-Memory consumption went from 206.3 MB to 201.9 MB.
-Total: 40.412800 ms (FindLiveObjects: 2.993000 ms CreateObjectMapping: 3.011700 ms MarkObjects: 24.365500 ms  DeleteObjects: 10.036900 ms)
+Unloading 234 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8614 unused Assets / (5.9 MB). Loaded Objects now: 9410.
+Memory consumption went from 214.3 MB to 208.4 MB.
+Total: 26.477800 ms (FindLiveObjects: 2.580800 ms CreateObjectMapping: 3.004200 ms MarkObjects: 15.054200 ms  DeleteObjects: 5.833900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 273320.271893 seconds.
-  path: Assets/Prefabs/Projectile_Child.prefab
-  artifactKey: Guid(6e610b2b8266f9c4286c0c08e73a76d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile_Child.prefab using Guid(6e610b2b8266f9c4286c0c08e73a76d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '55d1289f2d5000e2493272d2c0ef6211') in 1.2487542 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '7c8e3f98b37baf3590a0b31e57270900') in 0.0299909 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 69.414344 seconds.
-  path: Assets/InputSystem_Actions.inputactions
-  artifactKey: Guid(052faaac586de48259a63d0c4782560b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InputSystem_Actions.inputactions using Guid(052faaac586de48259a63d0c4782560b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '3e5011cb26f9eb54b9226ae0b4754709') in 0.0110952 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.497274 seconds.
-  path: Assets/Systems
-  artifactKey: Guid(9ed4f2be6881b0a4a9bcc8e7a3669640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems using Guid(9ed4f2be6881b0a4a9bcc8e7a3669640) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '64be376062e0db2a7b126b6870f5bd28') in 0.0011642 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.693462 seconds.
-  path: Assets/Systems/Base_Head_Earth.vfx
-  artifactKey: Guid(39a3e6bf37ec5ee4bb21bec215c27c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Earth.vfx using Guid(39a3e6bf37ec5ee4bb21bec215c27c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '66a72fe902b7fd49fb207575bff6fe60') in 0.2639601 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 72.366542 seconds.
-  path: Assets/Systems/Base_Head_Water 1.vfx
-  artifactKey: Guid(7e75843fe9cb8f24e869385fc4557dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water 1.vfx using Guid(7e75843fe9cb8f24e869385fc4557dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '12a799eec0a3d93115535dad7ddf307a') in 0.0050103 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.359980 seconds.
-  path: Assets/Systems/Base_Head_Fire.vfx
-  artifactKey: Guid(7112376b7edd5204891bf7318044a415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Fire.vfx using Guid(7112376b7edd5204891bf7318044a415) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aab55f077e4b034b1f29403c2041526d') in 0.1947303 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.008623 seconds.
+  Time since last request: 525846.020285 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '9e4b6643c84fc6bbd7b73a038afe87bf') in 0.0038661 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e00e9197f307ff58f859bfc8206640c6') in 0.087873 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.295255 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(00e7839096a13124ea03c4ff6686a433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '7c95f509a30cca338a781adaf78ec949') in 0.003906 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.067405 seconds.
+  Time since last request: 66.661019 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '15477370b6aaa5a86721932a7e48a5b8') in 0.004643 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '64060c83111fbbe79ca288d3a6a44292') in 0.022945 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 75.649560 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0f4121ad7c582d0fd73c37b4578e5922') in 0.0367986 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.244768 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '54bcb9efe0e25243f05155b49d5a02ec') in 0.0108322 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 1103.815317 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '76689403337729130a51d7daf301021d') in 0.0509871 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.610060 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '856c2b71f8e1b4683f5dacc5a4f6bca3') in 0.0198831 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.463869 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a5196bd7a8f0470512c3b3d09d3c5508') in 0.0185546 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.010135 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'b8f373c4adbe317822fb8f13bbf01f09') in 0.025201 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.960448 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '3ab82e08687a1872a2ba3d0a6eb7d423') in 0.0199805 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.266484 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ebf177d04912407015f9f2f070bb3e39') in 0.0210082 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 67.552820 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6d7922a9b9a346e9eab726d42704376b') in 0.0181012 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.890095 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '7a4ce51ef341d11daaf24a135cc8d9ed') in 0.0176111 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.512594 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '45e9385803aa552922e3eb23f3649c18') in 0.0190832 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.956643 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd73e2725a5c7508a76775dce7a92b32b') in 0.0379697 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.787126 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'fafbd7f21b97a30a25052fec8f78b605') in 0.0207279 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 251.519142 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '03cf871e3a123ea9451b9a9d9341a631') in 0.0200729 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 84.711349 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'e1be694d4a5d02ebcc92eca704cf7b90') in 0.0266892 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.919514 seconds.
+  Time since last request: 10.285644 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '9fd7a04c199448aa98e6912bcc43dfea') in 0.0153099 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '64de515a01dc0ebcd0cb37d31d60e3e2') in 0.0183611 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 23.905302 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '927d477bc54aa38a5960fa2bf744f42d') in 0.0249106 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.574066 seconds.
+  Time since last request: 2.387202 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '1e07121b5be6fb296ad7bef07326b68b') in 0.0114053 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '84936c060876667193e4eb3f56c15bd8') in 0.0174809 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 52.018988 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '840dc1cce9b75c4fd2008a91c65c07d1') in 0.0274339 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.033357 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'df54893d0174c1d1789b25cee0978173') in 0.0291467 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.531444 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '7af4208a3b582b7c853238d473117e7d') in 0.0254108 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.367334 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6b2a926df193cd75d1bddfe6406cc56b') in 0.0296715 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.831396 seconds.
+  Time since last request: 213.135843 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '739f24e1e84beea5919414138b6e7425') in 0.0161151 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '074733f1031a2d0a6139c62753df0ba3') in 0.0193867 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.377815 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd0d6b896805b2e98f666559be6a38605') in 0.0228877 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.089708 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '90ae3d3620f534146e3af097a97f7398') in 0.024291 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 219.898728 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '120431bf395b35658cad2ffa897d7ac2') in 0.0223664 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.666428 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '2de67a0da98ffae106247217da11480e') in 0.0339684 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 143.821868 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '71efe28c6ea8d99477a7075eb13d6d31') in 0.0264346 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.527640 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '35ca03dd278a1a2ea4724a31d4a384ba') in 0.027512 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 198.158540 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '3f8b9a0e2983d8875e2c607c3f9dc1a4') in 0.0271814 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.432473 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '14e1971a8a6d8318d113324655ba4f2e') in 0.0303246 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.194265 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a968c347e18aaf73cac1b451331868f8') in 0.0239876 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.621073 seconds.
+  Time since last request: 25.805122 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'defe39df113734d92becc217e57c7957') in 0.0150245 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '102d22e1e13f3880d33ab4e63559befa') in 0.0136664 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.963235 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '503c69126fda815a98a29bc1bde98bfc') in 0.0216402 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.628972 seconds.
+  Time since last request: 3.022862 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd98d2b44c7dc25ef8f93b3078db62eb5') in 0.0119938 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a27456b2fad14a7f6eda8fbbaab257a8') in 0.0128393 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.725568 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '4018485837df480ae7d32a1aac226a0e') in 0.0258596 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.936069 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'b12ea067e8b8a14607dfcb8ee44ed243') in 0.0187568 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.040471 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '7a85ce32f857e6fa5be5375e1193b1fa') in 0.0236136 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.553944 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '34745e96c232d9fc7a4aabfc41158ac4') in 0.0245413 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.584405 seconds.
-  path: Assets/Prefabs/Projectile.prefab
-  artifactKey: Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Projectile.prefab using Guid(4b83055f52d8ca54ea0170a261c431aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '383637478e65b506374e1753494fc252') in 0.0233823 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.295608 seconds.
+  Time since last request: 97.304459 seconds.
   path: Assets/Systems/Base_Head_Lightning.vfx
-  artifactKey: Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(79e1e70403c5d2543ba49f171c959eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '8d53e04bf9f51ea8133cd348e46c0ce1') in 0.0143339 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a08499727253de74b37dffce36280c97') in 0.0197419 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 31.254762 seconds.
-  path: Assets/Icons/EarthStone.png
-  artifactKey: Guid(a8c95f8614f72c8438627a06f53ecf90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Icons/EarthStone.png using Guid(a8c95f8614f72c8438627a06f53ecf90) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'cfcaaee11f61ca7d5e2a60f8c018b905') in 0.1420437 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 64.831891 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '290d79e8b25fe67d41f0b4a90c629392') in 0.0206343 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Icons/thunder_icon64.png
-  artifactKey: Guid(6ddebe863ace4bc4fa73d88821f12cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Icons/thunder_icon64.png using Guid(6ddebe863ace4bc4fa73d88821f12cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '81ef21b0331f32983acf97a651937842') in 0.0491117 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 39.398821 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7ac2b27148373a65d2314766c19ae658') in 0.0194983 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Icons/FireStone.png
-  artifactKey: Guid(18084c8caddb24d418eb1b3923663b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Icons/FireStone.png using Guid(18084c8caddb24d418eb1b3923663b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '2797dde916785d9aad061312b6aa056a') in 0.0467836 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 2.173479 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7b19c1b3f4d402111aaf95237d7c9ac6') in 0.0257578 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Icons/Non-Elemental Stone.png
-  artifactKey: Guid(807619cb023d5e74b82852b2b073693d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Icons/Non-Elemental Stone.png using Guid(807619cb023d5e74b82852b2b073693d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '79e78d487003543ddd200a689aa6095f') in 0.0473525 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 14.041262 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '11975c6256f239f8f259d1930e9a07db') in 0.0214917 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========================================================================
+Received Import Request.
+  Time since last request: 32.194790 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'eddc8e024977f54f93a83e8c0969ac61') in 0.0185483 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.403320 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '8b8110b76de491306227c7e597d9348b') in 0.0337107 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.033308 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b96b97e8129eb15b28a92532135f57a9') in 0.0301157 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.200032 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '99f63d51019072b9bef135baec63a183') in 0.023969 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.623324 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '94a023b2c42d53fe957fcbcf3f5442e7') in 0.0311022 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 329.438875 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '308fd841179f46dc304c137b38918abc') in 0.0552007 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.369275 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b425cf23d01c9e8b9149274618e01be3') in 0.0454424 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.830629 seconds.
+  path: Assets/Systems/Base_Head_Lightning.vfx
+  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Lightning.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'c530ab38e44522e27b2ba4d88a5e451c') in 0.0711122 seconds
+Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 19
+
