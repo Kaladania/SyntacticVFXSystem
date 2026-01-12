@@ -15,7 +15,7 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-53118
+53828
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,18 +59,18 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [31240]  Target information:
+Player connection [12352]  Target information:
 
-Player connection [31240]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 762189354 [EditorId] 762189354 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [12352]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 2012952850 [EditorId] 2012952850 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [31240]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 762189354 [EditorId] 762189354 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [12352]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 2012952850 [EditorId] 2012952850 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [31240] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [31240] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12352] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [12352] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 6.50 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 5.90 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.19f1 (302b264628f9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Resources/UnitySubsystems
@@ -86,44 +86,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56212
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005402 seconds.
-- Loaded All Assemblies, in  0.733 seconds
+Registered in 0.003269 seconds.
+- Loaded All Assemblies, in  0.527 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.576 seconds
-Domain Reload Profiling: 1305ms
-	BeginReloadAssembly (263ms)
+- Finished resetting the current domain, in  0.415 seconds
+Domain Reload Profiling: 938ms
+	BeginReloadAssembly (204ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (66ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (91ms)
-	LoadAllAssembliesAndSetupDomain (292ms)
-		LoadAssemblies (258ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (192ms)
+		LoadAssemblies (202ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (287ms)
-			TypeCache.Refresh (285ms)
-				TypeCache.ScanAssembly (263ms)
+		AnalyzeDomain (187ms)
+			TypeCache.Refresh (185ms)
+				TypeCache.ScanAssembly (167ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (577ms)
+	FinalizeReload (415ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (495ms)
+		SetupLoadedEditorAssemblies (349ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (20ms)
-			ProcessInitializeOnLoadAttributes (328ms)
-			ProcessInitializeOnLoadMethodAttributes (99ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (8ms)
+			ProcessInitializeOnLoadAttributes (229ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -134,96 +134,55 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.460 seconds
+- Loaded All Assemblies, in  2.014 seconds
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.75 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 1253ms
+TypeManager.Initialize took: 518ms
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.287 seconds
-Domain Reload Profiling: 5742ms
-	BeginReloadAssembly (985ms)
+- Finished resetting the current domain, in  3.689 seconds
+Domain Reload Profiling: 5699ms
+	BeginReloadAssembly (842ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (70ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (1331ms)
-		LoadAssemblies (895ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (1059ms)
+		LoadAssemblies (710ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (607ms)
-			TypeCache.Refresh (441ms)
-				TypeCache.ScanAssembly (398ms)
-			BuildScriptInfoCaches (147ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (3288ms)
+		AnalyzeDomain (479ms)
+			TypeCache.Refresh (324ms)
+				TypeCache.ScanAssembly (298ms)
+			BuildScriptInfoCaches (129ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (3690ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2706ms)
+		SetupLoadedEditorAssemblies (3118ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (279ms)
-			ProcessInitializeOnLoadAttributes (2063ms)
-			ProcessInitializeOnLoadMethodAttributes (343ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (245ms)
+			ProcessInitializeOnLoadAttributes (2556ms)
+			ProcessInitializeOnLoadMethodAttributes (294ms)
+			AfterProcessingInitializeOnLoad (14ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 2.34 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 6.35 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 236 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8614 unused Assets / (6.7 MB). Loaded Objects now: 9418.
-Memory consumption went from 218.9 MB to 212.2 MB.
-Total: 39.404100 ms (FindLiveObjects: 3.904000 ms CreateObjectMapping: 4.420000 ms MarkObjects: 20.777000 ms  DeleteObjects: 10.295600 ms)
+Unloading 240 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8614 unused Assets / (6.4 MB). Loaded Objects now: 9421.
+Memory consumption went from 218.9 MB to 212.5 MB.
+Total: 44.181100 ms (FindLiveObjects: 3.393700 ms CreateObjectMapping: 11.030700 ms MarkObjects: 20.107300 ms  DeleteObjects: 9.645000 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 594965.290336 seconds.
-  path: Assets/Systems/Base_Head_Earth.vfx
-  artifactKey: Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Earth.vfx using Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd666e14b6401babc9cf53e4492c4a4fb') in 0.102146 seconds
-Number of updated asset objects reloaded before import = 5Number of asset objects unloaded after import = 19
-
-========================================================================
-Received Import Request.
-  Time since last request: 1260.061639 seconds.
-  path: Assets/Shaders/S_Earth.shadergraph
-  artifactKey: Guid(36eb26282851ffe4ca8be8b956659a09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/S_Earth.shadergraph using Guid(36eb26282851ffe4ca8be8b956659a09) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'e4314fde74db34ee7431e6e966422e8f') in 10.6093353 seconds
-Number of updated asset objects reloaded before import = 6Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 4559.114141 seconds.
-  path: Packages/com.unity.visualeffectgraph/Shaders/UpdateStrips.compute
-  artifactKey: Guid(8fa6c4009fe2a4d4486c62736fc30ad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.visualeffectgraph/Shaders/UpdateStrips.compute using Guid(8fa6c4009fe2a4d4486c62736fc30ad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c88424f19f5f85fca652b2b99dfab32d') in 0.2050659 seconds
-Number of updated asset objects reloaded before import = 5Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005431 seconds.
-  path: Packages/com.unity.visualeffectgraph/Shaders/VFXParticleStripCommon.hlsl
-  artifactKey: Guid(04a2e61b1178ef3478b6e9bb0bcef3d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.visualeffectgraph/Shaders/VFXParticleStripCommon.hlsl using Guid(04a2e61b1178ef3478b6e9bb0bcef3d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '392028ce6b3f703ed3d86b7bb6320fe2') in 0.076601 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
