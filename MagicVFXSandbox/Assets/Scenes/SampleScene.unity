@@ -995,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 958246751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.76, y: 1, z: 0}
+  m_LocalPosition: {x: -3.37, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1897,7 +1897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2134432538
 Transform:
   m_ObjectHideFlags: 0
@@ -1921,7 +1921,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134432537}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1964,7 +1964,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134432537}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 8107762f6fe9d604481b6cb445d1537e, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: d8809aa50b000f74ea0859e8fc0d89ee, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
