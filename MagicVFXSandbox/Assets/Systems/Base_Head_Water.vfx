@@ -70,10 +70,10 @@ MonoBehaviour:
   - title: Burst
     position:
       serializedVersion: 2
-      x: 3109
+      x: 3110
       y: 347
-      width: 476
-      height: 1669
+      width: 482
+      height: 1816
     contents:
     - model: {fileID: 8926484042661615488}
       id: 0
@@ -10225,7 +10225,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 8926484042661615540}
   - {fileID: 8926484042661615547}
-  m_UIPosition: {x: 3135, y: 1403}
+  m_UIPosition: {x: 3142, y: 1510}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -10805,7 +10805,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 3134, y: 1694}
+  m_UIPosition: {x: 3136, y: 1842}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
