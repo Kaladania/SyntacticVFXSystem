@@ -28,9 +28,15 @@ namespace SnSECS
             var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
             List<VisualEffectAsset> generatedVFXs = new List<VisualEffectAsset>();
 
+            SNSFireComponent tempFireComponent;
+            SNSWaterComponet tempWaterComponent;
+            SNSLightningComponet tempLightningComponent;
+            SNSEarthComponet tempEarthComponent;
+
             //grabs an array full of the type of components attached to the entity
             NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
 
+            //Adds the specified asset to the list of assets to spawn
             //Starts at 1 because Unity automatically stores a 'simulate' flag at index 0
             for (int i = 1; i < elementArray.Length; i++)
             {
@@ -38,67 +44,113 @@ namespace SnSECS
                 //loads the correct VFX and alter's it's state depending on the component type at the current index
                 if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSFireComponent>())
                 {
-                    if (i == 1)
-                    {
-                        //Adds the specified asset to the list of assets to spawn
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
-                    }
-                    else
-                    {
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._trail);
-                        //TODO: TYPE-EXTRA stuff
-                    }
+                    tempFireComponent = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity);
 
-                    generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._ambience);
+                    foreach (ElementType element in tempFireComponent._types)
+                    {
+                        switch (element)
+                        {
+                            case ElementType.BASE:
+
+                                
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._ambience);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
 
                 }
                 else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())
                 {
-                    if (i == 1)
+                    tempWaterComponent = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity);
+
+                    foreach (ElementType element in tempWaterComponent._types)
                     {
-                        
-                        //Adds the specified asset to the list of assets to spawn
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
-                    }
-                    else
-                    {
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._trail);
-                        //TODO: TYPE-EXTRA stuff
+                        switch (element)
+                        {
+                            case ElementType.BASE:
+
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._ambience);
+                                break;
+                            default:
+                                break;
+                        }
                     }
 
-                    generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._ambience);
                 }
                 else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSEarthComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
                 {
-                    if (i == 1)
-                    {
+                    tempEarthComponent = entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity);
 
-                        //Adds the specified asset to the list of assets to spawn
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._head);
-                    }
-                    else
+                    foreach (ElementType element in tempEarthComponent._types)
                     {
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._trail);
-                        //TODO: TYPE-EXTRA stuff
-                    }
+                        switch (element)
+                        {
+                            case ElementType.BASE:
 
-                    generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._ambience);
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._ambience);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
                 }
                 else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSLightningComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
                 {
-                    if (i == 1)
-                    {
+                    tempLightningComponent = entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity);
 
-                        //Adds the specified asset to the list of assets to spawn
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._head);
-                    }
-                    else
+                    foreach (ElementType element in tempLightningComponent._types)
                     {
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._trail);
-                        //TODO: TYPE-EXTRA stuff
-                    }
+                        switch (element)
+                        {
+                            case ElementType.BASE:
 
-                    generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._ambience);
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._ambience);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
                 }
 
                 /// IF COMPONENT TYPE IS FOUND, SPAWN THE SYSTEM ATTACHED [CURRENT PLAN IS TO USE A VISUAL EFFECT COMPONENT FOR EACH ELEMENT]

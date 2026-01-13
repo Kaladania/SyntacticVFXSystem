@@ -14,7 +14,7 @@ namespace SnSECS
     public struct SNSWaterComponet : ISharedComponentData, IEquatable<SNSWaterComponet>
     {
 
-        public ElementType _type; //type of element
+        public List<ElementType> _types; //type of element
         public VisualEffectAsset _head; //element projectile head
         public VisualEffectAsset _trail; //element projectile trail
         public VisualEffectAsset _ambience; //element projectile ambience
@@ -53,7 +53,9 @@ namespace SnSECS
                     break;
             }*/
 
-            _type = elementType;
+            _types = new List<ElementType>();
+            _types.Add(elementType);
+
             _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
             _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Water.vfx", typeof(VisualEffectAsset));
             _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Ambience_Water.vfx", typeof(VisualEffectAsset));
@@ -71,7 +73,7 @@ namespace SnSECS
 
         public bool Equals(SNSWaterComponet other)
         {
-            return _type == other._type &&
+            return _types == other._types &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_head, other._head) &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_trail, other._trail) &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_ambience, other._ambience);
@@ -79,7 +81,7 @@ namespace SnSECS
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(_type, _head, _trail, _ambience);
+            return HashCode.Combine(_types, _head, _trail, _ambience);
         }
 
         public static bool operator ==(SNSWaterComponet left, SNSWaterComponet right)

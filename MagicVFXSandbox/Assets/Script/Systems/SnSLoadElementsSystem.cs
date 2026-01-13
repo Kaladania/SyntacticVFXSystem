@@ -68,7 +68,7 @@ namespace SnSECS
                     }
 
                 }
-                else
+                else if (1 < i && i < 3)
                 {
                     switch (elements[i])
                     {
@@ -87,6 +87,32 @@ namespace SnSECS
                         case Elements.NONE:
 
                             entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
+                            Debug.LogError("Extra Element Enum = \"NONE\" when trying to load entity components from combo. \nDefaulted to Fire Elemnent");
+
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (elements[i])
+                    {
+                        case Elements.FIRE:
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.AMBIENCE));
+                            break;
+                        case Elements.EARTH:
+                            entityManager.AddSharedComponentManaged(entity, new SNSEarthComponet(ElementType.AMBIENCE));
+                            break;
+                        case Elements.WATER:
+                            entityManager.AddSharedComponentManaged(entity, new SNSWaterComponet(ElementType.AMBIENCE));
+                            break;
+                        case Elements.LIGHTNING:
+                            entityManager.AddSharedComponentManaged(entity, new SNSLightningComponet(ElementType.AMBIENCE));
+                            break;
+                        case Elements.NONE:
+
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.AMBIENCE));
                             Debug.LogError("Extra Element Enum = \"NONE\" when trying to load entity components from combo. \nDefaulted to Fire Elemnent");
 
                             break;
