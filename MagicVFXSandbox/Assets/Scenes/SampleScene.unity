@@ -914,7 +914,7 @@ VFXRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958246751}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -956,7 +956,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958246751}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 7a880d6a05a28344a81011669fb02ab9, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 93eb5b808b3e545429a137b99c44d8b2, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -995,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 958246751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1, y: 1, z: 0}
+  m_LocalPosition: {x: -2.24, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1425,7 +1425,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470352292}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 77e8b1987d6fba8408df343e1333b564, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: a6454e4084c659e40955f4e25b1078a0, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -1964,7 +1964,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134432537}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: d8809aa50b000f74ea0859e8fc0d89ee, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: f020f808e2bce16488e0d5f838377987, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
