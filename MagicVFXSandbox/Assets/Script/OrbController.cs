@@ -375,7 +375,7 @@ public class OrbController : MonoBehaviour
     }
 
     /// <summary>
-    /// Spawns the particle system in-game
+    /// Combines the list of VFX systems to create a PCG VFX
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
     private GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)

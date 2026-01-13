@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Threading;
 using Unity.Entities;
 using UnityEditor;
 using UnityEngine;
@@ -12,50 +11,52 @@ namespace SnSECS
     /// <summary>
     /// Holds the visual effect paramters for a given element
     /// </summary>
-    public struct SNSFireComponent : ISharedComponentData, IEquatable<SNSFireComponent>
+    public struct SNSLightningComponet : ISharedComponentData, IEquatable<SNSLightningComponet>
     {
 
         public ElementType _type; //type of element
         public VisualEffectAsset _head; //element projectile head
         public VisualEffectAsset _trail; //element projectile trail
         public VisualEffectAsset _ambience; //element projectile ambience
-        public float _density; //density of the effect
+
         public float _scale; //the size of the effect
         public float _speed; //speed of the effect
+        public float _density; //density of the effect
         public Color _colour; //effect colour
 
         /// <summary>
         /// Constructs the component with it's default values
         /// </summary>
         /// <param name="elementType"></param>
-        public SNSFireComponent(ElementType elementType)
+        public SNSLightningComponet(ElementType elementType)
         {
             /*switch (elementType)
             {
                 case ElementType.BASE:
 
                     _type = elementType;
-                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
-                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
                     break;
                 case ElementType.EXTRA:
 
                     _type = elementType;
-                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
-                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
                     break;
                 default:
                     //defaults to spawning the 'EXTRA' VFXs
                     _type = elementType;
-                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
-                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
+                    _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+                    _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+
                     break;
             }*/
 
             _type = elementType;
-            _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
-            _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Fire.vfx", typeof(VisualEffectAsset));
-            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Ambience_Fire.vfx", typeof(VisualEffectAsset));
+            _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Lightning.vfx", typeof(VisualEffectAsset));
+            _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Lightning.vfx", typeof(VisualEffectAsset));
+            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Ambience_Lightning.vfx", typeof(VisualEffectAsset));
 
             _scale = 1;
             _speed = 1;
@@ -65,10 +66,10 @@ namespace SnSECS
 
         public override bool Equals(object obj)
         {
-            return obj is SNSFireComponent component && Equals(component);
+            return obj is SNSLightningComponet componet && Equals(componet);
         }
 
-        public bool Equals(SNSFireComponent other)
+        public bool Equals(SNSLightningComponet other)
         {
             return _type == other._type &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_head, other._head) &&
@@ -81,15 +82,14 @@ namespace SnSECS
             return HashCode.Combine(_type, _head, _trail, _ambience);
         }
 
-        public static bool operator ==(SNSFireComponent left, SNSFireComponent right)
+        public static bool operator ==(SNSLightningComponet left, SNSLightningComponet right)
         {
             return left.Equals(right);
         }
 
-        public static bool operator !=(SNSFireComponent left, SNSFireComponent right)
+        public static bool operator !=(SNSLightningComponet left, SNSLightningComponet right)
         {
             return !(left == right);
         }
     }
 }
-

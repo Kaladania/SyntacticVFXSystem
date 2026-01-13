@@ -294,3 +294,635 @@ Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e409
  -> (artifact id: '946db361f06612511d24678d7cc38a0b') in 0.0251788 seconds
 Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
+========================================================================
+Received Import Request.
+  Time since last request: 179.189698 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e9fe78e0efa4116784bb98815ae7fba9') in 0.0356921 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.038262 seconds.
+  path: Assets/Systems/Base_Ambient_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambient_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'd70466de0cf4e065ad230501536fa5b0') in 0.0159388 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.675663 seconds.
+  path: Assets/Systems/Base_Ambiennce_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambiennce_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a064310bd89c66cc8345922f3a7aa2af') in 0.0102657 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.072159 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '2a22a958895ed2aee29dd2b3c1866539') in 0.009233 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.580620 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '709b60db0aeaee9f00123c6272f976c4') in 0.0085522 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.642919 seconds.
+  path: Assets/Systems/Base_Ambience_Fire.vfx
+  artifactKey: Guid(70d61461b180c0146a7fec91aad9fff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Fire.vfx using Guid(70d61461b180c0146a7fec91aad9fff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '91dc0a114f9514bfa882805b9c2dc42d') in 0.0088644 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.002171 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '2e2f010b24e0168ab6d1c8f22ccad347') in 0.0018376 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.118175 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'df45a63e3342d63d9ef4fc318426d5d1') in 0.0160667 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 241.961762 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '72f2cc6aef53d6d6ff9520257d62bfec') in 0.0272916 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 313.116871 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '6ccba2608233cc2c81b9737d23a42b7b') in 0.0463475 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.421553 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'cb90ada9fbe2ec919135a897b17c959e') in 0.0222635 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.373549 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4fa291cf1781ee7132b4af0bf2e06d22') in 0.0331191 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.932778 seconds.
+  path: Assets/Systems/Base_Ambience_Earth.vfx
+  artifactKey: Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Ambience_Earth.vfx using Guid(f020f808e2bce16488e0d5f838377987) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '073fc06c4d1b73ac5a5833b3af2fb5d8') in 0.0210605 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 607.540966 seconds.
+  path: Assets/Systems/Base_Head_Earth.vfx
+  artifactKey: Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Earth.vfx using Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4c217e62af5c436736501032cd3355d4') in 0.2456714 seconds
+Number of updated asset objects reloaded before import = 5Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 65.847307 seconds.
+  path: Assets/Systems/Base_Head_Earth.vfx
+  artifactKey: Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Earth.vfx using Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '6f767b48455e79f2f76b003f48ddaf49') in 0.0668597 seconds
+Number of updated asset objects reloaded before import = 5Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.587811 seconds.
+  path: Assets/Systems/Base_Head_Earth.vfx
+  artifactKey: Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Earth.vfx using Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'ddb5375bb7773f8992630012982be94e') in 0.0535331 seconds
+Number of updated asset objects reloaded before import = 5Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.597383 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '25c17d9183ca5bde4dad87a9bd2866e7') in 0.0636301 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 747.653740 seconds.
+  path: Assets/Systems/Base_Head_Earth.vfx
+  artifactKey: Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Head_Earth.vfx using Guid(93eb5b808b3e545429a137b99c44d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'cae0451ce19ffc6dcce46a39c73d68da') in 0.1097009 seconds
+Number of updated asset objects reloaded before import = 7Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 53005.197884 seconds.
+  path: Assets/Script/Systems
+  artifactKey: Guid(f5ff9842b010ba045a22363573ff6871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Systems using Guid(f5ff9842b010ba045a22363573ff6871) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4f34dca74fab537cd4e1e27272154187') in 0.0361329 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.592067 seconds.
+  path: Assets/Script/Components
+  artifactKey: Guid(d8ed8772c2170ea4fba801eb779471db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components using Guid(d8ed8772c2170ea4fba801eb779471db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '775633d3b53ce352b11679c612dda098') in 0.0073048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.188524 seconds.
+  path: Assets/Script/Components/SNSEffectComponent.cs
+  artifactKey: Guid(2a90567ce279db14d9d39b45d4f52c52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSEffectComponent.cs using Guid(2a90567ce279db14d9d39b45d4f52c52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'cad1c94faa4f00e29b28c26d67761983') in 0.0079037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.549282 seconds.
+  path: Assets/Script/Components/SNSElementComponent.cs
+  artifactKey: Guid(b0442efb75b5db34ebc873d53e84ec97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSElementComponent.cs using Guid(b0442efb75b5db34ebc873d53e84ec97) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'aa3b89bda33f81e682675c2b90c66ae5') in 0.3318899 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.310189 seconds.
+  path: Assets/Script/Components/SNSWaterComponent.cs
+  artifactKey: Guid(d1b6dce30d0a21140b055699e7dbf050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSWaterComponent.cs using Guid(d1b6dce30d0a21140b055699e7dbf050) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'fa1a4c3c94e3a6d6c89b1b80823e215d') in 0.0424037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.117017 seconds.
+  path: Assets/Script/Components/SNSFireComponent.cs
+  artifactKey: Guid(485119b710775ac4a8581e502138bd00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSFireComponent.cs using Guid(485119b710775ac4a8581e502138bd00) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e05a0757b2e44bf69dd4cc91334dde7f') in 0.0042705 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.43 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8603 unused Assets / (5.8 MB). Loaded Objects now: 9424.
+Memory consumption went from 181.7 MB to 175.8 MB.
+Total: 856.502300 ms (FindLiveObjects: 6.500200 ms CreateObjectMapping: 2.674200 ms MarkObjects: 837.367200 ms  DeleteObjects: 9.810800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 22.125110 seconds.
+  path: Assets/Script/Components/SNSWaterComponent1.cs
+  artifactKey: Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSWaterComponent1.cs using Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e5b16654131bc7eedbda2a67eb4a0981') in 0.3504159 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.01 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8604 unused Assets / (6.7 MB). Loaded Objects now: 9425.
+Memory consumption went from 181.7 MB to 175.0 MB.
+Total: 34.652600 ms (FindLiveObjects: 2.712600 ms CreateObjectMapping: 3.260500 ms MarkObjects: 18.263000 ms  DeleteObjects: 10.414100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.815928 seconds.
+  path: Assets/Script/Components/SNSWaterComponent2.cs
+  artifactKey: Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSWaterComponent2.cs using Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e162bb98b9b3b374f0773fb741b55d12') in 0.0143391 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.27 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8604 unused Assets / (6.0 MB). Loaded Objects now: 9425.
+Memory consumption went from 181.7 MB to 175.6 MB.
+Total: 30.382800 ms (FindLiveObjects: 2.407600 ms CreateObjectMapping: 2.516100 ms MarkObjects: 17.056600 ms  DeleteObjects: 8.399400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 68.511746 seconds.
+  path: Assets/Script/Components/SNSEarthComponent.cs
+  artifactKey: Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSEarthComponent.cs using Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'dea22d408cdc34e5c06d5da371b5a0e2') in 0.0182519 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8604 unused Assets / (5.7 MB). Loaded Objects now: 9425.
+Memory consumption went from 181.7 MB to 175.9 MB.
+Total: 28.081000 ms (FindLiveObjects: 2.147000 ms CreateObjectMapping: 2.587400 ms MarkObjects: 16.550300 ms  DeleteObjects: 6.792900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 19.721686 seconds.
+  path: Assets/Script/Components/SNSElectricComponent.cs
+  artifactKey: Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSElectricComponent.cs using Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'fc160048d085388332dfde81f31dbb2b') in 0.0149951 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1419.291837 seconds.
+  path: Assets/Script/Systems/SnSGenerateEffectSystem.cs
+  artifactKey: Guid(d171b9d491ea11643b89b1689807ed33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Systems/SnSGenerateEffectSystem.cs using Guid(d171b9d491ea11643b89b1689807ed33) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '01987f969548d1ff2e894c599f1da1fb') in 0.1222372 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.203912 seconds.
+  path: Assets/Script/Components/SNSEarthComponent.cs
+  artifactKey: Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSEarthComponent.cs using Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'dea22d408cdc34e5c06d5da371b5a0e2') in 0.0052353 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8604 unused Assets / (5.5 MB). Loaded Objects now: 9425.
+Memory consumption went from 181.5 MB to 176.0 MB.
+Total: 182.219900 ms (FindLiveObjects: 2.457300 ms CreateObjectMapping: 1.729800 ms MarkObjects: 170.485200 ms  DeleteObjects: 7.334100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (5.7 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.8 MB.
+Total: 23.328600 ms (FindLiveObjects: 1.495500 ms CreateObjectMapping: 1.839800 ms MarkObjects: 14.005400 ms  DeleteObjects: 5.985300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 20.078812 seconds.
+  path: Assets/Script/Components/SNSLightningComponent.cs
+  artifactKey: Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSLightningComponent.cs using Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '85ad36f0bc6963fee39460f950bd66bd') in 0.1110274 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (5.8 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.7 MB.
+Total: 26.887700 ms (FindLiveObjects: 2.050100 ms CreateObjectMapping: 2.265200 ms MarkObjects: 15.159200 ms  DeleteObjects: 7.410900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 31.457847 seconds.
+  path: Assets/Script/Components/SNSLightningComponent.cs
+  artifactKey: Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSLightningComponent.cs using Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '85ad36f0bc6963fee39460f950bd66bd') in 0.0140318 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 383.090024 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'fb069ff3d050037c3799e0f22c7f3dd3') in 0.1260601 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.79 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (6.1 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.4 MB.
+Total: 131.500600 ms (FindLiveObjects: 1.962900 ms CreateObjectMapping: 1.089100 ms MarkObjects: 121.214700 ms  DeleteObjects: 7.229700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 88.295947 seconds.
+  path: Assets/Script/Components/SNSElectricComponent.cs
+  artifactKey: Guid(ccf7d7233174e524aab7893e0b11fb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSElectricComponent.cs using Guid(ccf7d7233174e524aab7893e0b11fb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4891d68fb5df90a07a59717d5e52fadd') in 0.0461368 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.674080 seconds.
+  path: Assets/Script/Components/SNSEarthComponent.cs
+  artifactKey: Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSEarthComponent.cs using Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'dea22d408cdc34e5c06d5da371b5a0e2') in 0.0010816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.70 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (5.1 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 176.4 MB.
+Total: 26.261700 ms (FindLiveObjects: 1.465600 ms CreateObjectMapping: 2.249700 ms MarkObjects: 15.314600 ms  DeleteObjects: 7.229000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.08 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (6.2 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.3 MB.
+Total: 29.896900 ms (FindLiveObjects: 3.626100 ms CreateObjectMapping: 2.616500 ms MarkObjects: 17.628600 ms  DeleteObjects: 6.023300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.31 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (5.7 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.8 MB.
+Total: 27.679900 ms (FindLiveObjects: 2.135600 ms CreateObjectMapping: 2.856600 ms MarkObjects: 15.064200 ms  DeleteObjects: 7.620800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (5.7 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.8 MB.
+Total: 29.122300 ms (FindLiveObjects: 1.583400 ms CreateObjectMapping: 1.660500 ms MarkObjects: 18.639800 ms  DeleteObjects: 7.235300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.25 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8605 unused Assets / (5.6 MB). Loaded Objects now: 9426.
+Memory consumption went from 181.5 MB to 175.9 MB.
+Total: 304.105500 ms (FindLiveObjects: 5.341200 ms CreateObjectMapping: 1.031500 ms MarkObjects: 291.295400 ms  DeleteObjects: 6.432200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1825.842498 seconds.
+  path: Assets/Script/Components/SNSEarthComponent.cs
+  artifactKey: Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSEarthComponent.cs using Guid(b07a74b29a089bc4e8fea6c5425cd735) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7bc85d2f02b22879ad21c8600ae9ec34') in 0.7245051 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.387861 seconds.
+  path: Assets/Script/Components/SNSLightningComponent.cs
+  artifactKey: Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSLightningComponent.cs using Guid(cb678e32c129a8e44a9ee4549079fabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'b47e6886b6538ba83fed691aac3fe493') in 0.0010037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.910811 seconds.
+  path: Assets/Script/Components/SNSElectricComponent.cs
+  artifactKey: Guid(ccf7d7233174e524aab7893e0b11fb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSElectricComponent.cs using Guid(ccf7d7233174e524aab7893e0b11fb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4891d68fb5df90a07a59717d5e52fadd') in 0.0013577 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.566352 seconds.
+  path: Assets/Script/Components/SNSFireComponent.cs
+  artifactKey: Guid(485119b710775ac4a8581e502138bd00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSFireComponent.cs using Guid(485119b710775ac4a8581e502138bd00) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '5e927fe557bdaad02c1e852763dcf740') in 0.0013594 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.270448 seconds.
+  path: Assets/Script/Components/SNSWaterComponent.cs
+  artifactKey: Guid(d1b6dce30d0a21140b055699e7dbf050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Components/SNSWaterComponent.cs using Guid(d1b6dce30d0a21140b055699e7dbf050) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'd374ef58193578c85f341ed58c5f1360') in 0.0011865 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.75 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8604 unused Assets / (5.2 MB). Loaded Objects now: 9425.
+Memory consumption went from 181.5 MB to 176.3 MB.
+Total: 19.133300 ms (FindLiveObjects: 1.111000 ms CreateObjectMapping: 1.313900 ms MarkObjects: 12.164300 ms  DeleteObjects: 4.541000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  5.590 seconds
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 2.12 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+TypeManager.Initialize took: 402ms
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.910 seconds
+Domain Reload Profiling: 7503ms
+	BeginReloadAssembly (1465ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (143ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (584ms)
+	RebuildCommonClasses (211ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (97ms)
+	LoadAllAssembliesAndSetupDomain (3806ms)
+		LoadAssemblies (3706ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (513ms)
+			TypeCache.Refresh (46ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (407ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1911ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1314ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (230ms)
+			ProcessInitializeOnLoadAttributes (912ms)
+			ProcessInitializeOnLoadMethodAttributes (154ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 1.39 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8617 unused Assets / (6.5 MB). Loaded Objects now: 9440.
+Memory consumption went from 196.6 MB to 190.1 MB.
+Total: 14.594500 ms (FindLiveObjects: 1.222500 ms CreateObjectMapping: 1.175300 ms MarkObjects: 7.492100 ms  DeleteObjects: 4.702600 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (5.2 MB). Loaded Objects now: 9440.
+Memory consumption went from 190.1 MB to 184.8 MB.
+Total: 10.581200 ms (FindLiveObjects: 0.638600 ms CreateObjectMapping: 0.315700 ms MarkObjects: 8.343900 ms  DeleteObjects: 1.281900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.949 seconds
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 1.13 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+TypeManager.Initialize took: 393ms
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.523 seconds
+Domain Reload Profiling: 2473ms
+	BeginReloadAssembly (255ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (95ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (611ms)
+		LoadAssemblies (424ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (289ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (260ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1524ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1172ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (186ms)
+			ProcessInitializeOnLoadAttributes (822ms)
+			ProcessInitializeOnLoadMethodAttributes (149ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8616 unused Assets / (6.7 MB). Loaded Objects now: 9443.
+Memory consumption went from 196.8 MB to 190.1 MB.
+Total: 20.018100 ms (FindLiveObjects: 1.610000 ms CreateObjectMapping: 1.993200 ms MarkObjects: 10.183000 ms  DeleteObjects: 6.230200 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (5.0 MB). Loaded Objects now: 9443.
+Memory consumption went from 190.0 MB to 185.0 MB.
+Total: 17.398000 ms (FindLiveObjects: 1.520500 ms CreateObjectMapping: 0.752500 ms MarkObjects: 11.958100 ms  DeleteObjects: 3.163600 ms)
+
+Prepare: number of updated asset objects reloaded= 2
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (2.4 MB). Loaded Objects now: 9443.
+Memory consumption went from 190.7 MB to 188.2 MB.
+Total: 321.996300 ms (FindLiveObjects: 1.627800 ms CreateObjectMapping: 0.312600 ms MarkObjects: 318.916000 ms  DeleteObjects: 1.137000 ms)
+
+Prepare: number of updated asset objects reloaded= 0

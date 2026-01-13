@@ -21,6 +21,7 @@ namespace SnSECS
 
         public float _scale; //the size of the effect
         public float _speed; //speed of the effect
+        public float _density; //density of the effect
         public Color _colour; //effect colour
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace SnSECS
         /// <param name="elementType"></param>
         public SNSWaterComponet(ElementType elementType)
         {
-            switch (elementType)
+            /*switch (elementType)
             {
                 case ElementType.BASE:
 
@@ -50,12 +51,16 @@ namespace SnSECS
                     _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
 
                     break;
-            }
+            }*/
 
-            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+            _type = elementType;
+            _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
+            _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Water.vfx", typeof(VisualEffectAsset));
+            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Ambience_Water.vfx", typeof(VisualEffectAsset));
 
             _scale = 1;
             _speed = 1;
+            _density = 1;
             _colour = Color.white;
         }
 
