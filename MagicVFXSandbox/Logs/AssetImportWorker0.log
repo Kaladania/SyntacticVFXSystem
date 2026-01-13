@@ -15,7 +15,7 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51606
+52612
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,18 +59,18 @@ C:/Users/Nicole/Documents/GitHub/SyntacticVFXSystem/MagicVFXSandbox
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [39592]  Target information:
+Player connection [5152]  Target information:
 
-Player connection [39592]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 1055099112 [EditorId] 1055099112 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5152]  * "[IP] 100.79.137.8 [Port] 0 [Flags] 2 [Guid] 3145061003 [EditorId] 3145061003 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [39592]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 1055099112 [EditorId] 1055099112 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5152]  * "[IP] 192.168.4.51 [Port] 0 [Flags] 2 [Guid] 3145061003 [EditorId] 3145061003 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QE6QBF5L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [39592] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [39592] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5152] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5152] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 4.66 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.73 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.19f1 (302b264628f9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Resources/UnitySubsystems
@@ -86,44 +86,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56768
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56440
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004358 seconds.
-- Loaded All Assemblies, in  0.514 seconds
+Registered in 0.004303 seconds.
+- Loaded All Assemblies, in  0.828 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.586 seconds
-Domain Reload Profiling: 1100ms
-	BeginReloadAssembly (203ms)
+- Finished resetting the current domain, in  0.822 seconds
+Domain Reload Profiling: 1647ms
+	BeginReloadAssembly (341ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (191ms)
-		LoadAssemblies (195ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (81ms)
+	LoadAllAssembliesAndSetupDomain (334ms)
+		LoadAssemblies (333ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (187ms)
-			TypeCache.Refresh (185ms)
-				TypeCache.ScanAssembly (162ms)
-			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (588ms)
+		AnalyzeDomain (329ms)
+			TypeCache.Refresh (278ms)
+				TypeCache.ScanAssembly (211ms)
+			BuildScriptInfoCaches (14ms)
+			ResolveRequiredComponents (24ms)
+	FinalizeReload (823ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (495ms)
+		SetupLoadedEditorAssemblies (726ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (42ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (6ms)
-			ProcessInitializeOnLoadAttributes (324ms)
-			ProcessInitializeOnLoadMethodAttributes (112ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (49ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (11ms)
+			ProcessInitializeOnLoadAttributes (541ms)
+			ProcessInitializeOnLoadMethodAttributes (109ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -134,230 +134,163 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.445 seconds
+- Loaded All Assemblies, in  2.870 seconds
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 1.16 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.13 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 567ms
+TypeManager.Initialize took: 556ms
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.020 seconds
-Domain Reload Profiling: 4459ms
-	BeginReloadAssembly (967ms)
+- Finished resetting the current domain, in  3.321 seconds
+Domain Reload Profiling: 6188ms
+	BeginReloadAssembly (1278ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (52ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (1330ms)
-		LoadAssemblies (977ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (1481ms)
+		LoadAssemblies (1161ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (478ms)
-			TypeCache.Refresh (321ms)
-				TypeCache.ScanAssembly (293ms)
-			BuildScriptInfoCaches (139ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (2021ms)
+		AnalyzeDomain (634ms)
+			TypeCache.Refresh (442ms)
+				TypeCache.ScanAssembly (401ms)
+			BuildScriptInfoCaches (168ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (3322ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1601ms)
+		SetupLoadedEditorAssemblies (1776ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (242ms)
-			ProcessInitializeOnLoadAttributes (1126ms)
-			ProcessInitializeOnLoadMethodAttributes (215ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (220ms)
+			ProcessInitializeOnLoadAttributes (1360ms)
+			ProcessInitializeOnLoadMethodAttributes (173ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 2.06 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 9.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 234 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8614 unused Assets / (6.7 MB). Loaded Objects now: 9409.
-Memory consumption went from 214.1 MB to 207.4 MB.
-Total: 27.259000 ms (FindLiveObjects: 2.338900 ms CreateObjectMapping: 2.031500 ms MarkObjects: 15.082400 ms  DeleteObjects: 7.802300 ms)
+Unloading 242 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8614 unused Assets / (6.6 MB). Loaded Objects now: 9420.
+Memory consumption went from 220.6 MB to 214.0 MB.
+Total: 35.324400 ms (FindLiveObjects: 3.639100 ms CreateObjectMapping: 3.661600 ms MarkObjects: 18.311000 ms  DeleteObjects: 9.345200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 704077.649051 seconds.
-  path: Assets/Shaders/S_Water.shadergraph
-  artifactKey: Guid(f71d8e68b0cb0d846885cb1eacbabdde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/S_Water.shadergraph using Guid(f71d8e68b0cb0d846885cb1eacbabdde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '8bdc0bcadaea858e9c5f5e2aa538169d') in 0.5160156 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+  Time since last request: 720972.391762 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e3e02c37716179d02f956bdaf603fba8') in 0.1002274 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 86.558392 seconds.
-  path: Assets/Shaders/S_Water.shadergraph
-  artifactKey: Guid(f71d8e68b0cb0d846885cb1eacbabdde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/S_Water.shadergraph using Guid(f71d8e68b0cb0d846885cb1eacbabdde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '240ee9137590af39448e37a71746635d') in 0.696566 seconds
-Number of updated asset objects reloaded before import = 4Number of asset objects unloaded after import = 5
+  Time since last request: 41.464087 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'abdf8271b8e86657b3b35bb137497f27') in 0.0194844 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.313823 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a8c4a42bb0a47d50c0e2e21dc860a291') in 0.0279995 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
+  Time since last request: 38.828860 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '276b4c2f2f502db02b1751eef2d640d4') in 0.0175828 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 41.853681 seconds.
-  path: Assets/Shaders/S_GoopyBall.shadergraph
-  artifactKey: Guid(51ff9b951c5027d429325d7974cfebd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/S_GoopyBall.shadergraph using Guid(51ff9b951c5027d429325d7974cfebd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '668a934949d4a3427793482a6bc8cbde') in 0.2356059 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+  Time since last request: 26.259111 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'f439089e9f05f9bd3653cf6ecbac2d77') in 0.0260209 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.323322 seconds.
-  path: Assets/Shaders/S_GoopyBall.shadergraph
-  artifactKey: Guid(51ff9b951c5027d429325d7974cfebd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/S_GoopyBall.shadergraph using Guid(51ff9b951c5027d429325d7974cfebd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ac39e3a4da3c0471971e4ba7e638f1f7') in 0.0502705 seconds
-Number of updated asset objects reloaded before import = 4Number of asset objects unloaded after import = 6
+  Time since last request: 1.823731 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '999073bcb69741c09f29c3e847f570dd') in 0.0235324 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 43.798237 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'f8754757c75e0a74a5aafa12466a482f') in 0.0312075 seconds
-Number of updated asset objects reloaded before import = 4Number of asset objects unloaded after import = 23
+  Time since last request: 46.618752 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3ef43c1784806b79909716341cddf9c3') in 0.0202137 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 33.527014 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '8a7df300b9b3ddb55559583df0513b0e') in 0.0320489 seconds
-Number of updated asset objects reloaded before import = 4Number of asset objects unloaded after import = 23
+  Time since last request: 7.951822 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'c7b78e792dd78168c7195b3414c885ee') in 0.0202221 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.738753 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '04db9211fdf101df254db5509a81e984') in 0.0347869 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
+  Time since last request: 4.105237 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3c827b04c254954f2664c77d0d8940e8') in 0.0198865 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.181606 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'fff6c28c029e20bf0a63cbae808e0250') in 0.0347721 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
+  Time since last request: 23.127440 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7866f944610a4750b412f4ddc5a36ffa') in 0.0189534 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 28.706584 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '551e48cd9ff47063df00c5eeaadc0a7e') in 0.0374205 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
+  Time since last request: 85.731462 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '91106435db6966e5d4bc71bb078d9c55') in 0.0310989 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.497088 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '451703ea3cdffeff01c3faf5f6b5cd46') in 0.037533 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
+  Time since last request: 7.196468 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'e8ba4617827bb100605eba1acbd068d4') in 0.02468 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.983255 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6fbc9bb40f5e49e70f397cde3e2683b9') in 0.0281585 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.594039 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '54502e29df8df5f498254d2361f97551') in 0.0234586 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.875375 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'faf8ca5833f552392aea6392d7f8d8f2') in 0.0295188 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 61.120254 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'b9e04b009ea6a8596fc1cbe83bc9d661') in 0.0321607 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.222889 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'fc37981fd47d5ce4d4a3cd83c4a806ff') in 0.0335309 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.101946 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '3576b13f8cf3bf5da1175b934588c356') in 0.0363893 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.937483 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '8ec13d0fcfc7e9de3fe4e1591cbdd0a8') in 0.0356901 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 107.515749 seconds.
-  path: Assets/Systems/Base_Head_Water.vfx
-  artifactKey: Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Systems/Base_Head_Water.vfx using Guid(7a880d6a05a28344a81011669fb02ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '5cadd6f9f163bdfc6589f7e392faf143') in 0.0401647 seconds
-Number of updated asset objects reloaded before import = 3Number of asset objects unloaded after import = 23
+  Time since last request: 21.873396 seconds.
+  path: Assets/Systems/Base_Tail_Earth.vfx
+  artifactKey: Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Systems/Base_Tail_Earth.vfx using Guid(a6454e4084c659e40955f4e25b1078a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '946db361f06612511d24678d7cc38a0b') in 0.0251788 seconds
+Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 15
 
