@@ -285,7 +285,8 @@ public class OrbController : MonoBehaviour
         //loads the SNS VFX and uses it to spawn a projectile used for the spell
         GameObject projectile = CreateProjectile(generatedVFXs);
 
-        if (projectile != null)
+        #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
+        /*if (projectile != null)
         {
             ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
             int targetCount = 0;
@@ -317,8 +318,8 @@ public class OrbController : MonoBehaviour
             {
                 newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
 
-                /*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
-                     projectile.transform.position.z);*/
+                *//*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
+                     projectile.transform.position.z);*//*
                 GameObject childProjectile = Instantiate(projectile, newSpawnPosition, Quaternion.identity);
 
                 controller = childProjectile.GetComponent<ProjectileMovement>();
@@ -354,8 +355,8 @@ public class OrbController : MonoBehaviour
                 {
                     newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
 
-                    /*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
-                         projectile.transform.position.z);*/
+                    *//*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
+                         projectile.transform.position.z);*//*
                     GameObject childProjectile = Instantiate(projectile, newSpawnPosition, Quaternion.identity);
 
                     controller = childProjectile.GetComponent<ProjectileMovement>();
@@ -371,7 +372,8 @@ public class OrbController : MonoBehaviour
 
                 }
             }
-        }
+        }*/
+        #endregion
     }
 
     /// <summary>

@@ -47,13 +47,21 @@ namespace SnSECS
                             entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.BASE));
                             break;
                         case Elements.EARTH:
+                            entityManager.AddSharedComponentManaged(entity, new SNSEarthComponet(ElementType.BASE));
                             break;
                         case Elements.WATER:
                             entityManager.AddSharedComponentManaged(entity, new SNSWaterComponet(ElementType.BASE));
                             break;
                         case Elements.LIGHTNING:
+
+                            entityManager.AddSharedComponentManaged(entity, new SNSLightningComponet(ElementType.BASE));
                             break;
+
                         case Elements.NONE:
+
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.BASE));
+                            Debug.LogError("Base Element Enum = \"NONE\" when trying to load entity components from combo. \nDefaulted to Fire Elemnent");
+
                             break;
                         default:
                             break;
@@ -68,13 +76,19 @@ namespace SnSECS
                             entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
                             break;
                         case Elements.EARTH:
+                            entityManager.AddSharedComponentManaged(entity, new SNSEarthComponet(ElementType.EXTRA));
                             break;
                         case Elements.WATER:
                             entityManager.AddSharedComponentManaged(entity, new SNSWaterComponet(ElementType.EXTRA));
                             break;
                         case Elements.LIGHTNING:
+                            entityManager.AddSharedComponentManaged(entity, new SNSLightningComponet(ElementType.EXTRA));
                             break;
                         case Elements.NONE:
+
+                            entityManager.AddSharedComponentManaged(entity, new SNSFireComponent(ElementType.EXTRA));
+                            Debug.LogError("Extra Element Enum = \"NONE\" when trying to load entity components from combo. \nDefaulted to Fire Elemnent");
+
                             break;
                         default:
                             break;
