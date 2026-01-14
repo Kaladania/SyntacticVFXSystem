@@ -12,7 +12,7 @@ namespace SnSECS
     /// <summary>
     /// Holds the visual effect paramters for a given element
     /// </summary>
-    public struct SNSFireComponent : ISharedComponentData, IEquatable<SNSFireComponent>
+    public struct SNSFireComponent : ISharedComponentData, IEquatable<SNSFireComponent>, ICloneable, IDisposable
     {
 
         public List<ElementType> _types; //type of element
@@ -91,6 +91,22 @@ namespace SnSECS
         public static bool operator !=(SNSFireComponent left, SNSFireComponent right)
         {
             return !(left == right);
+        }
+
+        public void Dispose()
+        {
+            UnityEngine.Object.Destroy(_head);
+            UnityEngine.Object.Destroy(_trail);
+            UnityEngine.Object.Destroy(_ambience);
+        }
+
+        public object Clone()
+        {
+            return new SNSFireComponent { 
+                _head = UnityEngine.Object.Instantiate(_head),
+                _trail = UnityEngine.Object.Instantiate(_trail),
+                _ambience = UnityEngine.Object.Instantiate(_ambience)
+            };
         }
     }
 }

@@ -54,7 +54,7 @@ namespace SnSECS
             }*/
 
             _types = new List<ElementType>();
-            _types.Add(elementType);
+            //_types.Add(elementType);
 
             _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
             _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Water.vfx", typeof(VisualEffectAsset));
