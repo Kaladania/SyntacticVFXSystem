@@ -52,7 +52,6 @@ namespace SnSECS
                         {
                             case ElementType.BASE:
 
-                                
                                 generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
                                 break;
 

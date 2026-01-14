@@ -15,7 +15,9 @@ namespace SnSECS
     public struct SNSFireComponent : ISharedComponentData, IEquatable<SNSFireComponent>, ICloneable, IDisposable
     {
 
-        public List<ElementType> _types; //type of element
+        //public List<ElementType> _types; //type of element
+        //public bool[] _types;
+        public HashSet<ElementType> _types;
         public VisualEffectAsset _head; //element projectile head
         public VisualEffectAsset _trail; //element projectile trail
         public VisualEffectAsset _ambience; //element projectile ambience
@@ -52,8 +54,24 @@ namespace SnSECS
                     break;
             }*/
 
-            _types = new List<ElementType>();
-            _types.Add(elementType);
+            //_types = new List<ElementType>();
+            //_types.Add(elementType);
+
+            /*_types = new bool[3];
+
+            //updates the type list if the element type is valid
+            //type "None" is used if want to initalise a basic, uncustomised component
+            if (elementType != ElementType.NONE)
+            {
+                _types[((int)elementType)] = true;
+            }*/
+
+            _types = new HashSet<ElementType>();
+
+            if (elementType != ElementType.NONE)
+            {
+                _types.Add(elementType);
+            }
 
             _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Fire.vfx", typeof(VisualEffectAsset));
             _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Fire.vfx", typeof(VisualEffectAsset));
