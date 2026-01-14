@@ -58,12 +58,12 @@ namespace SnSECS
                         {
                             //tempFireComponent = (SNSFireComponent)componentMap[Elements.FIRE];
 
-                            tempFireComponent._scale += scaleModifier;
-                            tempFireComponent._density += densityModifier;
-                            tempFireComponent._speed += speedModifier;
+                            tempFireComponent._scale *= scaleModifier;
+                            tempFireComponent._density *= densityModifier;
+                            tempFireComponent._speed *= speedModifier;
 
                             
-                            componentMap[Elements.FIRE] = tempWaterComponent;
+                            //componentMap[Elements.FIRE] = tempWaterComponent;
                         }
 
                         //states the type of VFX needing to be loaded for this specific element
@@ -72,7 +72,7 @@ namespace SnSECS
                         {
                             tempFireComponent._types.Add(ElementType.BASE);
                         }
-                        else if (1 <= i && i <= 3)
+                        else if (1 <= i && i <= 2)
                         {
                             tempFireComponent._types.Add(ElementType.EXTRA);
                         }
@@ -86,22 +86,25 @@ namespace SnSECS
                         break;
 
 
-                    //increases the modifers if the element is a duplicate (increases the intensity/prominence of the VFX)
                     case Elements.WATER:
 
+                        //increases the modifers if the element is a duplicate (increases the intensity/prominence of the VFX)
                         if (componentMap.ContainsKey(Elements.WATER))
                         {
-                            tempWaterComponent = (SNSWaterComponet)componentMap[Elements.WATER];
-                            tempWaterComponent._scale += scaleModifier;
-                            tempWaterComponent._density += densityModifier;
-                            tempWaterComponent._speed += speedModifier;
+                           
+                            tempWaterComponent._scale *= scaleModifier;
+                            tempWaterComponent._density *= densityModifier;
+                            tempWaterComponent._speed *= speedModifier;
+
                         }
 
+                        //states the type of VFX needing to be loaded for this specific element
+                        //One element can have multiple VFX types depending it's position
                         if (i == 0)
                         {
                             tempWaterComponent._types.Add(ElementType.BASE);
                         }
-                        else if (1 <= i && i <= 3)
+                        else if (1 <= i && i <= 2)
                         {
                             tempWaterComponent._types.Add(ElementType.EXTRA);
                         }
@@ -111,6 +114,68 @@ namespace SnSECS
                         }
 
                         componentMap[Elements.WATER] = tempWaterComponent;
+
+                        break;
+
+                    case Elements.EARTH:
+
+                        //increases the modifers if the element is a duplicate (increases the intensity/prominence of the VFX)
+                        if (componentMap.ContainsKey(Elements.EARTH))
+                        {
+
+                            tempEarthComponent._scale *= scaleModifier;
+                            tempEarthComponent._density *= densityModifier;
+                            tempEarthComponent._speed *= speedModifier;
+
+                        }
+
+                        //states the type of VFX needing to be loaded for this specific element
+                        //One element can have multiple VFX types depending it's position
+                        if (i == 0)
+                        {
+                            tempEarthComponent._types.Add(ElementType.BASE);
+                        }
+                        else if (1 <= i && i <= 2)
+                        {
+                            tempEarthComponent._types.Add(ElementType.EXTRA);
+                        }
+                        else
+                        {
+                            tempEarthComponent._types.Add(ElementType.AMBIENCE);
+                        }
+
+                        componentMap[Elements.EARTH] = tempEarthComponent;
+
+                        break;
+
+                    case Elements.LIGHTNING:
+
+                        //increases the modifers if the element is a duplicate (increases the intensity/prominence of the VFX)
+                        if (componentMap.ContainsKey(Elements.LIGHTNING))
+                        {
+
+                            tempLightningComponent._scale *= scaleModifier;
+                            tempLightningComponent._density *= densityModifier;
+                            tempLightningComponent._speed *= speedModifier;
+
+                        }
+
+                        //states the type of VFX needing to be loaded for this specific element
+                        //One element can have multiple VFX types depending it's position
+                        if (i == 0)
+                        {
+                            tempLightningComponent._types.Add(ElementType.BASE);
+                        }
+                        else if (1 <= i && i <= 2)
+                        {
+                            tempLightningComponent._types.Add(ElementType.EXTRA);
+                        }
+                        else
+                        {
+                            tempLightningComponent._types.Add(ElementType.AMBIENCE);
+                        }
+
+                        componentMap[Elements.LIGHTNING] = tempLightningComponent;
 
                         break;
                 }

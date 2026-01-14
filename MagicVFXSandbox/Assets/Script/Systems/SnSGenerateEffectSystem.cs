@@ -6,6 +6,7 @@ using Unity.Entities;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.VFX;
+using static UnityEngine.EventSystems.EventTrigger;
 using static UnityEngine.ParticleSystem;
 
 namespace SnSECS
@@ -217,6 +218,7 @@ namespace SnSECS
             #endregion
             return generatedVFXs;
         }
+
 
         /*private static VisualEffectAsset LoadVFXAsset(Elements element, ElementType type)
         {
