@@ -11,7 +11,7 @@ namespace SnSECS
     /// <summary>
     /// Holds the visual effect paramters for a given element
     /// </summary>
-    public struct SNSLightningComponet : ISharedComponentData, IEquatable<SNSLightningComponet>
+    public struct SNSLightningComponent : ISharedComponentData, IEquatable<SNSLightningComponent>
     {
 
         public List<ElementType> _types; //type of element
@@ -28,7 +28,7 @@ namespace SnSECS
         /// Constructs the component with it's default values
         /// </summary>
         /// <param name="elementType"></param>
-        public SNSLightningComponet(ElementType elementType)
+        public SNSLightningComponent(ElementType elementType)
         {
             /*switch (elementType)
             {
@@ -68,10 +68,10 @@ namespace SnSECS
 
         public override bool Equals(object obj)
         {
-            return obj is SNSLightningComponet componet && Equals(componet);
+            return obj is SNSLightningComponent componet && Equals(componet);
         }
 
-        public bool Equals(SNSLightningComponet other)
+        public bool Equals(SNSLightningComponent other)
         {
             return _types == other._types &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_head, other._head) &&
@@ -84,12 +84,12 @@ namespace SnSECS
             return HashCode.Combine(_types, _head, _trail, _ambience);
         }
 
-        public static bool operator ==(SNSLightningComponet left, SNSLightningComponet right)
+        public static bool operator ==(SNSLightningComponent left, SNSLightningComponent right)
         {
             return left.Equals(right);
         }
 
-        public static bool operator !=(SNSLightningComponet left, SNSLightningComponet right)
+        public static bool operator !=(SNSLightningComponent left, SNSLightningComponent right)
         {
             return !(left == right);
         }

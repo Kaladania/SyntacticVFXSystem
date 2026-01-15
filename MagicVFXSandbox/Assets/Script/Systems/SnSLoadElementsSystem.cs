@@ -36,9 +36,9 @@ namespace SnSECS
             Entity entity = entityManager.CreateEntity();
 
             SNSFireComponent tempFireComponent = new SNSFireComponent(ElementType.NONE);
-            SNSWaterComponet tempWaterComponent = new SNSWaterComponet(ElementType.NONE);
-            SNSLightningComponet tempLightningComponent = new SNSLightningComponet(ElementType.NONE);
-            SNSEarthComponet tempEarthComponent = new SNSEarthComponet(ElementType.NONE);
+            SNSWaterComponent tempWaterComponent = new SNSWaterComponent(ElementType.NONE);
+            SNSLightningComponent tempLightningComponent = new SNSLightningComponent(ElementType.NONE);
+            SNSEarthComponent tempEarthComponent = new SNSEarthComponent(ElementType.NONE);
 
             Dictionary<Elements, ISharedComponentData> componentMap = new Dictionary<Elements, ISharedComponentData>();
 
@@ -192,13 +192,13 @@ namespace SnSECS
                         entityManager.AddSharedComponentManaged(entity, (SNSFireComponent)componentMap[Elements.FIRE]);
                         break;
                     case Elements.EARTH:
-                        entityManager.AddSharedComponentManaged(entity, (SNSEarthComponet)componentMap[Elements.EARTH]);
+                        entityManager.AddSharedComponentManaged(entity, (SNSEarthComponent)componentMap[Elements.EARTH]);
                         break;
                     case Elements.WATER:
-                        entityManager.AddSharedComponentManaged(entity, (SNSWaterComponet)componentMap[Elements.WATER]);
+                        entityManager.AddSharedComponentManaged(entity, (SNSWaterComponent)componentMap[Elements.WATER]);
                         break;
                     case Elements.LIGHTNING:
-                        entityManager.AddSharedComponentManaged(entity, (SNSLightningComponet)componentMap[Elements.LIGHTNING]);
+                        entityManager.AddSharedComponentManaged(entity, (SNSLightningComponent)componentMap[Elements.LIGHTNING]);
                         break;
                     case Elements.NONE:
                         entityManager.AddSharedComponentManaged(entity, (SNSFireComponent)componentMap[Elements.FIRE]);

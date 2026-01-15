@@ -242,7 +242,7 @@ public class OrbController : MonoBehaviour
     /// Re
     /// </summary>
     /// <returns></returns>
-    private List<VisualEffectAsset> GenerateVFX()
+    private List<VisualEffect> GenerateVFX()
     {
         
         //Create an Entity with a correct amount (and type) of element components
@@ -265,7 +265,7 @@ public class OrbController : MonoBehaviour
 
     }*/
 
-    private void CreateSpell(List<VisualEffectAsset> generatedVFXs)
+    private void CreateSpell(List<VisualEffect> generatedVFXs)
     {
         //records a count of the number of duplicate elements in a combo
 
@@ -283,7 +283,8 @@ public class OrbController : MonoBehaviour
 
 
         //loads the SNS VFX and uses it to spawn a projectile used for the spell
-        GameObject projectile = CreateProjectile(generatedVFXs);
+        //GameObject projectile = CreateProjectile(generatedVFXs);
+        CreateProjectile(generatedVFXs);
 
         #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
         /*if (projectile != null)
@@ -380,7 +381,7 @@ public class OrbController : MonoBehaviour
     /// Combines the list of VFX systems to create a PCG VFX
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    private GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
+    private GameObject CreateProjectile(List<VisualEffect> generatedVFXs)
     {
         GameObject projectile = null;
 
@@ -398,7 +399,7 @@ public class OrbController : MonoBehaviour
            else
            {
                //Adds the particle system to the loaded projectile prefab
-               baseVfx.visualEffectAsset = generatedVFXs[0];
+               baseVfx = generatedVFXs[0];
            }
 
             //rotate the projectile to face the turret facing direction
@@ -426,7 +427,7 @@ public class OrbController : MonoBehaviour
                 else
                 {
                     //Adds the particle system to the loaded projectile prefab
-                    childVFX.visualEffectAsset = generatedVFXs[i];
+                    childVFX = generatedVFXs[i];
                 }
             }
 

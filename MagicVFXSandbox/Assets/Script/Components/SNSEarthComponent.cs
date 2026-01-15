@@ -11,7 +11,7 @@ namespace SnSECS
     /// <summary>
     /// Holds the visual effect paramters for a given element
     /// </summary>
-    public struct SNSEarthComponet : ISharedComponentData, IEquatable<SNSEarthComponet>
+    public struct SNSEarthComponent : ISharedComponentData, IEquatable<SNSEarthComponent>
     {
 
         public List<ElementType> _types; //type of element
@@ -28,7 +28,7 @@ namespace SnSECS
         /// Constructs the component with it's default values
         /// </summary>
         /// <param name="elementType"></param>
-        public SNSEarthComponet(ElementType elementType)
+        public SNSEarthComponent(ElementType elementType)
         {
             _types = new List<ElementType>();
             _types.Add(elementType);
@@ -45,10 +45,10 @@ namespace SnSECS
 
         public override bool Equals(object obj)
         {
-            return obj is SNSEarthComponet componet && Equals(componet);
+            return obj is SNSEarthComponent componet && Equals(componet);
         }
 
-        public bool Equals(SNSEarthComponet other)
+        public bool Equals(SNSEarthComponent other)
         {
             return _types == other._types &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_head, other._head) &&
@@ -61,12 +61,12 @@ namespace SnSECS
             return HashCode.Combine(_types, _head, _trail, _ambience);
         }
 
-        public static bool operator ==(SNSEarthComponet left, SNSEarthComponet right)
+        public static bool operator ==(SNSEarthComponent left, SNSEarthComponent right)
         {
             return left.Equals(right);
         }
 
-        public static bool operator !=(SNSEarthComponet left, SNSEarthComponet right)
+        public static bool operator !=(SNSEarthComponent left, SNSEarthComponent right)
         {
             return !(left == right);
         }

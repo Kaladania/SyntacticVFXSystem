@@ -23,16 +23,18 @@ namespace SnSECS
     public struct SnSGenerateEffectSystem
     {
          
-        public static List<VisualEffectAsset> GenerateSnS(Entity entity)
+        public static List<VisualEffect> GenerateSnS(Entity entity)
         {
             //initalise variables
             var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-            List<VisualEffectAsset> generatedVFXs = new List<VisualEffectAsset>();
+            List<VisualEffect> generatedVFXs = new List<VisualEffect>();
 
             SNSFireComponent tempFireComponent;
-            SNSWaterComponet tempWaterComponent;
-            SNSLightningComponet tempLightningComponent;
-            SNSEarthComponet tempEarthComponent;
+            SNSWaterComponent tempWaterComponent;
+            SNSLightningComponent tempLightningComponent;
+            SNSEarthComponent tempEarthComponent;
+
+            VisualEffect tempVFXComponent;
 
             //grabs an array full of the type of components attached to the entity
             NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
@@ -47,110 +49,46 @@ namespace SnSECS
                 {
                     tempFireComponent = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity);
 
-                    foreach (ElementType element in tempFireComponent._types)
+                    foreach (ElementType type in tempFireComponent._types)
                     {
-                        switch (element)
-                        {
-                            case ElementType.BASE:
+                        generatedVFXs.Add(CreateVFXComponent(tempFireComponent, type));
 
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
-                                break;
+                    }
+                    
 
-                            case ElementType.EXTRA:
+                }
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponent>())
+                {
+                    tempWaterComponent = entityManager.GetSharedComponentManaged<SNSWaterComponent>(entity);
 
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._trail);
-                                break;
-                            case ElementType.AMBIENCE:
+                    foreach (ElementType type in tempWaterComponent._types)
+                    {
+                        generatedVFXs.Add(CreateVFXComponent(tempWaterComponent, type));
 
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._ambience);
-                                break;
-                            default:
-                                break;
-                        }
                     }
 
                 }
-                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSEarthComponent>())
                 {
-                    tempWaterComponent = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity);
+                    tempEarthComponent = entityManager.GetSharedComponentManaged<SNSEarthComponent>(entity);
 
-                    foreach (ElementType element in tempWaterComponent._types)
+                    foreach (ElementType type in tempEarthComponent._types)
                     {
-                        switch (element)
-                        {
-                            case ElementType.BASE:
+                        generatedVFXs.Add(CreateVFXComponent(tempEarthComponent, type));
 
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
-                                break;
-
-                            case ElementType.EXTRA:
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._trail);
-                                break;
-                            case ElementType.AMBIENCE:
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._ambience);
-                                break;
-                            default:
-                                break;
-                        }
                     }
 
                 }
-                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSEarthComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSLightningComponent>())
                 {
-                    tempEarthComponent = entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity);
+                    tempLightningComponent = entityManager.GetSharedComponentManaged<SNSLightningComponent>(entity);
 
-                    foreach (ElementType element in tempEarthComponent._types)
+                    foreach (ElementType type in tempLightningComponent._types)
                     {
-                        switch (element)
-                        {
-                            case ElementType.BASE:
+                        generatedVFXs.Add(CreateVFXComponent(tempLightningComponent, type));
 
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._head);
-                                break;
-
-                            case ElementType.EXTRA:
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._trail);
-                                break;
-                            case ElementType.AMBIENCE:
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._ambience);
-                                break;
-                            default:
-                                break;
-                        }
                     }
-                }
-                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSLightningComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
-                {
-                    tempLightningComponent = entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity);
 
-                    foreach (ElementType element in tempLightningComponent._types)
-                    {
-                        switch (element)
-                        {
-                            case ElementType.BASE:
-
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._head);
-                                break;
-
-                            case ElementType.EXTRA:
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._trail);
-                                break;
-                            case ElementType.AMBIENCE:
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._ambience);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
                 }
 
                 /// IF COMPONENT TYPE IS FOUND, SPAWN THE SYSTEM ATTACHED [CURRENT PLAN IS TO USE A VISUAL EFFECT COMPONENT FOR EACH ELEMENT]
@@ -185,7 +123,7 @@ namespace SnSECS
                         case Elements.EARTH:
                             break;
                         case Elements.WATER:
-                            entityManager.AddComponentObject(entity, new SNSWaterComponet(ElementType.BASE));
+                            entityManager.AddComponentObject(entity, new SNSWaterComponent(ElementType.BASE));
                             break;
                         case Elements.LIGHTNING:
                             break;
@@ -219,12 +157,151 @@ namespace SnSECS
             return generatedVFXs;
         }
 
-
-        /*private static VisualEffectAsset LoadVFXAsset(Elements element, ElementType type)
+        /// <summary>
+        /// Creates a new VFX component and updates it with the correct VFX asset and asset stats
+        /// </summary>
+        /// <param name="component">Entity component to load VFX data from</param>
+        /// <param name="type">Type of VFX data to load</param>
+        /// <returns>The initalised VFX component</returns>
+        private static VisualEffect CreateVFXComponent(SNSFireComponent component, ElementType type)
         {
+            //sets up the VFX component and loads the correct asset
+            VisualEffect tempVFXComponent = new VisualEffect();
 
+            switch (type)
+            {
+                case ElementType.BASE:
+                    tempVFXComponent.visualEffectAsset = component._head;
+                    break;
+                case ElementType.EXTRA:
+                    tempVFXComponent.visualEffectAsset = component._trail;
+                    break;
+                case ElementType.AMBIENCE:
+                    tempVFXComponent.visualEffectAsset = component._ambience;
+                    break;
+                default:
+                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                    break;
+            }
+
+            //alters the states on the loaded VFX Asset
+            tempVFXComponent.SetFloat("Scale", component._scale);
+            tempVFXComponent.SetFloat("Speed", component._speed);
+            tempVFXComponent.SetFloat("Density", component._density);
+
+            //adds finalised component to list of components to add to the projectile
+            return tempVFXComponent;
         }
-*/
+
+        /// <summary>
+        /// Creates a new VFX component and updates it with the correct VFX asset and asset stats
+        /// </summary>
+        /// <param name="component">Entity component to load VFX data from</param>
+        /// <param name="type">Type of VFX data to load</param>
+        /// <returns>The initalised VFX component</returns>
+        private static VisualEffect CreateVFXComponent(SNSWaterComponent component, ElementType type)
+        {
+            //sets up the VFX component and loads the correct asset
+            VisualEffect tempVFXComponent = new VisualEffect();
+
+            switch (type)
+            {
+                case ElementType.BASE:
+                    tempVFXComponent.visualEffectAsset = component._head;
+                    break;
+                case ElementType.EXTRA:
+                    tempVFXComponent.visualEffectAsset = component._trail;
+                    break;
+                case ElementType.AMBIENCE:
+                    tempVFXComponent.visualEffectAsset = component._ambience;
+                    break;
+                default:
+                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                    break;
+            }
+
+            //alters the states on the loaded VFX Asset
+            tempVFXComponent.SetFloat("Scale", component._scale);
+            tempVFXComponent.SetFloat("Speed", component._speed);
+            tempVFXComponent.SetFloat("Density", component._density);
+
+            //adds finalised component to list of components to add to the projectile
+            return tempVFXComponent;
+        }
+
+        /// <summary>
+        /// Creates a new VFX component and updates it with the correct VFX asset and asset stats
+        /// </summary>
+        /// <param name="component">Entity component to load VFX data from</param>
+        /// <param name="type">Type of VFX data to load</param>
+        /// <returns>The initalised VFX component</returns>
+        private static VisualEffect CreateVFXComponent(SNSEarthComponent component, ElementType type)
+        {
+            //sets up the VFX component and loads the correct asset
+            VisualEffect tempVFXComponent = new VisualEffect();
+
+            switch (type)
+            {
+                case ElementType.BASE:
+                    tempVFXComponent.visualEffectAsset = component._head;
+                    break;
+                case ElementType.EXTRA:
+                    tempVFXComponent.visualEffectAsset = component._trail;
+                    break;
+                case ElementType.AMBIENCE:
+                    tempVFXComponent.visualEffectAsset = component._ambience;
+                    break;
+                default:
+                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                    break;
+            }
+
+            //alters the states on the loaded VFX Asset
+            tempVFXComponent.SetFloat("Scale", component._scale);
+            tempVFXComponent.SetFloat("Speed", component._speed);
+            tempVFXComponent.SetFloat("Density", component._density);
+
+            //adds finalised component to list of components to add to the projectile
+            return tempVFXComponent;
+        }
+
+        /// <summary>
+        /// Creates a new VFX component and updates it with the correct VFX asset and asset stats
+        /// </summary>
+        /// <param name="component">Entity component to load VFX data from</param>
+        /// <param name="type">Type of VFX data to load</param>
+        /// <returns>The initalised VFX component</returns>
+        private static VisualEffect CreateVFXComponent(SNSLightningComponent component, ElementType type)
+        {
+            //sets up the VFX component and loads the correct asset
+            VisualEffect tempVFXComponent = new VisualEffect();
+
+            switch (type)
+            {
+                case ElementType.BASE:
+                    tempVFXComponent.visualEffectAsset = component._head;
+                    break;
+                case ElementType.EXTRA:
+                    tempVFXComponent.visualEffectAsset = component._trail;
+                    break;
+                case ElementType.AMBIENCE:
+                    tempVFXComponent.visualEffectAsset = component._ambience;
+                    break;
+                default:
+                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                    break;
+            }
+
+            //alters the states on the loaded VFX Asset
+            tempVFXComponent.SetFloat("Scale", component._scale);
+            tempVFXComponent.SetFloat("Speed", component._speed);
+            tempVFXComponent.SetFloat("Amount", component._density); //some weird error with setting the value as 'Density' means it needed to be changed
+
+            //adds finalised component to list of components to add to the projectile
+            return tempVFXComponent;
+        }
+
+
 
         /// <summary>
         /// Loads the corresponding VFX system for the given element and type

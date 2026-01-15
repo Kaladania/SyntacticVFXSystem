@@ -11,7 +11,7 @@ namespace SnSECS
     /// <summary>
     /// Holds the visual effect paramters for a given element
     /// </summary>
-    public struct SNSWaterComponet : ISharedComponentData, IEquatable<SNSWaterComponet>
+    public struct SNSWaterComponent : ISharedComponentData, IEquatable<SNSWaterComponent>
     {
 
         public List<ElementType> _types; //type of element
@@ -28,7 +28,7 @@ namespace SnSECS
         /// Constructs the component with it's default values
         /// </summary>
         /// <param name="elementType"></param>
-        public SNSWaterComponet(ElementType elementType)
+        public SNSWaterComponent(ElementType elementType)
         {
             /*switch (elementType)
             {
@@ -68,10 +68,10 @@ namespace SnSECS
 
         public override bool Equals(object obj)
         {
-            return obj is SNSWaterComponet componet && Equals(componet);
+            return obj is SNSWaterComponent componet && Equals(componet);
         }
 
-        public bool Equals(SNSWaterComponet other)
+        public bool Equals(SNSWaterComponent other)
         {
             return _types == other._types &&
                    EqualityComparer<VisualEffectAsset>.Default.Equals(_head, other._head) &&
@@ -84,12 +84,12 @@ namespace SnSECS
             return HashCode.Combine(_types, _head, _trail, _ambience);
         }
 
-        public static bool operator ==(SNSWaterComponet left, SNSWaterComponet right)
+        public static bool operator ==(SNSWaterComponent left, SNSWaterComponent right)
         {
             return left.Equals(right);
         }
 
-        public static bool operator !=(SNSWaterComponet left, SNSWaterComponet right)
+        public static bool operator !=(SNSWaterComponent left, SNSWaterComponent right)
         {
             return !(left == right);
         }
