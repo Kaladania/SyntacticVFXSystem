@@ -42,8 +42,8 @@ namespace SnSECS
 
             Dictionary<Elements, ISharedComponentData> componentMap = new Dictionary<Elements, ISharedComponentData>();
 
-            const float scaleModifier = 0.2f;
-            const float speedModifier = 0.2f;
+            const float scaleModifier = 1.2f;
+            const float speedModifier = 1.2f;
             const float densityModifier = 2f;
 
             //adds the all specifed componets to the entity
@@ -200,11 +200,10 @@ namespace SnSECS
                     case Elements.LIGHTNING:
                         entityManager.AddSharedComponentManaged(entity, (SNSLightningComponent)componentMap[Elements.LIGHTNING]);
                         break;
-                    case Elements.NONE:
+
+                    default:
                         entityManager.AddSharedComponentManaged(entity, (SNSFireComponent)componentMap[Elements.FIRE]);
                         Debug.LogWarning("Element Key in Component Map Dictionary was set to \"NONE\". Defaulting to Fire Element.");
-                        break;
-                    default:
                         break;
                 }
             }

@@ -6,6 +6,7 @@ using Unity.Entities;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.VFX;
+using UnityEngine.VFX.Utility;
 using static UnityEngine.EventSystems.EventTrigger;
 using static UnityEngine.ParticleSystem;
 
@@ -23,11 +24,11 @@ namespace SnSECS
     public struct SnSGenerateEffectSystem
     {
          
-        public static List<VisualEffect> GenerateSnS(Entity entity)
+        public static GameObject GenerateSnS(Entity entity)
         {
             //initalise variables
             var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-            List<VisualEffect> generatedVFXs = new List<VisualEffect>();
+            //List<VisualEffect> generatedVFXs = new List<VisualEffect>();
 
             SNSFireComponent tempFireComponent;
             SNSWaterComponent tempWaterComponent;
@@ -35,6 +36,11 @@ namespace SnSECS
             SNSEarthComponent tempEarthComponent;
 
             VisualEffect tempVFXComponent;
+
+            GameObject VFXObject = new GameObject();
+            VFXObject.name = "SNS VFX Object";
+
+            GameObject tempObject = new GameObject();
 
             //grabs an array full of the type of components attached to the entity
             NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
@@ -51,11 +57,21 @@ namespace SnSECS
 
                     foreach (ElementType type in tempFireComponent._types)
                     {
-                        generatedVFXs.Add(CreateVFXComponent(tempFireComponent, type));
+                        
+                        tempObject = CreateVFXObject(tempFireComponent, type); //loads a gameobject with a vfx component holding a customised VFX asset
+
+                        if (i == 1)
+                        {
+                            VFXObject = tempObject; //sets the object as the main parent if it's the base element
+                        }
+                        else
+                        {
+                            tempObject.transform.parent = VFXObject.transform; //attached the gameobject to the base vfx object parent as a child
+                        }
+                           
 
                     }
                     
-
                 }
                 else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponent>())
                 {
@@ -63,8 +79,16 @@ namespace SnSECS
 
                     foreach (ElementType type in tempWaterComponent._types)
                     {
-                        generatedVFXs.Add(CreateVFXComponent(tempWaterComponent, type));
+                        tempObject = CreateVFXObject(tempWaterComponent, type); //loads a gameobject with a vfx component holding a customised VFX asset
 
+                        if (i == 1)
+                        {
+                            VFXObject = tempObject; //sets the object as the main parent if it's the base element
+                        }
+                        else
+                        {
+                            tempObject.transform.parent = VFXObject.transform; //attached the gameobject to the base vfx object parent as a child
+                        }
                     }
 
                 }
@@ -74,7 +98,16 @@ namespace SnSECS
 
                     foreach (ElementType type in tempEarthComponent._types)
                     {
-                        generatedVFXs.Add(CreateVFXComponent(tempEarthComponent, type));
+                        tempObject = CreateVFXObject(tempEarthComponent, type); //loads a gameobject with a vfx component holding a customised VFX asset
+
+                        if (i == 1)
+                        {
+                            VFXObject = tempObject; //sets the object as the main parent if it's the base element
+                        }
+                        else
+                        {
+                            tempObject.transform.parent = VFXObject.transform; //attached the gameobject to the base vfx object parent as a child
+                        }
 
                     }
 
@@ -85,11 +118,28 @@ namespace SnSECS
 
                     foreach (ElementType type in tempLightningComponent._types)
                     {
-                        generatedVFXs.Add(CreateVFXComponent(tempLightningComponent, type));
+                        tempObject = CreateVFXObject(tempLightningComponent, type); //loads a gameobject with a vfx component holding a customised VFX asset
 
+                        if (i == 1)
+                        {
+                            VFXObject = tempObject; //sets the object as the main parent if it's the base element
+                        }
+                        else
+                        {
+                            tempObject.transform.parent = VFXObject.transform; //attached the gameobject to the base vfx object parent as a child
+                        }
                     }
 
                 }
+
+                //if this is the first component to be loaded, replace the empty parent with the child
+                //hierachy is now: PARENT(Base) -> CHILDREN (tails and ambience) instead of PARENT(EMPTY) -> CHILDREN (Base, tails and ambience)
+                /*if (i == 1)
+                {
+                    GameObject childObject = VFXObject.transform.GetChild(0).gameObject;
+                    childObject.transform.SetParent(null);
+                    VFXObject = childObject;
+                }*/
 
                 /// IF COMPONENT TYPE IS FOUND, SPAWN THE SYSTEM ATTACHED [CURRENT PLAN IS TO USE A VISUAL EFFECT COMPONENT FOR EACH ELEMENT]
                 /// TRY AND SEE IF THERES A WAY TO ADD A NODE CHAIN TO A VFX ASSET INSTEAD OF HAVING TO STORE THE ENTIRE ASSET
@@ -154,7 +204,7 @@ namespace SnSECS
                 }
             }*/
             #endregion
-            return generatedVFXs;
+            return VFXObject;
         }
 
         /// <summary>
@@ -162,35 +212,53 @@ namespace SnSECS
         /// </summary>
         /// <param name="component">Entity component to load VFX data from</param>
         /// <param name="type">Type of VFX data to load</param>
-        /// <returns>The initalised VFX component</returns>
-        private static VisualEffect CreateVFXComponent(SNSFireComponent component, ElementType type)
+        /// <returns>A game object initalised VFX component</returns>
+        private static GameObject CreateVFXObject(SNSFireComponent component, ElementType type)
         {
+            GameObject gameObject = new GameObject();
             //sets up the VFX component and loads the correct asset
-            VisualEffect tempVFXComponent = new VisualEffect();
+            VisualEffect vfxComponent = gameObject.AddComponent<VisualEffect>();
 
-            switch (type)
+            if (vfxComponent != null)
             {
-                case ElementType.BASE:
-                    tempVFXComponent.visualEffectAsset = component._head;
-                    break;
-                case ElementType.EXTRA:
-                    tempVFXComponent.visualEffectAsset = component._trail;
-                    break;
-                case ElementType.AMBIENCE:
-                    tempVFXComponent.visualEffectAsset = component._ambience;
-                    break;
-                default:
-                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
-                    break;
+                switch (type)
+                {
+                    case ElementType.BASE:
+                        vfxComponent.visualEffectAsset = component._head;
+                        break;
+                    case ElementType.EXTRA:
+                        vfxComponent.visualEffectAsset = component._trail;
+                        break;
+                    case ElementType.AMBIENCE:
+                        vfxComponent.visualEffectAsset = component._ambience;
+                        break;
+                    default:
+                        Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                        break;
+                }
+
+                //alters the states on the loaded VFX Asset
+                List<VFXExposedProperty> exposedProperties = new List<VFXExposedProperty>();
+                vfxComponent.visualEffectAsset.GetExposedProperties(exposedProperties);
+
+                try
+                {
+                    vfxComponent.SetFloat("Scale", component._scale);
+                    vfxComponent.SetFloat("Speed", component._speed);
+                    vfxComponent.SetFloat("Density", component._density); //some weird error with setting the value as 'Density' means it needed to be changed
+                }
+                catch (System.Exception e)
+                {
+                    throw e;
+                }
+            }
+            else
+            {
+                gameObject = null; //nullifies the gameobject to indicate that something has gone wrong
+                Debug.LogWarning("WARNING: Unable to generate an SNS VFX component. CreateVFXObject() was unable to add a VFX component to the new game object");
             }
 
-            //alters the states on the loaded VFX Asset
-            tempVFXComponent.SetFloat("Scale", component._scale);
-            tempVFXComponent.SetFloat("Speed", component._speed);
-            tempVFXComponent.SetFloat("Density", component._density);
-
-            //adds finalised component to list of components to add to the projectile
-            return tempVFXComponent;
+            return gameObject;
         }
 
         /// <summary>
@@ -198,35 +266,44 @@ namespace SnSECS
         /// </summary>
         /// <param name="component">Entity component to load VFX data from</param>
         /// <param name="type">Type of VFX data to load</param>
-        /// <returns>The initalised VFX component</returns>
-        private static VisualEffect CreateVFXComponent(SNSWaterComponent component, ElementType type)
+        /// <returns>A game object initalised VFX component</returns>
+        private static GameObject CreateVFXObject(SNSWaterComponent component, ElementType type)
         {
+            GameObject gameObject = new GameObject();
             //sets up the VFX component and loads the correct asset
-            VisualEffect tempVFXComponent = new VisualEffect();
+            VisualEffect vfxComponent = gameObject.AddComponent<VisualEffect>();
 
-            switch (type)
+            if (vfxComponent != null)
             {
-                case ElementType.BASE:
-                    tempVFXComponent.visualEffectAsset = component._head;
-                    break;
-                case ElementType.EXTRA:
-                    tempVFXComponent.visualEffectAsset = component._trail;
-                    break;
-                case ElementType.AMBIENCE:
-                    tempVFXComponent.visualEffectAsset = component._ambience;
-                    break;
-                default:
-                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
-                    break;
+                switch (type)
+                {
+                    case ElementType.BASE:
+                        vfxComponent.visualEffectAsset = component._head;
+                        break;
+                    case ElementType.EXTRA:
+                        vfxComponent.visualEffectAsset = component._trail;
+                        break;
+                    case ElementType.AMBIENCE:
+                        vfxComponent.visualEffectAsset = component._ambience;
+                        break;
+                    default:
+                        Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                        break;
+                }
+
+                //alters the states on the loaded VFX Asset
+                vfxComponent.SetFloat("Scale", component._scale);
+                vfxComponent.SetFloat("Speed", component._speed);
+                vfxComponent.SetFloat("Density", component._density); //some weird error with setting the value as 'Density' means it needed to be changed
+
+            }
+            else
+            {
+                gameObject = null; //nullifies the gameobject to indicate that something has gone wrong
+                Debug.LogWarning("WARNING: Unable to generate an SNS VFX component. CreateVFXObject() was unable to add a VFX component to the new game object");
             }
 
-            //alters the states on the loaded VFX Asset
-            tempVFXComponent.SetFloat("Scale", component._scale);
-            tempVFXComponent.SetFloat("Speed", component._speed);
-            tempVFXComponent.SetFloat("Density", component._density);
-
-            //adds finalised component to list of components to add to the projectile
-            return tempVFXComponent;
+            return gameObject;
         }
 
         /// <summary>
@@ -234,35 +311,44 @@ namespace SnSECS
         /// </summary>
         /// <param name="component">Entity component to load VFX data from</param>
         /// <param name="type">Type of VFX data to load</param>
-        /// <returns>The initalised VFX component</returns>
-        private static VisualEffect CreateVFXComponent(SNSEarthComponent component, ElementType type)
+        /// <returns>A game object initalised VFX component</returns>
+        private static GameObject CreateVFXObject(SNSEarthComponent component, ElementType type)
         {
+            GameObject gameObject = new GameObject();
             //sets up the VFX component and loads the correct asset
-            VisualEffect tempVFXComponent = new VisualEffect();
+            VisualEffect vfxComponent = gameObject.AddComponent<VisualEffect>();
 
-            switch (type)
+            if (vfxComponent != null)
             {
-                case ElementType.BASE:
-                    tempVFXComponent.visualEffectAsset = component._head;
-                    break;
-                case ElementType.EXTRA:
-                    tempVFXComponent.visualEffectAsset = component._trail;
-                    break;
-                case ElementType.AMBIENCE:
-                    tempVFXComponent.visualEffectAsset = component._ambience;
-                    break;
-                default:
-                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
-                    break;
+                switch (type)
+                {
+                    case ElementType.BASE:
+                        vfxComponent.visualEffectAsset = component._head;
+                        break;
+                    case ElementType.EXTRA:
+                        vfxComponent.visualEffectAsset = component._trail;
+                        break;
+                    case ElementType.AMBIENCE:
+                        vfxComponent.visualEffectAsset = component._ambience;
+                        break;
+                    default:
+                        Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                        break;
+                }
+
+                //alters the states on the loaded VFX Asset
+                vfxComponent.SetFloat("Scale", component._scale);
+                vfxComponent.SetFloat("Speed", component._speed);
+                vfxComponent.SetFloat("Density", component._density); //some weird error with setting the value as 'Density' means it needed to be changed
+
+            }
+            else
+            {
+                gameObject = null; //nullifies the gameobject to indicate that something has gone wrong
+                Debug.LogWarning("WARNING: Unable to generate an SNS VFX component. CreateVFXObject() was unable to add a VFX component to the new game object");
             }
 
-            //alters the states on the loaded VFX Asset
-            tempVFXComponent.SetFloat("Scale", component._scale);
-            tempVFXComponent.SetFloat("Speed", component._speed);
-            tempVFXComponent.SetFloat("Density", component._density);
-
-            //adds finalised component to list of components to add to the projectile
-            return tempVFXComponent;
+            return gameObject;
         }
 
         /// <summary>
@@ -270,36 +356,47 @@ namespace SnSECS
         /// </summary>
         /// <param name="component">Entity component to load VFX data from</param>
         /// <param name="type">Type of VFX data to load</param>
-        /// <returns>The initalised VFX component</returns>
-        private static VisualEffect CreateVFXComponent(SNSLightningComponent component, ElementType type)
+        /// <returns>A game object initalised VFX component</returns>
+        private static GameObject CreateVFXObject(SNSLightningComponent component, ElementType type)
         {
+            GameObject gameObject = new GameObject();
             //sets up the VFX component and loads the correct asset
-            VisualEffect tempVFXComponent = new VisualEffect();
+            VisualEffect vfxComponent = gameObject.AddComponent<VisualEffect>();
 
-            switch (type)
+            if (vfxComponent != null)
             {
-                case ElementType.BASE:
-                    tempVFXComponent.visualEffectAsset = component._head;
-                    break;
-                case ElementType.EXTRA:
-                    tempVFXComponent.visualEffectAsset = component._trail;
-                    break;
-                case ElementType.AMBIENCE:
-                    tempVFXComponent.visualEffectAsset = component._ambience;
-                    break;
-                default:
-                    Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
-                    break;
+                switch (type)
+                {
+                    case ElementType.BASE:
+                        vfxComponent.visualEffectAsset = component._head;
+                        break;
+                    case ElementType.EXTRA:
+                        vfxComponent.visualEffectAsset = component._trail;
+                        break;
+                    case ElementType.AMBIENCE:
+                        vfxComponent.visualEffectAsset = component._ambience;
+                        break;
+                    default:
+                        Debug.LogWarning("WARNING: Element type was \"NONE\" when trying to select what type of asset to add to the VFX component");
+                        break;
+                }
+
+                //alters the states on the loaded VFX Asset
+                vfxComponent.SetFloat("Scale", component._scale);
+                vfxComponent.SetFloat("Speed", component._speed);
+                vfxComponent.SetFloat("Amount", component._density); //some weird error with setting the value as 'Density' means it needed to be changed
+
+            }
+            else
+            {
+                gameObject = null; //nullifies the gameobject to indicate that something has gone wrong
+                Debug.LogWarning("WARNING: Unable to generate an SNS VFX component. CreateVFXObject() was unable to add a VFX component to the new game object");
             }
 
-            //alters the states on the loaded VFX Asset
-            tempVFXComponent.SetFloat("Scale", component._scale);
-            tempVFXComponent.SetFloat("Speed", component._speed);
-            tempVFXComponent.SetFloat("Amount", component._density); //some weird error with setting the value as 'Density' means it needed to be changed
-
-            //adds finalised component to list of components to add to the projectile
-            return tempVFXComponent;
+                return gameObject;
         }
+
+        //private static GameObject CreateGameObject(List<VisualEffect>)
 
 
 

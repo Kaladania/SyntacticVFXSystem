@@ -206,7 +206,7 @@ public class OrbController : MonoBehaviour
         Debug.Log("Combination Loaded");
 
 #if VERSION_SNS
-        CreateSpell(GenerateVFX());
+        CreateProjectile(GenerateVFX());
 #elif VERSION_SNS_PROC
 
         VisualEffectAsset vfx = GenerateVFX();
@@ -242,7 +242,7 @@ public class OrbController : MonoBehaviour
     /// Re
     /// </summary>
     /// <returns></returns>
-    private List<VisualEffect> GenerateVFX()
+    private GameObject GenerateVFX()
     {
         
         //Create an Entity with a correct amount (and type) of element components
@@ -267,11 +267,19 @@ public class OrbController : MonoBehaviour
 
     private void CreateSpell(List<VisualEffect> generatedVFXs)
     {
+        
+
+        //loads the SNS VFX and uses it to spawn a projectile used for the spell
+        //GameObject projectile = CreateProjectile(generatedVFXs);
+        //CreateProjectile(generatedVFXs);
+
+        #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
+
         //records a count of the number of duplicate elements in a combo
 
         //if there are more than 2 elements in the combination, water modifier gets an extra point
         //improves logic perception because it feels weird to only have 1 projectile when only 1 water element is added
-        if (_currentCombo.Count >= 2)
+        /*if (_currentCombo.Count >= 2)
         {
             _uniqueElementCounts[(int)Elements.WATER]++;
         }
@@ -280,13 +288,8 @@ public class OrbController : MonoBehaviour
         {
             _uniqueElementCounts[(int)element]++;
         }
+*/
 
-
-        //loads the SNS VFX and uses it to spawn a projectile used for the spell
-        //GameObject projectile = CreateProjectile(generatedVFXs);
-        CreateProjectile(generatedVFXs);
-
-        #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
         /*if (projectile != null)
         {
             ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
@@ -381,13 +384,34 @@ public class OrbController : MonoBehaviour
     /// Combines the list of VFX systems to create a PCG VFX
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    private GameObject CreateProjectile(List<VisualEffect> generatedVFXs)
+    private GameObject CreateProjectile(GameObject SNSObject)
     {
         GameObject projectile = null;
 
-        if (_spawnPoint != null && generatedVFXs != null)
+        if (_spawnPoint != null && SNSObject != null)
         {
             projectile = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+
+            //instead, add the SNS system as a child instead of trying to proccess it
+            
+            //adds the generated SNS Object as a child to the given projectile prefab
+            if (projectile != null)
+            {
+                SNSObject.transform.parent = projectile.transform;
+
+                //rotate the projectile to face the turret facing direction
+                projectile.transform.rotation = Quaternion.LookRotation(transform.forward);
+
+                ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
+
+                if (controller != null)
+                {
+                    controller.Direction = transform.forward;
+                }
+            }
+/*
+
+
 
             VisualEffect baseVfx = projectile.GetComponent<VisualEffect>();
 
@@ -430,7 +454,7 @@ public class OrbController : MonoBehaviour
                     childVFX = generatedVFXs[i];
                 }
             }
-
+*/
         }
 
         return projectile;
