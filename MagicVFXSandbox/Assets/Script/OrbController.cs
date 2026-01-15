@@ -31,19 +31,19 @@ public class OrbController : MonoBehaviour
     private VisualEffectAsset _vfx = new VisualEffectAsset(); //TURN INTO A LIST/ECS SYSTEM. Holds the templated VFX systems
 
     [SerializeField]
-    private Transform _spawnPoint; //holds the spawn point of the VFX projectiles
+    private Transform _spawnPoint = null; //holds the spawn point of the VFX projectiles
 
     [SerializeField]
-    private GameObject _projectile; //holds a prefab for a basic projectile
+    private GameObject _projectile = null; //holds a prefab for a basic projectile
 
     [SerializeField]
-    private GameObject _childProjectile; //holds a prefab for a basic projectile
+    private GameObject _childProjectile = null; //holds a prefab for a basic projectile
 
     [SerializeField]
-    private GameObject _turret;
+    private GameObject _turret = null;
 
     [SerializeField]
-    private GameObject _turretSpawnPoint;
+    private GameObject _turretSpawnPoint = null;
 
     //projectile modifiers
     [SerializeField]
@@ -66,6 +66,11 @@ public class OrbController : MonoBehaviour
 
     private int[] _uniqueElementCounts; //keeps a count of the number of duplicate elements in a combo
 
+    [SerializeField]
+    private DataRecorder.Recorder _dataRecorder = null;
+
+    [SerializeField]
+    private int _id = 0;
 
     /*#if VERSION_SNS
         private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
@@ -90,7 +95,12 @@ public class OrbController : MonoBehaviour
         _uniqueElementCounts[(int)Elements.EARTH] = 0; //density level of AOE
         _uniqueElementCounts[(int)Elements.LIGHTNING] = 0; //level of speed increase
 
+        if (_dataRecorder == null)
+        {
+            Debug.LogError("ERROR! Data recorder reference is null. Creating a new runtime data recorder");
 
+            _dataRecorder = new DataRecorder.Recorder();
+        }
 
         //Create SNS Element Entity Archetype
 
@@ -210,6 +220,8 @@ public class OrbController : MonoBehaviour
 #else
         SpawnVFX(_vfx);
 #endif
+        //writes the combo to the data collection file
+        _dataRecorder.WriteComboToFile(_currentCombo);
 
         //empties combination and resets counters
         _nextComboIndex = 0;
@@ -262,6 +274,13 @@ public class OrbController : MonoBehaviour
 
     private void CreateSpell(List<VisualEffectAsset> generatedVFXs)
     {
+        
+        //loads the SNS VFX and uses it to spawn a projectile used for the spell
+        CreateProjectile(generatedVFXs);
+
+        #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
+        /*
+        
         //records a count of the number of duplicate elements in a combo
 
         //if there are more than 2 elements in the combination, water modifier gets an extra point
@@ -277,11 +296,8 @@ public class OrbController : MonoBehaviour
         }
 
 
-        //loads the SNS VFX and uses it to spawn a projectile used for the spell
-        GameObject projectile = CreateProjectile(generatedVFXs);
-
-        #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
-        /*if (projectile != null)
+        
+        if (projectile != null)
         {
             ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
             int targetCount = 0;

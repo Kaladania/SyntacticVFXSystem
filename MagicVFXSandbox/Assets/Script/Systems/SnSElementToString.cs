@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Entities;
-using UnityEngine.AddressableAssets;
+using UnityEngine;
 using UnityEngine.VFX;
-
 
 namespace SnSECS
 {
@@ -16,10 +15,10 @@ namespace SnSECS
     /// Generates a layered SNS system
     /// </summary>
     /// /// <param name="entity"> The entity attached element componets to use in the generation</param>
-    public struct SnSGenerateEffectSystem
+    public struct SnSElementToStringSystem
     {
-         
-        public static List<VisualEffectAsset> GenerateSnS(Entity entity)
+
+        public static string Get(Entity entity)
         {
             //initalise variables
             var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
@@ -37,7 +36,7 @@ namespace SnSECS
             //Starts at 1 because Unity automatically stores a 'simulate' flag at index 0
             for (int i = 1; i < elementArray.Length; i++)
             {
-               
+
                 //loads the correct VFX and alter's it's state depending on the component type at the current index
                 if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSFireComponent>())
                 {
@@ -212,89 +211,7 @@ namespace SnSECS
                 }
             }*/
             #endregion
-            return generatedVFXs;
-        }
-
-
-        /*private static VisualEffectAsset LoadVFXAsset(Elements element, ElementType type)
-        {
-
-        }
-*/
-
-        /// <summary>
-        /// Loads the corresponding VFX system for the given element and type
-        /// </summary>
-        /// <param name="element">element vfx to return</param>
-        /// <param name="type">type of element vfx</param>
-        /// <returns>The corresponding VFX asset</returns>
-        private static VisualEffectAsset LoadVFXAssets(Elements element, ElementType type)
-        {
-            VisualEffectAsset assetToReturn = null;
-
-            switch (element)
-            {
-                case Elements.FIRE:
-
-                    switch (type)
-                    {
-                        case ElementType.BASE:
-
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                            break;
-                        case ElementType.EXTRA:
-
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                            break;
-
-                        case ElementType.AMBIENCE:
-
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                            break;
-                        default:
-                            //defaults to spawning the 'EXTRA' VFXs
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Fire").Result;
-                            break;
-                    }
-
-                    break;
-                case Elements.EARTH:
-                    break;
-                case Elements.WATER:
-
-                    switch (type)
-                    {
-                        case ElementType.BASE:
-
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                            break;
-                        case ElementType.EXTRA:
-
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                            break;
-
-                        case ElementType.AMBIENCE:
-
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                            break;
-                        default:
-                            //defaults to spawning the 'EXTRA' VFXs
-                            assetToReturn = Addressables.LoadAssetAsync<VisualEffectAsset>("Base_Head_Water").Result;
-                            break;
-                    }
-
-                    break;
-                case Elements.LIGHTNING:
-                    break;
-                case Elements.NONE:
-                    break;
-                default:
-                    break;
-            }
-
-            return assetToReturn;
-            
+            return string.Empty;
         }
     }
-
 }
