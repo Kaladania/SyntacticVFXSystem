@@ -44,6 +44,9 @@ EditorUserSettings:
     UnityEditor.ShaderGraph.ToggleSettings:
       value: 18135d1527590858060c032302276919051e1a26296a7c362c250e36aea23d2bd2f533ffee3f280a3011e63e083b4365e6181c0eba4903183800ee1e14fc041c03f311d613ca131989431acfc10ed4af97d5dbe6d7f9d7cad1c9a9f6f1e2aca2b7ad8bf4a4ada282b7
       flags: 0
+    lightmappingBakingProfile:
+      value: 51
+      flags: 0
     unity-platforms__ui-persistent-state:
       value: 183b144645154b7d0202082d05376c0417031d6876681d0d61435d73a2a07608e3e03fe7e62e36333731fb3d103b4365b2313461eb
       flags: 0

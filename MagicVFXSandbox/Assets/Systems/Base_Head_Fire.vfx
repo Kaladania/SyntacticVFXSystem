@@ -8157,8 +8157,7 @@ MonoBehaviour:
       m_SerializableType: UnityEditor.VFX.DirectionType, Unity.VisualEffectGraph.Editor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Direction: 0
-  m_LinkedSlots:
-  - {fileID: 8926484042661615811}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661615439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8911,7 +8910,7 @@ MonoBehaviour:
   m_OutputSlots: []
   m_Disabled: 0
   m_ActivationSlot: {fileID: 8926484042661615464}
-  mode: 6
+  mode: 1
   axes: 4
   faceRay: 1
 --- !u!114 &8926484042661615464
@@ -10723,8 +10722,7 @@ MonoBehaviour:
       m_SerializableType: UnityEditor.VFX.DirectionType, Unity.VisualEffectGraph.Editor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Direction: 0
-  m_LinkedSlots:
-  - {fileID: 8926484042661615794}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661615542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11477,7 +11475,7 @@ MonoBehaviour:
   m_OutputSlots: []
   m_Disabled: 0
   m_ActivationSlot: {fileID: 8926484042661615576}
-  mode: 6
+  mode: 1
   axes: 4
   faceRay: 1
 --- !u!114 &8926484042661615576
@@ -13875,7 +13873,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.DirectionType, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"direction":{"x":-10.0,"y":0.0,"z":0.0}}'
+      m_SerializableObject: '{"direction":{"x":-1.0,"y":0.0,"z":0.0}}'
     m_Space: 1
   m_Property:
     name: Direction
@@ -14834,7 +14832,7 @@ MonoBehaviour:
   m_OutputSlots: []
   m_Disabled: 0
   m_ActivationSlot: {fileID: 8926484042661615701}
-  mode: 6
+  mode: 1
   axes: 4
   faceRay: 1
 --- !u!114 &8926484042661615701
@@ -17334,8 +17332,7 @@ MonoBehaviour:
       m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 1
-  m_LinkedSlots:
-  - {fileID: 8926484042661615541}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661615795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17672,8 +17669,7 @@ MonoBehaviour:
       m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   m_Direction: 1
-  m_LinkedSlots:
-  - {fileID: 8926484042661615438}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661615812
 MonoBehaviour:
   m_ObjectHideFlags: 0
