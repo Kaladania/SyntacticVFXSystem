@@ -1,17 +1,12 @@
 using SnSECS;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Unity.Entities;
-using Unity.Entities.UniversalDelegates;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 using UnityEngine.VFX;
-using static UnityEditor.Rendering.FilterWindow;
-using static UnityEngine.Rendering.DebugUI;
 
 
 public class OrbController : MonoBehaviour
@@ -384,8 +379,10 @@ public class OrbController : MonoBehaviour
     {
         GameObject projectile = null;
 
+
         if (_spawnPoint != null && generatedVFXs != null)
         {
+            Vector3 childSpawnPointPosition = _childProjectile.transform.position;
             projectile = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
 
             VisualEffect baseVfx = projectile.GetComponent<VisualEffect>();
@@ -408,14 +405,16 @@ public class OrbController : MonoBehaviour
 
             if (controller != null)
             {
-                controller.Direction = transform.forward;
+                controller.Direction = transform.right;
             }
 
             //loops through the rest of the array and adds the child VFX (trial + ambience)
             for (int i = 1; i < generatedVFXs.Count; i++)
             {
-                GameObject childObject = Instantiate(_childProjectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+                GameObject childObject = Instantiate(_childProjectile, _spawnPoint.position + _childProjectile.transform.position, UnityEngine.Quaternion.identity);
+                
                 childObject.transform.parent = projectile.transform;
+                //childObject.transform.localPosition = new Vector3(childPosition.x, childObject.transform.position.y, childObject.transform.position.z);
 
                 VisualEffect childVFX = childObject.GetComponent<VisualEffect>();
 
