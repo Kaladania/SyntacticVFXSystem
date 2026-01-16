@@ -3746,6 +3746,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660539138}
   m_CullTransparentMesh: 1
+--- !u!1 &1680076150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680076152}
+  - component: {fileID: 1680076151}
+  m_Layer: 0
+  m_Name: GameManagerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1680076151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680076150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2136173d3eae39645bc7c0c6b3ea5de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnFrequency: 3.5
+  _spawnPoint: {fileID: 1089325748}
+  _orbController: {fileID: 2071756194}
+--- !u!4 &1680076152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680076150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 61.452003, y: 31.660631, z: -0.43102378}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707803808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,30 +4882,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c70d8e505afb684eaefeed71f1fe6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiIconPositions:
-  - {fileID: 1722367419}
-  - {fileID: 1438808178}
-  - {fileID: 956650549}
-  - {fileID: 257353432}
-  - {fileID: 711141224}
-  _keys: 0000000002000000010000000300000004000000
-  _values:
-  - {fileID: 21300000, guid: a6c937a9b27b2f64fbfbdcc0619c6d1c, type: 3}
-  - {fileID: 21300000, guid: a344ccbb202d891418e2db9b5b042f95, type: 3}
-  - {fileID: 21300000, guid: a8c95f8614f72c8438627a06f53ecf90, type: 3}
-  - {fileID: 21300000, guid: 6ddebe863ace4bc4fa73d88821f12cdf, type: 3}
-  - {fileID: 21300000, guid: 807619cb023d5e74b82852b2b073693d, type: 3}
-  _vfx: {fileID: 8926484042661614526, guid: 00e7839096a13124ea03c4ff6686a433, type: 3}
   _spawnPoint: {fileID: 236451701}
   _projectile: {fileID: 9087165346810739734, guid: 4b83055f52d8ca54ea0170a261c431aa, type: 3}
   _childProjectile: {fileID: 9087165346810739734, guid: 6e610b2b8266f9c4286c0c08e73a76d6, type: 3}
-  _turret: {fileID: 236451700}
-  _turretSpawnPoint: {fileID: 1089325747}
-  _buddyProjectileDistance: 1
-  _projectileSpeedIncrease: 10
-  _AOEBaseDensity: 3
-  _AOEDensityIncrease: 1
-  _AOESpawnRadius: 5
   _dataRecorder: {fileID: 1961338753}
   _id: 0
 --- !u!54 &2071756196
@@ -5136,3 +5162,4 @@ SceneRoots:
   - {fileID: 1707803812}
   - {fileID: 298935079}
   - {fileID: 1940124935}
+  - {fileID: 1680076152}

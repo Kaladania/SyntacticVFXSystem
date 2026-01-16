@@ -29,7 +29,7 @@ namespace DataRecorder
 
             while (File.Exists(filePath))
             {
-                filePath = _ID + "_" + DateTime.Now.ToShortTimeString() + ".txt";
+                filePath = "Assets/Testing Results/" + _ID + "_" + DateTime.Now.ToShortTimeString() + ".txt";
                 filePath = filePath.Replace(":", "-");
                 Debug.LogError($"ERROR: A file already exists with this name. ID may be incorrect. Creating a new file with name: {filePath} ");
             }

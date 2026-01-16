@@ -1,15 +1,18 @@
 using SnSECS;
 using System.Collections.Generic;
 using Unity.Entities;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-//using UnityEngine.UIElements;
 using UnityEngine.VFX;
 
+public enum ControlType
+{
+    AUTOMATIC,
+    MANUAL
+}
 
-public class OrbController : MonoBehaviour
+public class OrbController : OrbAutoController
 {
     public const int MAX_COMBO_LIMIT = 5; //states the maximum number of elements that can be added to a combination
     public const int NUM_ELEMENTS = 5; //states the maximum number of elements that can be added to a combination
@@ -28,9 +31,6 @@ public class OrbController : MonoBehaviour
     private List<Sprite> _values = new List<Sprite>();
 
     [SerializeField]
-    private VisualEffectAsset _vfx = new VisualEffectAsset(); //TURN INTO A LIST/ECS SYSTEM. Holds the templated VFX systems
-
-    [SerializeField]
     private Transform _spawnPoint = null; //holds the spawn point of the VFX projectiles
 
     [SerializeField]
@@ -42,10 +42,7 @@ public class OrbController : MonoBehaviour
     [SerializeField]
     private GameObject _turret = null;
 
-    [SerializeField]
-    private GameObject _turretSpawnPoint = null;
-
-    //projectile modifiers
+    /*//projectile modifiers
     [SerializeField]
     private float _buddyProjectileDistance = 1f; //states how far apart duplicate projectiles should be spawned (for water modifier)
 
@@ -60,7 +57,7 @@ public class OrbController : MonoBehaviour
     private int _AOEDensityIncrease = 1; //states how many additional projectiles should be spawned in the circular AOE attack
 
     [SerializeField]
-    private float _AOESpawnRadius = 1f; //spawn radius of AOE attack
+    private float _AOESpawnRadius = 1f; //spawn radius of AOE attack*/
     /*private float _AOELevel = 0; //altered by Earth
     private float _projectileTargets = 1; //altered by Fire*/
 
@@ -72,12 +69,18 @@ public class OrbController : MonoBehaviour
     [SerializeField]
     private int _id = 0;
 
+    [SerializeField]
+    private ControlType _controlType = ControlType.MANUAL; //states if the player should be able to spawn their own vfx
     /*#if VERSION_SNS
         private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
     #endif*/
 
     void Start()
     {
+        if (_controlType == ControlType.MANUAL)
+        { 
+        
+        }
         //Create Icon Dictionary
         _uiIcons.Clear();
 
@@ -211,7 +214,7 @@ public class OrbController : MonoBehaviour
         Debug.Log("Combination Loaded");
 
 #if VERSION_SNS
-        CreateSpell(GenerateVFX());
+        CreateProjectile(GenerateVFX());
 #elif VERSION_SNS_PROC
 
         VisualEffectAsset vfx = GenerateVFX();
@@ -391,7 +394,7 @@ public class OrbController : MonoBehaviour
     /// Combines the list of VFX systems to create a PCG VFX
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    private GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
+    public GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
     {
         GameObject projectile = null;
 
