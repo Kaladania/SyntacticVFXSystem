@@ -4,12 +4,20 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class JSONLoader : MonoBehaviour
 {
-    public string _JSONLabel = "SNSElements.json"; // Label assigned to addressable JSON
+    //public string _JSONLabel = "SNSElements.json"; // Label assigned to addressable JSON
+
+    [SerializeField]
+    private string _filePath = string.Empty;
 
     void Start()
     {
+        if (_filePath == string.Empty)
+        {
+            _filePath = "Assets/SNSTestingQuestions.json";
+        }
+
         //adds a callback to run a deserializing function the moment the JSON file has been fully loaded
-        Addressables.LoadAssetAsync<TextAsset>(_JSONLabel).Completed += OnJsonLoaded;
+        //Addressables.LoadAssetAsync<TextAsset>(_JSONLabel).Completed += OnJsonLoaded;
         //LoadJson();
     }
 

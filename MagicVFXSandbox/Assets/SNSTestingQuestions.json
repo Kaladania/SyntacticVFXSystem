@@ -1,0 +1,30 @@
+{
+  "section1": {
+    "ID": 0,
+    "questions": [
+      {
+        "answerIndex": 0,
+        "combinations": [ "FIRE", "WATER", "LIGHTNING" ]
+      },
+      {
+        "answerIndex": 0,
+        "combinations": [ "WATER", "LIGHTNING", "EARTH" ]
+      }
+    ]
+  },
+
+  "section2": {
+    "ID": 0,
+    "questions": [
+      {
+        "answerIndex": 0,
+        "combinations": [ "WATER", "WATER", "LIGHTNING" ]
+      },
+      {
+        "answerIndex": 0,
+        "combinations": [ "FIRE", "LIGHTNING", "EARTH" ]
+      }
+    ]
+  }
+
+}
