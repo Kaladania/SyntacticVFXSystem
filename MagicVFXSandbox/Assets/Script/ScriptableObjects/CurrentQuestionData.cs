@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 
 
-delegate void ScriptableObjectUpdateEvent();
+
 
 [CreateAssetMenu(fileName = "CurrentQuestionData", menuName = "Scriptable Objects/CurrentQuestionData")]
 public class CurrentQuestionData : ScriptableObject
@@ -16,7 +16,8 @@ public class CurrentQuestionData : ScriptableObject
     [Tooltip("Index of the correct combo answer")]
     public int _answerIndex = 0;
 
-    ScriptableObjectUpdateEvent scriptableObjectUpdated;
+    public delegate void ScriptableObjectUpdateEvent();
+    public static event ScriptableObjectUpdateEvent scriptableObjectUpdated;
 
     /// <summary>
     /// Returns the combo designated as the correct answer
@@ -28,7 +29,14 @@ public class CurrentQuestionData : ScriptableObject
         _combos = combos;
         _answerIndex = index;
 
-        scriptableObjectUpdated?.Invoke(); //raises an event to state that new data has been given to the scriptable object
+        if (scriptableObjectUpdated != null)
+        {
+            scriptableObjectUpdated?.Invoke(); //raises an event to state that new data has been given to the scriptable object
+        }
+        else
+        {
+            Debug.LogWarning("Update event was null");
+        }
     }
 
 }

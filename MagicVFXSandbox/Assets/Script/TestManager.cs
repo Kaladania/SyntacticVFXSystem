@@ -40,7 +40,7 @@ namespace QuizManager
         private int _currentSection = 0;
         private int _currentQuestion = 0;
 
-        ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
+        //private event CurrentQuestionData.ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
 
         [SerializeField]
         private int _testerID = 0;
@@ -89,14 +89,14 @@ namespace QuizManager
             _sections = new List<SectionData>();
             SectionData data = new SectionData();
             QuestionData questionData = new QuestionData();
-            questionData._combos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.WATER, Elements.LIGHTNING },
+            questionData._combos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.EARTH, Elements.LIGHTNING },
                 new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };
             questionData._answerIndex = 0;
             questionData._questionID = 0;
 
             data._sectionID = 0;
             data._questions = new List<QuestionData>() { questionData};
-            _sections.Add(new SectionData());
+            _sections.Add(data);
     
             //TEST DATA. REMOVE WHEN NEEDED
            /* _sectionCombos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.WATER, Elements.LIGHTNING }, 

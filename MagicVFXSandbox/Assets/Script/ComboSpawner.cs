@@ -21,11 +21,18 @@ public class ComboSpawner : MonoBehaviour
     [SerializeField]
     private CurrentQuestionData _questionDataSO; //the scriptable object holding the current question data
 
-    ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
+    //ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
+
+    private void Awake()
+    {
+        CurrentQuestionData.scriptableObjectUpdated += SetupSpawner; //sets up event to load new combo when the question data scriptable object is updated
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+
         if (_orbController == null)
         {
             Debug.LogError("ERROR! Orb Controller reference is null. Creating a new runtime orb controller");
@@ -37,8 +44,6 @@ public class ComboSpawner : MonoBehaviour
         {
             _spawnPoint = transform;
         }
-
-        _updateEvent = SetupSpawner; //sets up event to load new combo when the question data scriptable object is updated
 
         //TEMP TEST FUNCTIONS
         //Automatically spawns a loaded projectile on start.
