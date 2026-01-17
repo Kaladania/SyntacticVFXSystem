@@ -16,19 +16,6 @@ namespace QuizManager
         POST_TEST
     }
 
-        public struct QuestionData
-        {
-            public List<List<Elements>> _combos; //holds the possible combinations to choose from
-            public int _answerIndex; //holds the index of the correct answer
-            public int _questionID; //holds the ID of the current question
-        }
-
-        public struct SectionData
-        {
-            public List<QuestionData> _questions; //holds a list of all questions in the section
-            public int _sectionID; //holds the ID of the current section
-        }
-
     public class TestManager : MonoBehaviour
     {
         public static TestManager _instance;
@@ -51,6 +38,8 @@ namespace QuizManager
         [SerializeField]
         private CurrentQuestionData _currentQuestionData = null; //holds the scriptable object data container for question data.
 
+        [SerializeField]
+        private string _filePath = string.Empty;
 
 
         private void Awake()
@@ -63,6 +52,16 @@ namespace QuizManager
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+
+            if (_filePath == string.Empty)
+            {
+                _filePath = "Assets/SNSTestingQuestions.json";
+            }
+
+            //adds a callback to run a deserializing function the moment the JSON file has been fully loaded
+            //Addressables.LoadAssetAsync<TextAsset>(_JSONLabel).Completed += OnJsonLoaded;
+            //LoadJson();
+
             _state = TestingState.SETUP;
 
             if (_recorder == null)
@@ -86,6 +85,8 @@ namespace QuizManager
             //- - - - - 
             //Call function to get JSON loader to parse JSON and return a list of Section Data (populated with question data)
             
+            JSONLoader.CreateFromJSON( _filePath );
+
             _sections = new List<SectionData>();
             SectionData data = new SectionData();
             QuestionData questionData = new QuestionData();
