@@ -74,15 +74,17 @@ namespace DataRecorder
         /// Converts a combo to a CSV string and writes it to a file
         /// </summary>
         /// <param name="combo">The combo to convert</param>
-        public void WriteComboToFile(List<Elements> combo)
+        public String ComboToString(List<Elements> combo)
         {
-            string comboString = string.Empty;
+            string comboString = "[";
             foreach (Elements element in combo)
             {
                 comboString += element.ToString() + ",";
             }
+            comboString += "]";
 
-            WriteToFile(comboString);
+            return comboString;
+            //WriteToFile(comboString);
         }
 
 

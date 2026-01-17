@@ -7,8 +7,8 @@ using UnityEngine;
 
 namespace SnSECS
 {
-    [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-    public enum ElementType
+    //[JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+    /*public enum ElementType
     {
         BASE,
         EXTRA,
@@ -24,6 +24,9 @@ namespace SnSECS
         LIGHTNING,
         NONE
     }
+
+    public static const int MAX_COMBO_LIMIT = 5; //states the maximum number of elements that can be added to a combination
+    public const int NUM_ELEMENTS = 5; //states the maximum number of elements that can be added to a combination*/
     public struct SnSLoadElementsSystem
     {
         /// <summary>

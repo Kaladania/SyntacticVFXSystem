@@ -14,13 +14,12 @@ public enum ControlType
 
 public class OrbController : OrbAutoController
 {
-    public const int MAX_COMBO_LIMIT = 5; //states the maximum number of elements that can be added to a combination
-    public const int NUM_ELEMENTS = 5; //states the maximum number of elements that can be added to a combination
+    
     private int _nextComboIndex = 0; //holds the position of the next element to be added
     private List<Elements> _currentCombo = new List<Elements>(); //holds the current combination of elements
 
     [SerializeField]
-    private Image[] _uiIconPositions = new Image[MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
+    private Image[] _uiIconPositions = new Image[SNSData.MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
 
     private Dictionary<Elements, Sprite> _uiIcons = new Dictionary<Elements, Sprite>();
 
@@ -91,7 +90,7 @@ public class OrbController : OrbAutoController
         for (int i = 0; i < _keys.Count; i++)
             _uiIcons.Add(_keys[i], _values[i]);
 
-        _uniqueElementCounts = new int[NUM_ELEMENTS - 1];
+        _uniqueElementCounts = new int[SNSData.NUM_ELEMENTS - 1];
 
         _uniqueElementCounts[(int)Elements.FIRE] = 0; //number of extra targets a projectile can hit
         _uniqueElementCounts[(int)Elements.WATER] = 0; //number of extra projectiles to spawn
@@ -162,9 +161,9 @@ public class OrbController : OrbAutoController
     {
 
         
-        if (_nextComboIndex >= MAX_COMBO_LIMIT)
+        if (_nextComboIndex >= SNSData.MAX_COMBO_LIMIT)
         {
-            _nextComboIndex = MAX_COMBO_LIMIT;
+            _nextComboIndex = SNSData.MAX_COMBO_LIMIT;
             //LoadCombination(); //Automatically generates a system once all the combination slots have been filled
         }
         else
@@ -224,7 +223,7 @@ public class OrbController : OrbAutoController
         SpawnVFX(_vfx);
 #endif
         //writes the combo to the data collection file
-        _dataRecorder.WriteComboToFile(_currentCombo);
+        //_dataRecorder.WriteComboToFile(_currentCombo);
 
         //empties combination and resets counters
         _nextComboIndex = 0;

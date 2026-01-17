@@ -7,7 +7,6 @@ using Unity.VisualScripting;
 namespace QuizManager
 {
 
-
     public enum TestingState
     {
         SETUP,
@@ -80,25 +79,11 @@ namespace QuizManager
 
             //- - - - - 
             //Call function to get JSON loader to parse JSON and return a list of Section Data (populated with question data)
-            
-            
-            
+
+
+
 
             _sections = JSONLoader.CreateFromJSON(_filePath);
-            /* SectionData data = new SectionData();
-             QuestionData questionData = new QuestionData();
-             questionData._combos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.EARTH, Elements.LIGHTNING },
-                 new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };
-             questionData._answerIndex = 0;
-             questionData._questionID = 0;
-
-             data._sectionID = 0;
-             data._questions = new List<QuestionData>() { questionData};
-             _sections.Add(data);*/
-
-            //TEST DATA. REMOVE WHEN NEEDED
-            /* _sectionCombos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.WATER, Elements.LIGHTNING }, 
-                 new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };*/
 
             if (_currentQuestionData != null)
             {
@@ -162,6 +147,9 @@ namespace QuizManager
                     QuestionData question = _sections[_currentSection].questions[_currentQuestion];
                     _currentQuestionData.SetQuestionData(question.combos, question.answerIndex);
                     _currentQuestion++;
+
+                    /*string recorderText =
+                        $"Question: {_currentQuestion}\n Tested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);*/
                 }
                 else
                 {
