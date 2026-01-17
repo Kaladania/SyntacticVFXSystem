@@ -18,6 +18,11 @@ public class ComboSpawner : MonoBehaviour
 
     List<VisualEffectAsset> _currentSnSVFX; //holds the current generated VFX
 
+    [SerializeField]
+    private CurrentQuestionData _questionDataSO; //the scriptable object holding the current question data
+
+    ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,11 +38,13 @@ public class ComboSpawner : MonoBehaviour
             _spawnPoint = transform;
         }
 
+        _updateEvent = SetupSpawner; //sets up event to load new combo when the question data scriptable object is updated
+
         //TEMP TEST FUNCTIONS
         //Automatically spawns a loaded projectile on start.
         //Actually needs to be an event instagator instead (See Plan Outline)
-        LoadCombination(new List<Elements>(){ Elements.FIRE, Elements.WATER, Elements.LIGHTNING });
-        StartCoroutine(SpawnProjectile(_spawnFrequency, _currentSnSVFX));
+        /*LoadCombination(new List<Elements>(){ Elements.FIRE, Elements.WATER, Elements.LIGHTNING });
+        StartCoroutine(SpawnProjectile(_spawnFrequency, _currentSnSVFX));*/
 
     }
 
@@ -55,6 +62,17 @@ public class ComboSpawner : MonoBehaviour
         //Loads, Generates and stores the VFX blueprint for the currently tested projectile
         _currentSnSVFX = SnSGenerateEffectSystem.GenerateSnS(SnSLoadElementsSystem.LoadElement(combo));
         //_orbController.CreateProjectile(_currentSnSVFX);
+    }
+
+    /// <summary>
+    /// Loads a new combination and begins endlessly spawning it
+    /// Event delegate that is called once new question data has been supplied by the Test Manager
+    /// </summary>
+    void SetupSpawner()
+    {
+        LoadCombination(_questionDataSO.GetAnswerCombo());
+        StartCoroutine(SpawnProjectile(_spawnFrequency, _currentSnSVFX));
+
     }
 
     void StartSpawner()

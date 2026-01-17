@@ -23,6 +23,11 @@ namespace DataRecorder
 
         public void Start()
         {
+            
+        }
+
+        public void SetupRecorder(int id)
+        {
             filePath = "Assets/Testing Results/" + _ID + ".txt";
 
             //if a file with the same name already exists, raises an error and alters the file path name
@@ -36,7 +41,6 @@ namespace DataRecorder
 
             WriteToNewFile($"Participant ID: {_ID}");
         }
-
         
         /// <summary>
         /// Creates a new file and writes to it

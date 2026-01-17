@@ -14,21 +14,21 @@ public class OrbAutoController : MonoBehaviour
     [SerializeField]
     private GameObject _childProjectile = null; //holds a prefab for a basic projectile
 
-    [SerializeField]
-    private DataRecorder.Recorder _dataRecorder = null;
+    /*[SerializeField]
+    private DataRecorder.Recorder _dataRecorder = null;*/
 
-    [SerializeField]
-    private int _id = 0;
+    /*[SerializeField]
+    private int _id = 0;*/
 
     void Start()
     {
         
-        if (_dataRecorder == null)
+        /*if (_dataRecorder == null)
         {
             Debug.LogError("ERROR! Data recorder reference is null. Creating a new runtime data recorder");
 
             _dataRecorder = new DataRecorder.Recorder();
-        }
+        }*/
 
     }
 
