@@ -58,10 +58,6 @@ namespace QuizManager
                 _filePath = "Assets/SNSTestingQuestions.json";
             }
 
-            //adds a callback to run a deserializing function the moment the JSON file has been fully loaded
-            //Addressables.LoadAssetAsync<TextAsset>(_JSONLabel).Completed += OnJsonLoaded;
-            //LoadJson();
-
             _state = TestingState.SETUP;
 
             if (_recorder == null)
@@ -85,23 +81,24 @@ namespace QuizManager
             //- - - - - 
             //Call function to get JSON loader to parse JSON and return a list of Section Data (populated with question data)
             
-            JSONLoader.CreateFromJSON( _filePath );
+            
+            
 
-            _sections = new List<SectionData>();
-            SectionData data = new SectionData();
-            QuestionData questionData = new QuestionData();
-            questionData._combos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.EARTH, Elements.LIGHTNING },
-                new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };
-            questionData._answerIndex = 0;
-            questionData._questionID = 0;
+            _sections = JSONLoader.CreateFromJSON(_filePath);
+            /* SectionData data = new SectionData();
+             QuestionData questionData = new QuestionData();
+             questionData._combos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.EARTH, Elements.LIGHTNING },
+                 new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };
+             questionData._answerIndex = 0;
+             questionData._questionID = 0;
 
-            data._sectionID = 0;
-            data._questions = new List<QuestionData>() { questionData};
-            _sections.Add(data);
-    
+             data._sectionID = 0;
+             data._questions = new List<QuestionData>() { questionData};
+             _sections.Add(data);*/
+
             //TEST DATA. REMOVE WHEN NEEDED
-           /* _sectionCombos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.WATER, Elements.LIGHTNING }, 
-                new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };*/
+            /* _sectionCombos = new List<List<Elements>>() { new List<Elements>{ Elements.FIRE, Elements.WATER, Elements.LIGHTNING }, 
+                 new List<Elements>{ Elements.WATER, Elements.EARTH, Elements.FIRE } };*/
 
             if (_currentQuestionData != null)
             {
@@ -157,13 +154,13 @@ namespace QuizManager
             if (_currentSection < _sections.Count)
             {
                 //if there are still more questions to be asked in the current section, load the next question
-                if (_currentQuestion < _sections[_currentSection]._questions.Count)
+                if (_currentQuestion < _sections[_currentSection].questions.Count)
                 {
                     
                     //Stores the current question data in the scriptable object
                     //Triggers the "updateSO" event to get the combo spawner and UI Manager to analyse the new data
-                    QuestionData question = _sections[_currentSection]._questions[_currentQuestion];
-                    _currentQuestionData.SetQuestionData(question._combos, question._answerIndex);
+                    QuestionData question = _sections[_currentSection].questions[_currentQuestion];
+                    _currentQuestionData.SetQuestionData(question.combos, question.answerIndex);
                     _currentQuestion++;
                 }
                 else

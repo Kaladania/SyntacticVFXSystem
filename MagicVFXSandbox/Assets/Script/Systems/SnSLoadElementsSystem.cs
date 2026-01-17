@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using Unity.Burst;
 using Unity.Collections;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace SnSECS
 {
-
+    [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
     public enum ElementType
     {
         BASE,

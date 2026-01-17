@@ -4,9 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-
-
-
 [CreateAssetMenu(fileName = "CurrentQuestionData", menuName = "Scriptable Objects/CurrentQuestionData")]
 public class CurrentQuestionData : ScriptableObject
 {

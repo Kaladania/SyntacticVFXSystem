@@ -3757,6 +3757,7 @@ GameObject:
   - component: {fileID: 1680076152}
   - component: {fileID: 1680076151}
   - component: {fileID: 1680076153}
+  - component: {fileID: 1680076154}
   m_Layer: 0
   m_Name: GameManagerObject
   m_TagString: Untagged
@@ -3810,6 +3811,19 @@ MonoBehaviour:
   _testerID: 0
   _recorder: {fileID: 1961338753}
   _currentQuestionData: {fileID: 11400000, guid: 742d7aca6b4532549989cb08218d98c3, type: 2}
+  _filePath: 
+--- !u!114 &1680076154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680076150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4a58a7ac4c09d43b37475c1cca347d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1707803808
 GameObject:
   m_ObjectHideFlags: 0

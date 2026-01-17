@@ -1,34 +1,46 @@
-{
-  "sections": [
+[
+  {
+    "ID": 0,
+    "questions": [
+      {
+        "combos": [
+          [ "FIRE", "WATER", "LIGHTNING" ],
+          [ "WATER", "FIRE", "LIGHTNING" ],
+          [ "FIRE", "FIRE", "LIGHTNING" ]
+        ],
+          "answerIndex" : 0
+      },
+      {
+        "combos": [
+          [ "WATER", "LIGHTNING", "EARTH" ],
+          [ "WATER", "WATER", "EARTH" ],
+          [ "LIGHTNING", "LIGHTNING", "EARTH" ]
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
 
-    {
-      "ID": 0,
-      "questions": [
-        {
-          "combos": [ "FIRE", "WATER", "LIGHTNING" ],
-          "answerIndex": 0
-        },
-        {
-          "combos": [ "WATER", "LIGHTNING", "EARTH" ],
-          "answerIndex": 0
-        }
-      ]
-    },
+  {
+    "ID": 0,
+    "questions": [
+      {
+        "answerIndex": 0,
+        "combos": [
+          [ "LIGHTNING", "WATER", "LIGHTNING" ],
+          [ "WATER", "FIRE", "WATER" ],
+          [ "FIRE", "EARTH", "LIGHTNING" ]
+        ]
+      },
+      {
+        "answerIndex": 0,
+        "combos": [
+          [ "EARTH", "WATER", "LIGHTNING" ],
+          [ "FIRE", "FIRE", "LIGHTNING" ],
+          [ "FIRE", "WATER", "LIGHTNING" ]
+        ]
+      }
+    ]
+  }
 
-    {
-      "ID": 0,
-      "questions": [
-        {
-          "answerIndex": 0,
-          "combos": [ "WATER", "WATER", "LIGHTNING" ]
-        },
-        {
-          "answerIndex": 0,
-          "combos": [ "FIRE", "LIGHTNING", "EARTH" ]
-        }
-      ]
-    }
-
-  ]
-
-}
+]
