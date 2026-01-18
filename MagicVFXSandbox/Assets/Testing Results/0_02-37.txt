@@ -1,0 +1,30 @@
+Participant ID: 0
+
+--- SECTION: 1 ----
+
+Question: 1
+ Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+Chosen answer: 0 [CORRECT]
+
+Question: 2
+ Tested Combination: [WATER,LIGHTNING,EARTH,]
+
+Chosen answer: 2 [INCORRECT]
+
+--- SECTION: 2 ----
+
+Chosen answer: 1 [INCORRECT]
+
+Question: 1
+ Tested Combination: [WATER,WATER,LIGHTNING,]
+
+Chosen answer: 0 [CORRECT]
+
+Question: 2
+ Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+Chosen answer: 0 [CORRECT]
+
+--- SECTION: 3 ----
+

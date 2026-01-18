@@ -21,6 +21,10 @@ public class ComboSpawner : MonoBehaviour
     [SerializeField]
     private CurrentQuestionData _questionDataSO; //the scriptable object holding the current question data
 
+    private Coroutine _currentCoroutine = null;
+
+    private bool _spawnProjectile = false;
+
     //ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
 
     private void Awake()
@@ -75,8 +79,17 @@ public class ComboSpawner : MonoBehaviour
     /// </summary>
     void SetupSpawner()
     {
+        //stops the current co-routine if there is any
+        if (_currentCoroutine != null)
+        {
+            StopCoroutine(_currentCoroutine);
+            _spawnProjectile = false;
+        }
+
+        //_currentCoroutine = SpawnProjectile(_spawnFrequency, _currentSnSVFX);
         LoadCombination(_questionDataSO.GetAnswerCombo());
-        StartCoroutine(SpawnProjectile(_spawnFrequency, _currentSnSVFX));
+        _currentCoroutine = StartCoroutine(SpawnProjectile(_spawnFrequency, _currentSnSVFX));
+        //StartCoroutine(_currentCoroutine);
 
     }
 
@@ -87,9 +100,11 @@ public class ComboSpawner : MonoBehaviour
 
     private IEnumerator SpawnProjectile(float coundownDuration, List<VisualEffectAsset> vfx)
     {
+        //_spawnProjectile = true;
         yield return new WaitForSeconds(coundownDuration); //returns a reference to the spawned enemy after a specified amount of time
 
-        _orbController.CreateProjectile(_currentSnSVFX);
-        StartCoroutine(SpawnProjectile(coundownDuration, vfx));
+        _orbController.CreateProjectile(vfx);
+        //StartCoroutine(_currentCoroutine);
+        _currentCoroutine = StartCoroutine(SpawnProjectile(_spawnFrequency, vfx));
     }
 }

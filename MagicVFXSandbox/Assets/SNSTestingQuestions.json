@@ -27,7 +27,7 @@
       {
         "answerIndex": 0,
         "combos": [
-          [ "LIGHTNING", "WATER", "LIGHTNING" ],
+          [ "WATER", "WATER", "LIGHTNING" ],
           [ "WATER", "FIRE", "WATER" ],
           [ "FIRE", "EARTH", "LIGHTNING" ]
         ]
@@ -35,7 +35,7 @@
       {
         "answerIndex": 0,
         "combos": [
-          [ "EARTH", "WATER", "LIGHTNING" ],
+          [ "FIRE", "WATER", "LIGHTNING" ],
           [ "FIRE", "FIRE", "LIGHTNING" ],
           [ "FIRE", "WATER", "LIGHTNING" ]
         ]
