@@ -1,0 +1,16 @@
+Participant ID: 0
+
+--- SECTION: 1 ----
+
+Reaction Time: 10.88
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 1.38
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.71
+
+Chosen answer: 1 [INCORRECT]
+

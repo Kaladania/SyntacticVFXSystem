@@ -29,6 +29,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> _panels = null;
 
+    [SerializeField]
+    private List<Button> _buttons = null;
     
 
     private bool _timerActive = true; //states if the countdown timer should current be de-incrimenting
@@ -38,7 +40,8 @@ public class UIManager : MonoBehaviour
     public delegate void RecordedTimeEvent(double elapsedTime);
     public static event RecordedTimeEvent timeRecorded;
 
-
+    [SerializeField]
+    private Color _uninteractableColour = Color.gray;
 
 
     private void Awake()
@@ -62,8 +65,19 @@ public class UIManager : MonoBehaviour
             UnityEngine.Debug.LogWarning("WARNING: Reference to Timer UI is null. Creating a new text mesh pro object");
         }
 
+        /*Button button = null;
+        foreach (GameObject panel in _panels)
+        {
+            button = panel.transform.parent.gameObject.GetComponent<Button>();
+
+            if (button != null)
+            {
+                _buttons.Add(button);
+            }
+            
+        }*/
       
-        SetTimers();
+        //SetTimers();
     }
 
     // Update is called once per frame
@@ -81,6 +95,8 @@ public class UIManager : MonoBehaviour
             else
             {
                 ResetCountdownTimer();
+                EnableButtons();
+                _startTime = Time.timeAsDouble;
             }
         }
     }
@@ -111,7 +127,6 @@ public class UIManager : MonoBehaviour
     /// </summary>
     void SetTimers()
     {
-        _startTime = Time.timeAsDouble;
         _countdownTimeRemaining = _countDownLength;
         _timerUI.gameObject.SetActive(true );
         _timerActive = true;
@@ -175,7 +190,36 @@ public class UIManager : MonoBehaviour
 
         //EventSystem.current.SetSelectedGameObject(null);
         SetTimers();
+        DisableButtons();
     }
+
+    void DisableButtons()
+    {
+        ColorBlock colorBlock;
+        foreach (Button button in _buttons)
+        {
+            button.interactable = false;
+
+            //darkens the inactive buttons
+            colorBlock = button.colors;
+            colorBlock.normalColor = _uninteractableColour;
+            button.colors = colorBlock;
+        }
+    }
+    void EnableButtons()
+    {
+        ColorBlock colorBlock;
+        foreach (Button button in _buttons)
+        {
+            button.interactable = true;
+
+            //sets the colour the inactive buttons to normal
+            colorBlock = button.colors;
+            colorBlock.normalColor = Color.white;
+            button.colors = colorBlock;
+        }
+    }
+
 
     /// <summary>
     /// Deselects the current button by set the current selected object as "null" (nothing)

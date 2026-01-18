@@ -1,0 +1,116 @@
+Participant ID: 0
+
+--- SECTION: 1 ----
+
+Reaction Time: 1.68
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.88
+
+Chosen answer: 2 [INCORRECT]
+
+Reaction Time: 0.69
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 0.46
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.55
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 1.16
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.18
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 1.66
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 3.38
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 3.19
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.68
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.59
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.52
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.54
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.52
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.54
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.52
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.47
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 10.04
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 3.13
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.42
+
+Chosen answer: 2 [INCORRECT]
+
+Reaction Time: 0.41
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 0.43
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.35
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 0.41
+
+Chosen answer: 2 [INCORRECT]
+
+Reaction Time: 0.39
+
+Chosen answer: 0 [CORRECT]
+
+Reaction Time: 0.34
+
+Chosen answer: 1 [INCORRECT]
+
+Reaction Time: 0.34
+
+Chosen answer: 0 [CORRECT]
+
