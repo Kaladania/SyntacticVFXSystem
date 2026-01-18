@@ -47,18 +47,19 @@ public class UIManager : MonoBehaviour
 
         List<Elements> currentComboToLoad = null;
         GameObject childObject = null;
+        GameObject panelParent = null;
 
         //for every possible answer in the current question
         for (int comboIndex = 0; comboIndex < _panels.Count; comboIndex++)
         {
-            
-            
+            panelParent = _panels[comboIndex].transform.parent.gameObject;
+
             //procceeds to enable a panel and populate it with the correct icons
             if (comboIndex < _currentQuestionData._combos.Count)
             {
                 currentComboToLoad = _currentQuestionData._combos[comboIndex];
 
-                _panels[comboIndex].SetActive(true);
+                panelParent.SetActive(true);
                 childObject = _panels[comboIndex].transform.GetChild(comboIndex).gameObject;
 
                 //for every element in the current combination being loaded for the possible question answers
@@ -84,7 +85,8 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                _panels[comboIndex].SetActive(false);
+                //disables the parent of the panel (the button) - therefore disabling the option completely
+                panelParent.SetActive(false);
             }
 
         }
