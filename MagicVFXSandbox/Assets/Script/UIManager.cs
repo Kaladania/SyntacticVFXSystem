@@ -1,10 +1,17 @@
 using SnSECS;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using TMPro;
 using Unity.Entities.UniversalDelegates;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public struct AnswerData
+{
+    public float totalTime;
+}
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
@@ -14,7 +21,25 @@ public class UIManager : MonoBehaviour
     private ElementIconMapTemplate _iconData = null; //holds the scriptable object data container for ui icon maps.
 
     [SerializeField]
+    private TextMeshProUGUI _timerUI = null;
+
+    [SerializeField]
+    private int _countDownLength = 0;
+
+    [SerializeField]
     private List<GameObject> _panels = null;
+
+    
+
+    private bool _timerActive = true; //states if the countdown timer should current be de-incrimenting
+    private float _countdownTimeRemaining = 0.0f; //time in seconds
+    private double _startTime = 0.0f; //records the start time of the question
+
+    public delegate void RecordedTimeEvent(double elapsedTime);
+    public static event RecordedTimeEvent timeRecorded;
+
+
+
 
     private void Awake()
     {
@@ -24,21 +49,77 @@ public class UIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /*Button buttonComponent;
-        for (int i = 0; i < _panels.Count; i++)
+       
+        //defaults the countdown length to 3 if the value is invalid
+        if (_countDownLength <= 0)
         {
-            buttonComponent = _panels[i].GetComponent<Button>();
-            buttonComponent.onClick.AddListener(delegate { StopTimer(i); });
-        }*/
-        
+            _countDownLength = 3;
+        }
+
+        if (_timerUI == null)
+        {
+            _timerUI = new TextMeshProUGUI();
+            UnityEngine.Debug.LogWarning("WARNING: Reference to Timer UI is null. Creating a new text mesh pro object");
+        }
+
+      
+        SetTimers();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if ( _timerActive)
+        {
+            //incriments the timer while active
+            if (_countdownTimeRemaining > 1)
+            {
+                _countdownTimeRemaining -= Time.deltaTime;
+                UpdateDisplayTime();
+
+            }
+            else
+            {
+                ResetCountdownTimer();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Updates the timer display number
+    /// </summary>
+    void UpdateDisplayTime()
+    {
+        float seconds = Mathf.FloorToInt(_countdownTimeRemaining % 60);
+        _timerUI.text = seconds.ToString();
+    }
+
+    /// <summary>
+    /// Resets countdown timer data and flags
+    /// </summary>
+    void ResetCountdownTimer()
+    {
+        _timerUI.gameObject.SetActive(false);
+        _countdownTimeRemaining = 0.0f;
+        _timerActive = false;
+        _timerUI.text = _countDownLength.ToString();
         
     }
 
+    /// <summary>
+    /// Sets all timers to their default values
+    /// </summary>
+    void SetTimers()
+    {
+        _startTime = Time.timeAsDouble;
+        _countdownTimeRemaining = _countDownLength;
+        _timerUI.gameObject.SetActive(true );
+        _timerActive = true;
+    }
+
+    /// <summary>
+    /// Toggles visibility and design of panels/ui icons to reflect the state of the current question
+    /// </summary>
     void SetupQuestionUI()
     {
         //create panel
@@ -92,6 +173,8 @@ public class UIManager : MonoBehaviour
 
         }
 
+        //EventSystem.current.SetSelectedGameObject(null);
+        SetTimers();
     }
 
     /// <summary>
@@ -99,6 +182,16 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void ResetSelection()
     {
+        //records the endtime and calculates the total elapsed time
+        double endTime = Time.timeAsDouble;
+        double elapsedTime = endTime - _startTime;
+        elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
+
+        timeRecorded?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
+
+        //UnityEngine.Debug.Log($"Gamelapsed time was: {elapsedTime} ");
+
         EventSystem.current.SetSelectedGameObject(null);
+
     }
 }

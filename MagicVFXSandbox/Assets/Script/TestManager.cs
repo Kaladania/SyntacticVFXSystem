@@ -47,6 +47,8 @@ namespace QuizManager
             {
                 _instance = this;
             }
+
+            UIManager.timeRecorded += RecordTime;
         }
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -179,9 +181,16 @@ namespace QuizManager
             _recorder.WriteToFile(questionResult);
             ChangeQuestion();
 
-            Debug.Log($"OnClick event was triggered and timer was stopped. Answer {answerIndex} was chosen");
         }
 
+        /// <summary>
+        /// Event delegate the writes the total reaction time to the data record file
+        /// </summary>
+        /// <param name="elapsedTime"></param>
+        public void RecordTime(double elapsedTime)
+        {
+            _recorder.WriteToFile($"Reaction Time: {elapsedTime}");
+        }
 
     }
 }
