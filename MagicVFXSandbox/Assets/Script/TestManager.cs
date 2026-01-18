@@ -87,6 +87,7 @@ namespace QuizManager
 
             if (_currentQuestionData != null)
             {
+                _recorder.WriteToFile($"--- SECTION: {_currentSection + 1} ----");
                 ChangeQuestion();
             }
             else
@@ -148,13 +149,16 @@ namespace QuizManager
                     _currentQuestionData.SetQuestionData(question.combos, question.answerIndex);
                     _currentQuestion++;
 
-                    /*string recorderText =
-                        $"Question: {_currentQuestion}\n Tested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);*/
+                    string recorderText =
+                        $"Question: {_currentQuestion}\n Tested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);
+                    _recorder.WriteToFile(recorderText);
                 }
                 else
                 {
                     _currentSection++;
                     _currentQuestion = 0;
+
+                    _recorder.WriteToFile($"--- SECTION: {_currentSection + 1} ----");
                 }
 
                     
@@ -169,6 +173,12 @@ namespace QuizManager
 
         public void StopTimer(int answerIndex)
         {
+            string questionResult = $"Chosen answer: {answerIndex}";
+            questionResult += answerIndex == _currentQuestionData._answerIndex ? " [CORRECT]" : " [INCORRECT]";
+
+            _recorder.WriteToFile(questionResult);
+            ChangeQuestion();
+
             Debug.Log($"OnClick event was triggered and timer was stopped. Answer {answerIndex} was chosen");
         }
 
