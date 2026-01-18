@@ -1,3 +1,4 @@
+using QuizManager;
 using SnSECS;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ public class ComboSpawner : MonoBehaviour
     private void Awake()
     {
         CurrentQuestionData.scriptableObjectUpdated += SetupSpawner; //sets up event to load new combo when the question data scriptable object is updated
+        TestManager.shutDownWorkers += Cleanup; //sets up event to disable spawning
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -88,7 +90,9 @@ public class ComboSpawner : MonoBehaviour
 
         //_currentCoroutine = SpawnProjectile(_spawnFrequency, _currentSnSVFX);
         LoadCombination(_questionDataSO.GetAnswerCombo());
-        _currentCoroutine = StartCoroutine(SpawnProjectile(_spawnFrequency, _currentSnSVFX));
+
+        //set to 0 so it starts instantly
+        _currentCoroutine = StartCoroutine(SpawnProjectile(0, _currentSnSVFX));
         //StartCoroutine(_currentCoroutine);
 
     }
@@ -106,5 +110,15 @@ public class ComboSpawner : MonoBehaviour
         _orbController.CreateProjectile(vfx);
         //StartCoroutine(_currentCoroutine);
         _currentCoroutine = StartCoroutine(SpawnProjectile(_spawnFrequency, vfx));
+    }
+
+    void Cleanup()
+    {
+        //stops the current co-routine if there is any
+        if (_currentCoroutine != null)
+        {
+            StopCoroutine(_currentCoroutine);
+            _spawnProjectile = false;
+        }
     }
 }

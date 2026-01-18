@@ -40,6 +40,9 @@ namespace QuizManager
         [SerializeField]
         private string _filePath = string.Empty;
 
+        public delegate void EndTestEvent();
+        public static event EndTestEvent shutDownWorkers;
+
 
         private void Awake()
         {
@@ -152,7 +155,7 @@ namespace QuizManager
                     _currentQuestion++;
 
                     string recorderText =
-                        $"Question: {_currentQuestion}\n Tested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);
+                        $"- - QUESTION: {_currentQuestion}\nTested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);
                     _recorder.WriteToFile(recorderText);
                 }
                 else
@@ -160,7 +163,14 @@ namespace QuizManager
                     _currentSection++;
                     _currentQuestion = 0;
 
-                    _recorder.WriteToFile($"--- SECTION: {_currentSection + 1} ----");
+                    //prevents an extra section header from being printed
+                    if (_currentSection + 1 <= _sections.Count)
+                    {
+                        _recorder.WriteToFile($"--- SECTION: {_currentSection + 1} ----");
+                    }
+                       
+                    //recalls the change question function to ensure the question switch happens on this frame
+                    ChangeQuestion();
                 }
 
                     
@@ -170,6 +180,7 @@ namespace QuizManager
             {
                 //signals that the test has finised.
                 UpdateTestingState(TestingState.POST_TEST);
+                shutDownWorkers?.Invoke(); //tells other managers (UI and Combo) to run shutdown functions
             }
         }
 
@@ -189,7 +200,7 @@ namespace QuizManager
         /// <param name="elapsedTime"></param>
         public void RecordTime(double elapsedTime)
         {
-            _recorder.WriteToFile($"Reaction Time: {elapsedTime}");
+            _recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
         }
 
     }

@@ -1,3 +1,4 @@
+using QuizManager;
 using SnSECS;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private List<Button> _buttons = null;
-    
+
+    [SerializeField]
+    private GameObject _creditsPanel = null;
 
     private bool _timerActive = true; //states if the countdown timer should current be de-incrimenting
     private float _countdownTimeRemaining = 0.0f; //time in seconds
@@ -47,6 +50,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         CurrentQuestionData.scriptableObjectUpdated += SetupQuestionUI; //sets up event to load new combo when the question data scriptable object is updated
+        TestManager.shutDownWorkers += Cleanup; //sets up event to disable all active UI elements once test is finished
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -65,19 +69,10 @@ public class UIManager : MonoBehaviour
             UnityEngine.Debug.LogWarning("WARNING: Reference to Timer UI is null. Creating a new text mesh pro object");
         }
 
-        /*Button button = null;
-        foreach (GameObject panel in _panels)
+        if (_creditsPanel == null)
         {
-            button = panel.transform.parent.gameObject.GetComponent<Button>();
-
-            if (button != null)
-            {
-                _buttons.Add(button);
-            }
-            
-        }*/
-      
-        //SetTimers();
+            UnityEngine.Debug.LogError("ERROR: Reference to the credits panel is null");
+        }
     }
 
     // Update is called once per frame
@@ -237,5 +232,15 @@ public class UIManager : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
 
+    }
+
+    /// <summary>
+    /// Disables any active UI elements and reveals the credits panels
+    /// </summary>
+    public void Cleanup()
+    {
+        _creditsPanel.SetActive(true);
+        DisableButtons();
+        ResetCountdownTimer();
     }
 }
