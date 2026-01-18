@@ -1,0 +1,32 @@
+Base Test design:
+
+- Use the test outlined in the age reaction paper
+
+ASK KIERAN IF TEST 1 IS NEEDED:
+
+Test 1:
+- Get participants to click on the center of the screen as many times as they can in 10 seconds
+	- May not be entirely needed as reaction time isn't the goal of the test, just the baseline
+
+Test 2:
+
+- Split the screen in 3 sections
+- Have a coloured letter appear in the center of each once
+	- The letter can vary as (target is orange P):
+		- F or P (letter)
+		- Orange or Blue (colour
+
+		- Target is orange P so needs to have a 40% chance
+			- Enforce by
+			- Decide if spawn is gonna be target or distraction (40%)
+			- If distraction
+				- 33.333% chance of distraction type change:
+					- Colour
+					- Letter
+					- Both
+
+- Have them do this for either X times
+	- Gives a baseline to compare
+		- Reaction times (how quickly can they move a mouse to click a box
+		- Proccessing times (how quickly can they acknowledge, and reason about stimuli)
+		- Hit Rate (are they someone who values speed over reaction? Someone with a low hit rate may mean that the sns hasnt failed, they're just someone who is know for responding before being 100% correct.
