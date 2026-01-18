@@ -23,7 +23,13 @@ public class UIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        /*Button buttonComponent;
+        for (int i = 0; i < _panels.Count; i++)
+        {
+            buttonComponent = _panels[i].GetComponent<Button>();
+            buttonComponent.onClick.AddListener(delegate { StopTimer(i); });
+        }*/
+        
     }
 
     // Update is called once per frame
@@ -83,8 +89,7 @@ public class UIManager : MonoBehaviour
 
         }
 
-       /* _uiIconPositions[_nextComboIndex].sprite = _uiIcons[element];
-        _uiIconPositions[_nextComboIndex].gameObject.SetActive(true);
-*/
     }
+
+   
 }

@@ -166,7 +166,12 @@ namespace QuizManager
                 UpdateTestingState(TestingState.POST_TEST);
             }
         }
-        
+
+        public void StopTimer(int answerIndex)
+        {
+            Debug.Log($"OnClick event was triggered and timer was stopped. Answer {answerIndex} was chosen");
+        }
+
 
     }
 }

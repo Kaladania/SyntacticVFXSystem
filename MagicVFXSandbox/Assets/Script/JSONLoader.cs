@@ -41,7 +41,6 @@ public class JSONLoader : MonoBehaviour
     public static List<SectionData> CreateFromJSON(string filePath)
     {
         string jsonString = File.ReadAllText(filePath);
-        Debug.Log(jsonString);
         //Sections sections = JsonUtility.FromJson<Sections>(jsonString);
         List<SectionData> sections = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SectionData>>(jsonString);
         /*foreach (SectionData section in sections.sections)
