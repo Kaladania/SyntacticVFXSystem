@@ -2,6 +2,7 @@ using SnSECS;
 using System.Collections.Generic;
 using Unity.Entities.UniversalDelegates;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -93,5 +94,11 @@ public class UIManager : MonoBehaviour
 
     }
 
-   
+    /// <summary>
+    /// Deselects the current button by set the current selected object as "null" (nothing)
+    /// </summary>
+    public void ResetSelection()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+    }
 }
