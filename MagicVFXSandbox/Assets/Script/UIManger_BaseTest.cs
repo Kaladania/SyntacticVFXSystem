@@ -67,11 +67,11 @@ public class UIManger_BaseTest : MonoBehaviour
     {
         yield return new WaitForSeconds(_spawnDelaySeconds); //delays the spawn of the next character
 
-        _currentChosenIndex = UnityEngine.Random.Range(0, 2); //chooses a random side to spawn
-        int diceRoll = UnityEngine.Random.Range(1, 100) / 100; // /100 turns the roll into a percentage chance
+        _currentChosenIndex = UnityEngine.Random.Range(0, 3); //chooses a random side to spawn
+        float diceRoll = UnityEngine.Random.Range(1, 100) / 100.0f; // /100 turns the roll into a percentage chance
         DistractionTypes type = DistractionTypes.MAX_ENUM;
 
-        if (diceRoll >= _distactorChance)
+        if (diceRoll <= _distactorChance)
         {
             type = (DistractionTypes)UnityEngine.Random.Range(0, (int)DistractionTypes.MAX_ENUM); //randomly chooses a distraction type (1 in 3 chance)
             
@@ -85,12 +85,22 @@ public class UIManger_BaseTest : MonoBehaviour
 
     }
 
-    public void DespawnCharacter()
+    public void DespawnCharacter(int index)
     {
+        if (index == _currentChosenIndex)
+        {
+            Debug.Log("CORRECT");   
+        }
+        else
+        {
+            Debug.Log("INCORRECT");
+        }
+
         _buttonTexts[_currentChosenIndex].text = "";
-        _buttonTexts[_currentChosenIndex ].color = Color.black;
+        _buttonTexts[_currentChosenIndex].color = Color.black;
 
         StartCoroutine(SpawnCharacter());
+
     }
 
     /// <summary>
@@ -122,6 +132,6 @@ public class UIManger_BaseTest : MonoBehaviour
                 break;
         }
 
-        return Tuple.Create(_targetChar, _targetColour);
+        return Tuple.Create(chosenCharacter, chosenColour);
     }
 }
