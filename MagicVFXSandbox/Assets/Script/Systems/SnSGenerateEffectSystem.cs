@@ -35,7 +35,7 @@ namespace SnSECS
             //grabs an array full of the type of components attached to the entity
             NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
 
-            elementArray.Sort(new SnSDataComparer { });
+            //elementArray.Sort(new SnSDataComparer { });
 
             //Adds the specified asset to the list of assets to spawn
             //Starts at 1 because Unity automatically stores a 'simulate' flag at index 0
@@ -53,7 +53,8 @@ namespace SnSECS
                         {
                             case ElementType.BASE:
 
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
                                 break;
 
                             case ElementType.EXTRA:
@@ -80,8 +81,8 @@ namespace SnSECS
                         {
                             case ElementType.BASE:
 
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
                                 break;
 
                             case ElementType.EXTRA:
@@ -108,8 +109,8 @@ namespace SnSECS
                         {
                             case ElementType.BASE:
 
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._head);
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._head);
                                 break;
 
                             case ElementType.EXTRA:
@@ -135,8 +136,8 @@ namespace SnSECS
                         {
                             case ElementType.BASE:
 
-
-                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._head);
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._head);
                                 break;
 
                             case ElementType.EXTRA:
