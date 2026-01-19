@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.VisualScripting;
 using UnityEngine.AddressableAssets;
 using UnityEngine.VFX;
 
@@ -32,6 +34,8 @@ namespace SnSECS
 
             //grabs an array full of the type of components attached to the entity
             NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
+
+            elementArray.Sort(new SnSDataComparer { });
 
             //Adds the specified asset to the list of assets to spawn
             //Starts at 1 because Unity automatically stores a 'simulate' flag at index 0
@@ -295,6 +299,7 @@ namespace SnSECS
             return assetToReturn;
             
         }
+        
     }
 
 }

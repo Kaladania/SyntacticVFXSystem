@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -120,12 +121,30 @@ namespace SnSECS
 
         public object Clone()
         {
-            return new SNSFireComponent { 
+            return new SNSFireComponent
+            {
                 _head = UnityEngine.Object.Instantiate(_head),
                 _trail = UnityEngine.Object.Instantiate(_trail),
                 _ambience = UnityEngine.Object.Instantiate(_ambience)
             };
         }
+
+        /*public int Compare(Elements a, Elements b)
+        {
+            int3 cellId = GetCellID(GridBounds, CellsPerAxis, a.xyz);
+            int3 otherCellId = GetCellID(GridBounds, CellsPerAxis, b.xyz);
+            int xDiff = cellId.x.CompareTo(otherCellId.x);
+            if (xDiff == 0)
+            {
+                int yDiff = cellId.y.CompareTo(otherCellId.y);
+                if (yDiff == 0)
+                {
+                    return cellId.z.CompareTo(otherCellId.z);
+                }
+                return yDiff;
+            }
+            return xDiff;
+        }*/
     }
 }
 
