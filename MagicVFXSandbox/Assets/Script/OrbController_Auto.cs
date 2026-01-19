@@ -6,13 +6,13 @@ public class OrbAutoController : MonoBehaviour
 {
    
     [SerializeField]
-    private Transform _spawnPoint = null; //holds the spawn point of the VFX projectiles
+    protected Transform _spawnPoint = null; //holds the spawn point of the VFX projectiles
 
     [SerializeField]
-    private GameObject _projectile = null; //holds a prefab for a basic projectile
+    protected GameObject _projectile = null; //holds a prefab for a basic projectile
 
     [SerializeField]
-    private GameObject _childProjectile = null; //holds a prefab for a basic projectile
+    protected GameObject _childProjectile = null; //holds a prefab for a basic projectile
 
     /*[SerializeField]
     private DataRecorder.Recorder _dataRecorder = null;*/

@@ -1190,8 +1190,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.7458053, y: -0.08711586, z: 0.6529033, w: 0.09951163}
+  m_LocalPosition: {x: -45.2, y: 33.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3242,6 +3242,7 @@ GameObject:
   - component: {fileID: 2071756194}
   - component: {fileID: 2071756196}
   - component: {fileID: 2071756197}
+  - component: {fileID: 2071756198}
   m_Layer: 3
   m_Name: Orb
   m_TagString: Untagged
@@ -3352,32 +3353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c70d8e505afb684eaefeed71f1fe6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiIconPositions:
-  - {fileID: 1722367419}
-  - {fileID: 1438808178}
-  - {fileID: 956650549}
-  - {fileID: 257353432}
-  - {fileID: 711141224}
-  _keys: 0000000002000000010000000300000004000000
-  _values:
-  - {fileID: 21300000, guid: a6c937a9b27b2f64fbfbdcc0619c6d1c, type: 3}
-  - {fileID: 21300000, guid: a344ccbb202d891418e2db9b5b042f95, type: 3}
-  - {fileID: 21300000, guid: a8c95f8614f72c8438627a06f53ecf90, type: 3}
-  - {fileID: 21300000, guid: 6ddebe863ace4bc4fa73d88821f12cdf, type: 3}
-  - {fileID: 21300000, guid: 807619cb023d5e74b82852b2b073693d, type: 3}
-  _vfx: {fileID: 8926484042661614526, guid: 00e7839096a13124ea03c4ff6686a433, type: 3}
   _spawnPoint: {fileID: 236451701}
   _projectile: {fileID: 9087165346810739734, guid: 4b83055f52d8ca54ea0170a261c431aa, type: 3}
   _childProjectile: {fileID: 9087165346810739734, guid: 6e610b2b8266f9c4286c0c08e73a76d6, type: 3}
-  _turret: {fileID: 236451700}
-  _turretSpawnPoint: {fileID: 1089325747}
-  _buddyProjectileDistance: 1
-  _projectileSpeedIncrease: 10
-  _AOEBaseDensity: 3
-  _AOEDensityIncrease: 1
-  _AOESpawnRadius: 5
-  _dataRecorder: {fileID: 1961338753}
-  _id: 0
 --- !u!54 &2071756196
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3420,6 +3398,30 @@ MonoBehaviour:
   _maxRaycastLength: 40
   _turret: {fileID: 1089325747}
   _cameraToLookAt: {fileID: 330585545}
+--- !u!114 &2071756198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071756189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f457c0f9ad42f442af43e9a5cc36353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPoint: {fileID: 236451701}
+  _projectile: {fileID: 9087165346810739734, guid: 4b83055f52d8ca54ea0170a261c431aa, type: 3}
+  _childProjectile: {fileID: 9087165346810739734, guid: 6e610b2b8266f9c4286c0c08e73a76d6, type: 3}
+  _uiIconPositions:
+  - {fileID: 1722367419}
+  - {fileID: 1438808178}
+  - {fileID: 956650549}
+  - {fileID: 257353432}
+  - {fileID: 711141224}
+  _iconData: {fileID: 11400000, guid: cc1e41d2ffaea204bbcce4626029d1d7, type: 2}
+  _dataRecorder: {fileID: 1961338753}
+  _id: 0
 --- !u!1 &2072735767
 GameObject:
   m_ObjectHideFlags: 0

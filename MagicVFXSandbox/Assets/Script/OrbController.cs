@@ -21,14 +21,17 @@ public class OrbController : OrbAutoController
     [SerializeField]
     private Image[] _uiIconPositions = new Image[SNSData.MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
 
-    private Dictionary<Elements, Sprite> _uiIcons = new Dictionary<Elements, Sprite>();
+    //private Dictionary<Elements, Sprite> _uiIcons = new Dictionary<Elements, Sprite>();
 
-    [SerializeField]
+    /*[SerializeField]
     private List<Elements> _keys = new List<Elements>();
 
     [SerializeField]
-    private List<Sprite> _values = new List<Sprite>();
+    private List<Sprite> _values = new List<Sprite>();*/
 
+    [SerializeField]
+    private ElementIconMapTemplate _iconData = null; //holds the scriptable object data container for ui icon maps.
+/*
     [SerializeField]
     private Transform _spawnPoint = null; //holds the spawn point of the VFX projectiles
 
@@ -39,7 +42,7 @@ public class OrbController : OrbAutoController
     private GameObject _childProjectile = null; //holds a prefab for a basic projectile
 
     [SerializeField]
-    private GameObject _turret = null;
+    private GameObject _turret = null;*/
 
     /*//projectile modifiers
     [SerializeField]
@@ -68,27 +71,22 @@ public class OrbController : OrbAutoController
     [SerializeField]
     private int _id = 0;
 
-    [SerializeField]
-    private ControlType _controlType = ControlType.MANUAL; //states if the player should be able to spawn their own vfx
+    
     /*#if VERSION_SNS
         private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
     #endif*/
 
     void Start()
     {
-        if (_controlType == ControlType.MANUAL)
-        { 
-        
-        }
         //Create Icon Dictionary
-        _uiIcons.Clear();
+        //_uiIcons.Clear();
 
-        if (_keys.Count != _values.Count)
+       /* if (_keys.Count != _values.Count)
             throw new System.Exception(string.Format("there are {0} keys and {1} values on application start. Make sure that both key and value types are serializable " +
                 "and have the same number of elements."));
 
         for (int i = 0; i < _keys.Count; i++)
-            _uiIcons.Add(_keys[i], _values[i]);
+            _uiIcons.Add(_keys[i], _values[i]);*/
 
         _uniqueElementCounts = new int[SNSData.NUM_ELEMENTS - 1];
 
@@ -171,7 +169,7 @@ public class OrbController : OrbAutoController
             _currentCombo.Add(element); //adds the paramter to the combination list
 
             //Updates the UI to show the icon for the current added element
-            _uiIconPositions[_nextComboIndex].sprite = _uiIcons[element];
+            _uiIconPositions[_nextComboIndex].sprite = _iconData.GetUIIcon(element);
             _uiIconPositions[_nextComboIndex].gameObject.SetActive(true);
 
             _nextComboIndex++;
@@ -198,7 +196,7 @@ public class OrbController : OrbAutoController
             _currentCombo.RemoveAt(lastIndex); //removes the last element in the list
 
             //Updates the UI to hide the icon for the last added element
-            _uiIconPositions[lastIndex].sprite = _uiIcons[Elements.NONE];
+            _uiIconPositions[lastIndex].sprite = _iconData.GetUIIcon(Elements.NONE);
             _uiIconPositions[lastIndex].gameObject.SetActive(false);
 
             _nextComboIndex--;
@@ -233,7 +231,7 @@ public class OrbController : OrbAutoController
         //resets icon images and visibility
         foreach (Image icon in _uiIconPositions)
         {
-            icon.sprite = _uiIcons[Elements.NONE];
+            icon.sprite = _iconData.GetUIIcon(Elements.NONE);
             icon.gameObject.SetActive(false);
         }
     }
