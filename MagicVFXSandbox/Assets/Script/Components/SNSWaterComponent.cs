@@ -14,7 +14,7 @@ namespace SnSECS
     public struct SNSWaterComponet : ISharedComponentData, IEquatable<SNSWaterComponet>
     {
 
-        public List<ElementType> _types; //type of element
+        public HashSet<ElementType> _types; //type of element
         public VisualEffectAsset _head; //element projectile head
         public VisualEffectAsset _trail; //element projectile trail
         public VisualEffectAsset _ambience; //element projectile ambience
@@ -53,8 +53,12 @@ namespace SnSECS
                     break;
             }*/
 
-            _types = new List<ElementType>();
-            //_types.Add(elementType);
+            _types = new HashSet<ElementType>();
+
+            if (elementType != ElementType.NONE)
+            {
+                _types.Add(elementType);
+            }
 
             _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Water.vfx", typeof(VisualEffectAsset));
             _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Water.vfx", typeof(VisualEffectAsset));
