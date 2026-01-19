@@ -38,6 +38,8 @@ public class UIManger_BaseTest : MonoBehaviour
 
     int _currentChosenIndex = -1;
 
+    Coroutine _currentCoroutine = null;
+
     private void Awake()
     {
         
@@ -54,13 +56,21 @@ public class UIManger_BaseTest : MonoBehaviour
         char.ToUpper(_targetChar);
         char.ToUpper(_distractorChar);
 
-        StartCoroutine(SpawnCharacter());
+        AttemptSpawn();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void AttemptSpawn()
+    {
+        if (_currentCoroutine == null)
+        {
+            _currentCoroutine = StartCoroutine(SpawnCharacter());
+        }
     }
 
     private IEnumerator SpawnCharacter()
@@ -83,12 +93,18 @@ public class UIManger_BaseTest : MonoBehaviour
         _buttonTexts[_currentChosenIndex].text = loadedCharacter.Item1.ToString();
         _buttonTexts[_currentChosenIndex].color = loadedCharacter.Item2;
 
+        _currentCoroutine = null;
     }
 
     public void DespawnCharacter(int index)
     {
         if (index == _currentChosenIndex)
         {
+            _buttonTexts[_currentChosenIndex].text = "";
+            _buttonTexts[_currentChosenIndex].color = Color.black;
+
+  
+            AttemptSpawn();
             Debug.Log("CORRECT");   
         }
         else
@@ -96,10 +112,6 @@ public class UIManger_BaseTest : MonoBehaviour
             Debug.Log("INCORRECT");
         }
 
-        _buttonTexts[_currentChosenIndex].text = "";
-        _buttonTexts[_currentChosenIndex].color = Color.black;
-
-        StartCoroutine(SpawnCharacter());
 
     }
 
