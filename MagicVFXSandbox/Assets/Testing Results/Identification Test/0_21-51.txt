@@ -1,0 +1,34 @@
+Participant ID: 0
+
+--- SECTION: 1 ----
+
+- - QUESTION: 1
+Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+Reaction Time: 29.33 seconds
+
+Chosen answer: 0 [CORRECT]
+
+- - QUESTION: 2
+Tested Combination: [WATER,LIGHTNING,EARTH,]
+
+Reaction Time: 1.51 seconds
+
+Chosen answer: 0 [CORRECT]
+
+--- SECTION: 2 ----
+
+- - QUESTION: 1
+Tested Combination: [WATER,WATER,LIGHTNING,]
+
+Reaction Time: 2.12 seconds
+
+Chosen answer: 0 [CORRECT]
+
+- - QUESTION: 2
+Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+Reaction Time: 0.55 seconds
+
+Chosen answer: 2 [INCORRECT]
+
