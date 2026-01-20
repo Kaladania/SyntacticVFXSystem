@@ -38,7 +38,7 @@ namespace QuizManager
         private CurrentQuestionData _currentQuestionData = null; //holds the scriptable object data container for question data.
 
         [SerializeField]
-        private string _filePath = string.Empty;
+        private string _questionsFilePath = string.Empty;
 
         [SerializeField]
         private string _folderLocation = string.Empty;
@@ -60,9 +60,9 @@ namespace QuizManager
         void Start()
         {
 
-            if (_filePath == string.Empty)
+            if (_questionsFilePath == string.Empty)
             {
-                _filePath = "Assets/SNSTestingQuestions.json";
+                _questionsFilePath = "Assets/SNSTestingQuestions.json";
             }
 
             if (_folderLocation == string.Empty)
@@ -96,7 +96,7 @@ namespace QuizManager
 
 
 
-            _sections = JSONLoader.CreateFromJSON(_filePath);
+            _sections = JSONLoader.CreateFromJSON(_questionsFilePath);
 
             if (_currentQuestionData != null)
             {

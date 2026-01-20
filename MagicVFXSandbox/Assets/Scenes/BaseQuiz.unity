@@ -2059,7 +2059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932323830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4135,7 +4135,7 @@ MonoBehaviour:
   _recorder: {fileID: 1961338753}
   _folderLocation: Assets/Testing Results/Reaction Test/
   _reactionTimeData: {fileID: 11400000, guid: c05e4c0482dc90245ab1d309efbd4f2f, type: 2}
-  _testDurationSeconds: 0
+  _testDurationSeconds: 10
 --- !u!1 &1707803808
 GameObject:
   m_ObjectHideFlags: 0

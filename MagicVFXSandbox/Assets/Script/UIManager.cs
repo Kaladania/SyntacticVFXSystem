@@ -23,6 +23,11 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI _timerUI = null;
+    [SerializeField]
+    private GameObject _timerPanel = null;
+
+    [SerializeField]
+    private TextMeshProUGUI _questionTextElement = null;
 
     [SerializeField]
     private int _countDownLength = 0;
@@ -35,6 +40,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private GameObject _creditsPanel = null;
+
+    [SerializeField]
+    private string _questionText = string.Empty;
 
     private bool _timerActive = true; //states if the countdown timer should current be de-incrimenting
     private float _countdownTimeRemaining = 0.0f; //time in seconds
@@ -73,6 +81,11 @@ public class UIManager : MonoBehaviour
         {
             UnityEngine.Debug.LogError("ERROR: Reference to the credits panel is null");
         }
+
+        if (_questionText == string.Empty)
+        {
+            _questionText = "Select the matching element combo";
+        }
     }
 
     // Update is called once per frame
@@ -91,6 +104,7 @@ public class UIManager : MonoBehaviour
             {
                 ResetCountdownTimer();
                 EnableButtons();
+                _questionTextElement.text = _questionText;
                 _startTime = Time.timeAsDouble;
             }
         }
@@ -110,7 +124,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     void ResetCountdownTimer()
     {
-        _timerUI.gameObject.SetActive(false);
+        _timerPanel.gameObject.SetActive(false);
         _countdownTimeRemaining = 0.0f;
         _timerActive = false;
         _timerUI.text = _countDownLength.ToString();
@@ -120,10 +134,10 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Sets all timers to their default values
     /// </summary>
-    void SetTimers()
+    void SetCountdownTimer()
     {
         _countdownTimeRemaining = _countDownLength;
-        _timerUI.gameObject.SetActive(true );
+        _timerPanel.gameObject.SetActive(true );
         _timerActive = true;
     }
 
@@ -184,7 +198,8 @@ public class UIManager : MonoBehaviour
         }
 
         //EventSystem.current.SetSelectedGameObject(null);
-        SetTimers();
+        SetCountdownTimer();
+        _questionTextElement.text = "";
         DisableButtons();
     }
 
