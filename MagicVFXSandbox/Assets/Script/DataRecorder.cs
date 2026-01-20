@@ -26,9 +26,10 @@ namespace DataRecorder
             
         }
 
-        public void SetupRecorder(int id)
+        public void SetupRecorder(int id, string folderPath)
         {
-            filePath = "Assets/Testing Results/" + _ID + ".txt";
+            //filePath = "Assets/Testing Results/" + _ID + ".txt";
+            filePath = folderPath + _ID + ".txt";
 
             //if a file with the same name already exists, raises an error and alters the file path name
 

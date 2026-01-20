@@ -36,6 +36,11 @@ public class UIManger_BaseTest : MonoBehaviour
     [SerializeField]
     Stopwatch _stopwatch = null;
 
+
+    [SerializeField]
+    private ReactionTimeContainerTemplate _reactionTimeData = null;
+
+
     //const float _targetChance = 0.6f;
     const float _distactorChance = 0.6f;
 
@@ -114,14 +119,14 @@ public class UIManger_BaseTest : MonoBehaviour
         {
             _buttonTexts[_currentChosenIndex].text = "";
             _buttonTexts[_currentChosenIndex].color = Color.black;
-
+            
+            _reactionTimeData._hits++;
   
             AttemptSpawn();
-            Debug.Log("CORRECT");   
         }
         else
         {
-            Debug.Log("INCORRECT");
+            _reactionTimeData._misses++;
         }
 
 

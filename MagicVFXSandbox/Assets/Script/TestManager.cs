@@ -40,6 +40,9 @@ namespace QuizManager
         [SerializeField]
         private string _filePath = string.Empty;
 
+        [SerializeField]
+        private string _folderLocation = string.Empty;
+
         public delegate void EndTestEvent();
         public static event EndTestEvent shutDownWorkers;
 
@@ -62,6 +65,11 @@ namespace QuizManager
                 _filePath = "Assets/SNSTestingQuestions.json";
             }
 
+            if (_folderLocation == string.Empty)
+            {
+                _folderLocation = "Assets/Testing Results/Identification Test/";
+            }
+
             _state = TestingState.SETUP;
 
             if (_recorder == null)
@@ -72,7 +80,7 @@ namespace QuizManager
             }
 
             //Sets up the Data Recorder
-            _recorder.SetupRecorder(_testerID);
+            _recorder.SetupRecorder(_testerID, _folderLocation);
 
             //_updateEvent = SetupSpawner; 
             //sets up event to load new combo when the question data scriptable object is updated
