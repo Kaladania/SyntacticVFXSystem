@@ -1,3 +1,4 @@
+using QuizManager;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,6 +37,9 @@ public class UIManger_BaseTest : MonoBehaviour
     [SerializeField]
     Stopwatch _stopwatch = null;
 
+    [SerializeField]
+    GameObject _creditsPanel = null;
+
 
     [SerializeField]
     private ReactionTimeContainerTemplate _reactionTimeData = null;
@@ -51,6 +55,7 @@ public class UIManger_BaseTest : MonoBehaviour
     private void Awake()
     {
         Stopwatch.countdownFinished += AttemptSpawn;
+        TestManager_Base.shutDownWorkers += CleanUp;
         //Stopwatch.stopwatchPaused += AttemptSpawn;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -162,5 +167,18 @@ public class UIManger_BaseTest : MonoBehaviour
         }
 
         return Tuple.Create(chosenCharacter, chosenColour);
+    }
+
+
+    void CleanUp()
+    {
+        _creditsPanel.SetActive(true);
+        
+        if (_currentCoroutine != null)
+        {
+            StopCoroutine(_currentCoroutine);
+            _currentCoroutine = null;
+            _stopwatch.PauseStopWatch();
+        }
     }
 }

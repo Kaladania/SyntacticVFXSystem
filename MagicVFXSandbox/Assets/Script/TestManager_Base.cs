@@ -1,8 +1,9 @@
-using UnityEngine;
 using DataRecorder;
-using System.Collections.Generic;
 using SnSECS;
+using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine;
 
 namespace QuizManager
 {
@@ -23,6 +24,9 @@ namespace QuizManager
 
         [SerializeField]
         private ReactionTimeContainerTemplate _reactionTimeData = null;
+
+        [SerializeField]
+        private int _testDurationSeconds = 0;
 
         public delegate void EndTestEvent();
         public static event EndTestEvent shutDownWorkers;
@@ -60,8 +64,15 @@ namespace QuizManager
 
             }
 
+            if (_testDurationSeconds == 0)
+            {
+                _testDurationSeconds = 0;
+            }
+
             //Sets up the Data Recorder
             _recorder.SetupRecorder(_testerID, _folderLocation);
+
+            StartCoroutine(EndTest());
 
         }
 
@@ -104,13 +115,29 @@ namespace QuizManager
             }
         }
 
+        private IEnumerator EndTest()
+        {
+            yield return new WaitForSeconds(_testDurationSeconds);
+
+            Stopwatch.stopwatchPaused -= RecordTime;
+            shutDownWorkers?.Invoke();
+
+            double averageTimeMS = (_reactionTimeData._cumulativeReactionTimeMS / (_reactionTimeData._hits + _reactionTimeData._misses));
+            int totalClicks = _reactionTimeData._hits + _reactionTimeData._misses;
+
+            string stringToWrite = $"Total Clicks: {totalClicks}" + $"\nHits: {_reactionTimeData._hits}" +
+                $"\nMisses: {_reactionTimeData._misses}" + $"\nAverage Reaction Time: {averageTimeMS}ms";
+
+            _recorder.WriteToFile(stringToWrite);
+        }
+
         /// <summary>
         /// Event delegate the writes the total reaction time to the data record file
         /// </summary>
         /// <param name="elapsedTime"></param>
         public void RecordTime(double elapsedTime)
         {
-            _reactionTimeData._cumulativeReactionTime += elapsedTime;
+            _reactionTimeData._cumulativeReactionTimeMS += elapsedTime;
             //_recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
         }
 

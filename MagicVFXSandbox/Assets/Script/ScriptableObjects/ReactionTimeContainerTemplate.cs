@@ -5,13 +5,13 @@ public class ReactionTimeContainerTemplate : ScriptableObject
 {
     public int _misses = 0;
     public int _hits = 0;
-    public double _cumulativeReactionTime = 0.0f;
+    public double _cumulativeReactionTimeMS = 0.0f;
 
     public void OnEnable()
     {
         _misses = 0;
         _hits = 0;
-        _cumulativeReactionTime = 0.0f;
+        _cumulativeReactionTimeMS = 0.0f;
     }
 
     /*public void SetData(float reactionTime, HitType type)
