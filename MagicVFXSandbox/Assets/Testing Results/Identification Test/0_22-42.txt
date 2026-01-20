@@ -1,0 +1,10 @@
+Participant ID: 0
+
+--- SECTION: 1 ----
+
+- - QUESTION: 1
+Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+- - QUESTION: 2
+Tested Combination: [WATER,LIGHTNING,EARTH,]
+

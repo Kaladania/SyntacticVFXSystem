@@ -43,6 +43,8 @@ namespace QuizManager
         [SerializeField]
         private string _folderLocation = string.Empty;
 
+        bool _testing = false;
+
         public delegate void EndTestEvent();
         public static event EndTestEvent shutDownWorkers;
 
@@ -127,25 +129,10 @@ namespace QuizManager
             }
         }
 
-        void UpdateTestingState(TestingState newState)
+        public void StartTest()
         {
-            //only changes state if the new incoming state if different to the old state
-            if (newState != _state)
-            {
-                switch (newState)
-                {
-                    case TestingState.SETUP:
-                        break;
-                    case TestingState.PRE_TEST:
-                        break;
-                    case TestingState.TESTING:
-                        break;
-                    case TestingState.POST_TEST:
-                        break;
-                    default:
-                        break;
-                }
-            }
+            _testing = true;
+            ChangeQuestion();
         }
 
         void ChangeQuestion()
@@ -163,7 +150,7 @@ namespace QuizManager
                     _currentQuestion++;
 
                     string recorderText =
-                        $"- - QUESTION: {_currentQuestion}\nTested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);
+                        $"- - QUESTION: {_currentQuestion - 1}\nTested Combination: " + _recorder.ComboToString(question.combos[question.answerIndex]);
                     _recorder.WriteToFile(recorderText);
                 }
                 else
@@ -187,18 +174,21 @@ namespace QuizManager
             else
             {
                 //signals that the test has finised.
-                UpdateTestingState(TestingState.POST_TEST);
                 shutDownWorkers?.Invoke(); //tells other managers (UI and Combo) to run shutdown functions
             }
         }
 
         public void StopTimer(int answerIndex)
         {
-            string questionResult = $"Chosen answer: {answerIndex}";
-            questionResult += answerIndex == _currentQuestionData._answerIndex ? " [CORRECT]" : " [INCORRECT]";
+            if (_testing)
+            {
+                string questionResult = $"Chosen answer: {answerIndex}";
+                questionResult += answerIndex == _currentQuestionData._answerIndex ? " [CORRECT]" : " [INCORRECT]";
 
-            _recorder.WriteToFile(questionResult);
-            ChangeQuestion();
+                _recorder.WriteToFile(questionResult);
+                ChangeQuestion();
+
+            }
 
         }
 

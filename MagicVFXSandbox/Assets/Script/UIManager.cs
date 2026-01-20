@@ -42,9 +42,12 @@ public class UIManager : MonoBehaviour
     private GameObject _creditsPanel = null;
 
     [SerializeField]
+    private GameObject _beginButton = null;
+
+    [SerializeField]
     private string _questionText = string.Empty;
 
-    private bool _timerActive = true; //states if the countdown timer should current be de-incrimenting
+    private bool _timerActive = false; //states if the countdown timer should current be de-incrimenting
     private float _countdownTimeRemaining = 0.0f; //time in seconds
     private double _startTime = 0.0f; //records the start time of the question
 
@@ -53,6 +56,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private Color _uninteractableColour = Color.gray;
+
+    bool _testStarted = false;
 
 
     private void Awake()
@@ -85,6 +90,13 @@ public class UIManager : MonoBehaviour
         if (_questionText == string.Empty)
         {
             _questionText = "Select the matching element combo";
+        }
+
+        //outlines the first panel during the "demo" mode to indicate testers need to select a button
+        Outline outline = _panels[0].transform.parent.gameObject.GetComponent<Outline>();
+        if (outline != null)
+        {
+            outline.effectColor = Color.green;
         }
     }
 
@@ -160,6 +172,7 @@ public class UIManager : MonoBehaviour
         {
             panelParent = _panels[comboIndex].transform.parent.gameObject;
 
+
             //procceeds to enable a panel and populate it with the correct icons
             if (comboIndex < _currentQuestionData._combos.Count)
             {
@@ -197,10 +210,26 @@ public class UIManager : MonoBehaviour
 
         }
 
-        //EventSystem.current.SetSelectedGameObject(null);
-        SetCountdownTimer();
-        _questionTextElement.text = "";
-        DisableButtons();
+        if (_testStarted)
+        {
+            //EventSystem.current.SetSelectedGameObject(null);
+            SetCountdownTimer();
+            _questionTextElement.text = "";
+            DisableButtons();
+        }
+    }
+
+    public void StartTest()
+    {
+        _testStarted = true;
+        _timerActive = true;
+        _beginButton.SetActive(false);
+
+        Outline outline = _panels[0].transform.parent.gameObject.GetComponent<Outline>();
+        if (outline != null)
+        {
+            outline.effectColor = Color.white;
+        }
     }
 
     void DisableButtons()
@@ -236,16 +265,20 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void ResetSelection()
     {
-        //records the endtime and calculates the total elapsed time
-        double endTime = Time.timeAsDouble;
-        double elapsedTime = endTime - _startTime;
-        elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
+        if ( _testStarted )
+        {
+            //records the endtime and calculates the total elapsed time
+            double endTime = Time.timeAsDouble;
+            double elapsedTime = endTime - _startTime;
+            elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
 
-        timeRecorded?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
+            timeRecorded?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
 
-        //UnityEngine.Debug.Log($"Gamelapsed time was: {elapsedTime} ");
+            //UnityEngine.Debug.Log($"Gamelapsed time was: {elapsedTime} ");
 
-        EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
 
     }
 
