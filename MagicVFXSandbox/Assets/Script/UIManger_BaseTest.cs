@@ -33,6 +33,9 @@ public class UIManger_BaseTest : MonoBehaviour
     [SerializeField]
     float _spawnDelaySeconds = 1.0f;
 
+    [SerializeField]
+    Stopwatch _stopwatch = null;
+
     //const float _targetChance = 0.6f;
     const float _distactorChance = 0.6f;
 
@@ -42,7 +45,8 @@ public class UIManger_BaseTest : MonoBehaviour
 
     private void Awake()
     {
-        
+        Stopwatch.countdownFinished += AttemptSpawn;
+        //Stopwatch.stopwatchPaused += AttemptSpawn;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,11 +56,17 @@ public class UIManger_BaseTest : MonoBehaviour
             Debug.LogError("ERROR: Reference to button texts are null");
         }
 
+        if (_stopwatch == null)
+        {
+            Debug.LogError("ERROR: Reference to stopwatch is null");
+        }
+
         //ensures both characters are captialised
         char.ToUpper(_targetChar);
         char.ToUpper(_distractorChar);
 
-        AttemptSpawn();
+        _stopwatch.StartCountdown();
+        //AttemptSpawn();
     }
 
     // Update is called once per frame
@@ -94,6 +104,8 @@ public class UIManger_BaseTest : MonoBehaviour
         _buttonTexts[_currentChosenIndex].color = loadedCharacter.Item2;
 
         _currentCoroutine = null;
+
+        _stopwatch.StartStopWatch();
     }
 
     public void DespawnCharacter(int index)
