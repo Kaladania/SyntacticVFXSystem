@@ -51,6 +51,7 @@ public class UIManger_BaseTest : MonoBehaviour
     int _currentChosenIndex = -1;
 
     Coroutine _currentCoroutine = null;
+    bool _characterSpawned = false;
 
     private void Awake()
     {
@@ -75,14 +76,34 @@ public class UIManger_BaseTest : MonoBehaviour
         char.ToUpper(_targetChar);
         char.ToUpper(_distractorChar);
 
-        _stopwatch.StartCountdown();
+       
         //AttemptSpawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if ( _characterSpawned)
+        {
+
+            if (Input.GetMouseButtonDown(0)) //left mouse button
+            {
+                DespawnCharacter(0);
+            }
+            else if (Input.GetMouseButtonDown(1)) //middle mouse button
+            {
+                DespawnCharacter(1);
+            }
+            else if (Input.GetMouseButton(2)) //right mouse button
+            {
+                DespawnCharacter(2);
+            }
+        }
+    }
+
+    public void StartTest()
+    {
+        _stopwatch.StartCountdown();
     }
 
     void AttemptSpawn()

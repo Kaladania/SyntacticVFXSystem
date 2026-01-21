@@ -28,8 +28,7 @@ namespace QuizManager
 
         //private event CurrentQuestionData.ScriptableObjectUpdateEvent _updateEvent; //the event triggered by new question data being given to the questionData scriptable object
 
-        [SerializeField]
-        private int _testerID = 0;
+        public static int _testerID = 0;
 
         [SerializeField]
         private DataRecorder.Recorder _recorder = null;

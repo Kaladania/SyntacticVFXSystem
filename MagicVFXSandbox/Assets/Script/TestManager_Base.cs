@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace QuizManager
 {
@@ -44,6 +45,7 @@ namespace QuizManager
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            TestManager._testerID = _testerID; //updates the ID for the identification test manager
             if (_folderLocation == string.Empty)
             {
                 _folderLocation = "Assets/Testing Results/Reaction Test/";
@@ -79,19 +81,7 @@ namespace QuizManager
         // Update is called once per frame
         void Update()
         {
-            switch (_state)
-            {
-                case TestingState.SETUP:
-                    break;
-                case TestingState.PRE_TEST:
-                    break;
-                case TestingState.TESTING:
-                    break;
-                case TestingState.POST_TEST:
-                    break;
-                default:
-                    break;
-            }
+
         }
 
         void UpdateTestingState(TestingState newState)
@@ -141,5 +131,12 @@ namespace QuizManager
             //_recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
         }
 
+        /// <summary>
+        /// Loads the next test
+        /// </summary>
+        public void SwitchToNextTest()
+        {
+            SceneManager.LoadScene("Mode_Quiz_Reaction");
+        }
     }
 }
