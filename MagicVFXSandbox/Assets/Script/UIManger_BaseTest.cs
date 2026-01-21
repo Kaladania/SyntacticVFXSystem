@@ -103,7 +103,7 @@ public class UIManger_BaseTest : MonoBehaviour
             {
                 DespawnCharacter(1);
             }
-            else if (Input.GetMouseButton(1)) //right mouse button
+            else if (Input.GetMouseButtonDown(1)) //right mouse button
             {
                 DespawnCharacter(2);
             }
@@ -159,12 +159,14 @@ public class UIManger_BaseTest : MonoBehaviour
             _buttonTexts[_currentChosenIndex].color = Color.black;
             
             _reactionTimeData._hits++;
+            Debug.Log($"Hits {_reactionTimeData._hits}");
   
             AttemptSpawn();
         }
         else
         {
             _reactionTimeData._misses++;
+            Debug.Log($"Misses {_reactionTimeData._misses}");
         }
 
         

@@ -101,7 +101,7 @@ namespace QuizManager
 
             if (_currentQuestionData != null)
             {
-                _recorder.WriteToFile($"--- SECTION: {_currentSection + 1} ----");
+                _recorder.WriteToFile($"--- SECTION: {_currentSection} ----");
                 ChangeQuestion();
             }
             else
@@ -197,7 +197,7 @@ namespace QuizManager
         /// <param name="elapsedTime"></param>
         public void RecordTime(double elapsedTime)
         {
-            _recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
+            _recorder.WriteToFile($"Reaction Time: {elapsedTime * 1000}ms");
         }
 
     }

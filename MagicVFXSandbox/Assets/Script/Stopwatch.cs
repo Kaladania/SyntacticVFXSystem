@@ -111,7 +111,7 @@ public class Stopwatch : MonoBehaviour
         double elapsedTime = (endTime - _startTime) * 1000; //calculates the elapsed time in ms
         elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
 
-        Debug.Log($"Elapsed time: {elapsedTime}ms");
+        //Debug.Log($"Elapsed time: {elapsedTime}ms");
 
         stopwatchPaused?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
 
