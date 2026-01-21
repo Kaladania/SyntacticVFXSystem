@@ -40,9 +40,18 @@ public class UIManger_BaseTest : MonoBehaviour
     [SerializeField]
     GameObject _creditsPanel = null;
 
+    [SerializeField]
+    Button _beginButton = null;
+
+    [SerializeField]
+    GameObject _instructionPanel = null;
+
 
     [SerializeField]
     private ReactionTimeContainerTemplate _reactionTimeData = null;
+
+    public delegate void InputRecieved();
+    public static event InputRecieved mouseButtonPressed;
 
 
     //const float _targetChance = 0.6f;
@@ -90,11 +99,11 @@ public class UIManger_BaseTest : MonoBehaviour
             {
                 DespawnCharacter(0);
             }
-            else if (Input.GetMouseButtonDown(1)) //middle mouse button
+            else if (Input.GetMouseButtonDown(2)) //middle mouse button
             {
                 DespawnCharacter(1);
             }
-            else if (Input.GetMouseButton(2)) //right mouse button
+            else if (Input.GetMouseButton(1)) //right mouse button
             {
                 DespawnCharacter(2);
             }
@@ -103,6 +112,8 @@ public class UIManger_BaseTest : MonoBehaviour
 
     public void StartTest()
     {
+        _beginButton.gameObject.SetActive(false);
+        _instructionPanel.SetActive(false);
         _stopwatch.StartCountdown();
     }
 
@@ -135,12 +146,13 @@ public class UIManger_BaseTest : MonoBehaviour
         _buttonTexts[_currentChosenIndex].color = loadedCharacter.Item2;
 
         _currentCoroutine = null;
-
+        _characterSpawned = true;
         _stopwatch.StartStopWatch();
     }
 
     public void DespawnCharacter(int index)
     {
+        _stopwatch.PauseStopWatch();
         if (index == _currentChosenIndex)
         {
             _buttonTexts[_currentChosenIndex].text = "";
@@ -154,6 +166,8 @@ public class UIManger_BaseTest : MonoBehaviour
         {
             _reactionTimeData._misses++;
         }
+
+        
 
 
     }

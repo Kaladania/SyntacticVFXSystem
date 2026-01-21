@@ -1,0 +1,7 @@
+Participant ID: 1
+
+Total Clicks: 3
+Hits: 1
+Misses: 2
+Average Reaction Time: 1927.94333333333ms
+

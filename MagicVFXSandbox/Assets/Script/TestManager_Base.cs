@@ -74,7 +74,7 @@ namespace QuizManager
             //Sets up the Data Recorder
             _recorder.SetupRecorder(_testerID, _folderLocation);
 
-            StartCoroutine(EndTest());
+           
 
         }
 
@@ -103,6 +103,11 @@ namespace QuizManager
                         break;
                 }
             }
+        }
+
+        public void StartTest()
+        {
+            StartCoroutine(EndTest());
         }
 
         private IEnumerator EndTest()
@@ -136,7 +141,7 @@ namespace QuizManager
         /// </summary>
         public void SwitchToNextTest()
         {
-            SceneManager.LoadScene("Mode_Quiz_Reaction");
+            SceneManager.LoadScene("Mode_Quiz_Identification");
         }
     }
 }

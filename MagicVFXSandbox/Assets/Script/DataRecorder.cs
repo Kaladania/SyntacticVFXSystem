@@ -29,18 +29,18 @@ namespace DataRecorder
         public void SetupRecorder(int id, string folderPath)
         {
             //filePath = "Assets/Testing Results/" + _ID + ".txt";
-            filePath = folderPath + _ID + ".txt";
+            filePath = folderPath + id + ".txt";
 
             //if a file with the same name already exists, raises an error and alters the file path name
 
             while (File.Exists(filePath))
             {
-                filePath = folderPath + _ID + "_" + DateTime.Now.ToShortTimeString() + ".txt";
+                filePath = folderPath + id + "_" + DateTime.Now.ToShortTimeString() + ".txt";
                 filePath = filePath.Replace(":", "-");
                 Debug.LogError($"ERROR: A file already exists with this name. ID may be incorrect. Creating a new file with name: {filePath} ");
             }
 
-            WriteToNewFile($"Participant ID: {_ID}");
+            WriteToNewFile($"Participant ID: {id}");
         }
         
         /// <summary>
