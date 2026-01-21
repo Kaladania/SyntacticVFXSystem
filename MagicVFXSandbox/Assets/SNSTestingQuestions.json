@@ -1,44 +1,242 @@
 [
   {
-    "ID": 0,
     "questions": [
       {
         "combos": [
           [ "FIRE", "WATER", "LIGHTNING" ],
-          [ "WATER", "FIRE", "LIGHTNING" ],
-          [ "FIRE", "FIRE", "LIGHTNING" ]
-        ],
-          "answerIndex" : 0
-      },
-      {
-        "combos": [
-          [ "WATER", "LIGHTNING", "EARTH" ],
-          [ "WATER", "WATER", "EARTH" ],
-          [ "LIGHTNING", "LIGHTNING", "EARTH" ]
+          [ "WATER", "EARTH", "LIGHTNING" ],
+          [ "LIGHTNING", "FIRE", "LIGHTNING" ]
         ],
         "answerIndex": 0
       }
     ]
   },
-
   {
-    "ID": 0,
     "questions": [
       {
-        "answerIndex": 0,
         "combos": [
-          [ "WATER", "WATER", "LIGHTNING" ],
-          [ "WATER", "FIRE", "WATER" ],
-          [ "FIRE", "EARTH", "LIGHTNING" ]
-        ]
+          [ "FIRE", "FIRE" ],
+          [ "WATER", "WATER" ]
+        ],
+        "answerIndex": 0
       },
       {
-        "answerIndex": 0,
         "combos": [
-          [ "FIRE", "WATER", "LIGHTNING" ],
-          [ "FIRE", "FIRE", "LIGHTNING" ],
-          [ "FIRE", "WATER", "LIGHTNING" ]
-        ]
+          [ "EARTH", "EARTH" ],
+          [ "LIGHTNING", "LIGHTNING" ]
+        ],
+        "answerIndex": 1
+      },
+      {
+        "combos": [
+          [ "EARTH", "EARTH" ],
+          [ "WATER", "WATER" ]
+        ],
+        "answerIndex": 1
+      },
+      {
+        "combos": [
+          [ "EARTH", "EARTH" ],
+          [ "FIRE", "FIRE" ]
+        ],
+        "answerIndex": 0
+      },
+      {
+        "combos": [
+          [ "FIRE", "LIGHTNING" ],
+          [ "EARTH", "FIRE" ]
+        ],
+        "answerIndex": 0
+      },
+      {
+        "combos": [
+          [ "EARTH", "WATER" ],
+          [ "WATER", "FIRE" ]
+        ],
+        "answerIndex": 0
+      },
+      {
+        "combos": [
+          [ "LIGHTNING", "WATER" ],
+          [ "WATER", "LIGHTNING" ]
+        ],
+        "answerIndex": 1
+      },
+      {
+        "combos": [
+          [ "EARTH", "FIRE" ],
+          [ "FIRE", "EARTH" ]
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "combos": [
+          [ "WATER", "WATER", "FIRE" ],
+          [ "WATER", "FIRE", "WATER" ],
+          [ "FIRE", "FIRE", "WATER" ]
+        ],
+        "answerIndex": 0
+      },
+      {
+        "combos": [
+          [ "EARTH", "LIGHTNING", "LIGHTNING" ],
+          [ "LIGHTNING", "EARTH", "EARTH" ],
+          [ "EARTH", "EARTH", "LIGHTNING" ]
+        ],
+        "answerIndex": 2
+      },
+      {
+        "combos": [
+          [ "FIRE", "EARTH", "FIRE" ],
+          [ "FIRE", "WATER", "FIRE" ],
+          [ "FIRE", "FIRE", "FIRE" ]
+        ],
+        "answerIndex": 1
+      },
+      {
+        "combos": [
+          [ "WATER", "LIGHTNING", "FIRE" ],
+          [ "LIGHTNING", "FIRE", "WATER" ],
+          [ "FIRE", "LIGHTNING", "WATER" ]
+        ],
+        "answerIndex": 2
+      },
+      {
+        "combos": [
+          [ "EARTH", "LIGHTNING", "WATER" ],
+          [ "EARTH", "EARTH", "LIGHTNING" ],
+          [ "EARTH", "FIRE", "LIGHTNING" ]
+        ],
+        "answerIndex": 2
+      },
+      {
+        "combos": [
+          [ "WATER", "EARTH", "FIRE" ],
+          [ "FIRE", "WATER", "EARTH" ],
+          [ "WATER", "FIRE", "WATER" ]
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "combos": [
+          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
+          [ "WATER", "WATER", "WATER", "WATER" ],
+          [ "FIRE", "FIRE", "FIRE", "FIRE" ],
+          [ "EARTH", "EARTH", "EARTH", "EARTH" ]
+        ],
+        "answerIndex": 0
+      },
+      {
+        "combos": [
+          [ "WATER", "WATER", "WATER", "WATER" ],
+          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
+          [ "EARTH", "EARTH", "EARTH", "EARTH" ],
+          [ "FIRE", "FIRE", "FIRE", "FIRE" ]
+        ],
+        "answerIndex": 2
+      },
+      {
+        "combos": [
+          [ "FIRE", "FIRE", "FIRE", "FIRE" ],
+          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
+          [ "EARTH", "EARTH", "EARTH", "EARTH" ],
+          [ "WATER", "WATER", "WATER", "WATER" ]
+        ],
+        "answerIndex": 3
+      },
+      {
+        "combos": [
+          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
+          [ "FIRE", "FIRE", "FIRE", "FIRE" ],
+          [ "WATER", "WATER", "WATER", "WATER" ],
+          [ "EARTH", "EARTH", "EARTH", "EARTH" ]
+        ],
+        "answerIndex": 1
+      },
+      {
+        "combos": [
+          [ "LIGHTNING", "LIGHTNING", "FIRE", "LIGHTNING" ],
+          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "FIRE" ],
+          [ "FIRE", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
+          [ "FIRE", "LIGHTNING", "LIGHTNING", "FIRE" ]
+        ],
+        "answerIndex": 2
+      },
+      {
+        "combos": [
+          [ "WATER", "EARTH", "WATER", "EARTH" ],
+          [ "EARTH", "EARTH", "WATER", "WATER" ],
+          [ "EARTH", "WATER", "WATER", "EARTH" ],
+          [ "WATER", "WATER", "WATER", "EARTG" ]
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "combos": [
+          [ "FIRE", "FIRE", "FIRE", "FIRE", "WATER" ],
+          [ "WATER", "FIRE", "FIRE", "FIRE", "FIRE" ],
+          [ "LIGHTNING", "EARTH", "FIRE", "WATER", "EARTH" ],
+          [ "FIRE", "FIRE", "WATER", "WATER", "EARTH" ]
+        ],
+        "answerIndex": 4
+      },
+      {
+        "combos": [
+          [ "LIGHTNING", "LIGHTNING", "WATER", "WATER", "LIGHTNING" ],
+          [ "WATER", "WATER", "FIRE", "FIRE", "LIGHTNING" ],
+          [ "LIGHTING", "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTING" ],
+          [ "WATER", "FIRE", "EARTH", "WATER", "LIGHTNING" ]
+        ],
+        "answerIndex": 0
+      },
+      {
+        "combos": [
+          [ "FIRE", "LIGHTNING", "WATER", "EARTH", "FIRE" ],
+          [ "WATER", "EARTH", "FIRE", "LIGHTING", "LIGHTING" ],
+          [ "FIRE", "EARTH", "WATER", "WATER", "FIRE" ],
+          [ "WATER", "WATER", "EARTH", "EARTH", "LIGHTNING" ]
+        ],
+        "answerIndex": 1
+      },
+      {
+        "combos": [
+          [ "WATER", "WATER", "WATER", "FIRE", "FIRE" ],
+          [ "FIRE", "FIRE", "WATER", "LIGHTNING", "WATER" ],
+          [ "LIGHTING", "LIGHTNING", "EARTH", "EARTH", "FIRE" ],
+          [ "FIRE", "LIGHTING", "WATER", "FIRE", "WATER" ]
+        ],
+        "answerIndex": 3
+      },
+
+      {
+        "combos": [
+          [ "LIGHTNING", "FIRE", "WATER", "EARTH", "FIRE" ],
+          [ "FIRE", "LIGHTNING", "WATER", "EARTH", "FIRE" ],
+          [ "WATER", "FIRE", "LIGHTNING", "EARTH", "WATER" ],
+          [ "FIRE", "EARTH", "WATER", "LIGHTNING", "WATER" ]
+        ],
+        "answerIndex": 3
+      },
+      {
+        "combos": [
+          [ "WATER", "EARTH", "LIGHTNING", "FIRE", "FIRE" ],
+          [ "EARTH", "EARTH", "WATER", "WATER", "FIRE" ],
+          [ "FIRE", "LIGHTNING", "LIGHTNING", "WATER", "EARTH" ],
+          [ "LIGHTNING", "WATER", "EARTH", "WATER", "LIGHTNING" ]
+        ],
+        "answerIndex": 2
       }
     ]
   }
