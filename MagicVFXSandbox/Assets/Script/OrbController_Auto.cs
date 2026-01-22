@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -14,6 +15,7 @@ public class OrbAutoController : MonoBehaviour
     [SerializeField]
     protected GameObject _childProjectile = null; //holds a prefab for a basic projectile
 
+    GameObject _currentSpawnedProjectile = null;
     /*[SerializeField]
     private DataRecorder.Recorder _dataRecorder = null;*/
 
@@ -32,11 +34,21 @@ public class OrbAutoController : MonoBehaviour
 
     }
 
+    public void DestroyProjectile()
+    {
+        
+
+        if (_currentSpawnedProjectile != null)
+        {
+            Destroy(_currentSpawnedProjectile);
+        }
+    }
+
     /// <summary>
     /// Combines the list of VFX systems to create a PCG VFX
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    public GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
+    public void CreateProjectile(List<VisualEffectAsset> generatedVFXs)
     {
         GameObject projectile = null;
 
@@ -92,7 +104,7 @@ public class OrbAutoController : MonoBehaviour
 
         }
 
-        return projectile;
+        _currentSpawnedProjectile = projectile;
     }
 
 }

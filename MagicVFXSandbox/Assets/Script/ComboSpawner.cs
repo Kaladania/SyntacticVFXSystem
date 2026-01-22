@@ -70,6 +70,7 @@ public class ComboSpawner : MonoBehaviour
     /// </summary>
     void LoadCombination(List<Elements> combo)
     {
+        _orbController.DestroyProjectile();
         //Loads, Generates and stores the VFX blueprint for the currently tested projectile
         _currentSnSVFX = SnSGenerateEffectSystem.GenerateSnS(SnSLoadElementsSystem.LoadElement(combo));
         //_orbController.CreateProjectile(_currentSnSVFX);
