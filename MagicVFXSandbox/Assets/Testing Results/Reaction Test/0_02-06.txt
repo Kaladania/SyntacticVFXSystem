@@ -1,7 +1,0 @@
-Participant ID: 0
-
-Total Clicks: 0
-Hits: 0
-Misses: 0
-Average Reaction Time: NaNms
-

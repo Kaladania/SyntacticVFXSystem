@@ -100,7 +100,7 @@
       {
         "combos": [
           [ "WATER", "LIGHTNING", "FIRE" ],
-          [ "LIGHTNING", "FIRE", "WATER" ],
+          [ "LIGHTNING", "EARTH", "WATER" ],
           [ "FIRE", "LIGHTNING", "WATER" ]
         ],
         "answerIndex": 2
@@ -117,7 +117,7 @@
         "combos": [
           [ "WATER", "EARTH", "FIRE" ],
           [ "FIRE", "WATER", "EARTH" ],
-          [ "WATER", "FIRE", "WATER" ]
+          [ "WATER", "FIRE", "LIGHTNING" ]
         ],
         "answerIndex": 0
       }
@@ -164,18 +164,18 @@
       {
         "combos": [
           [ "LIGHTNING", "LIGHTNING", "FIRE", "LIGHTNING" ],
-          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "FIRE" ],
-          [ "FIRE", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
-          [ "FIRE", "LIGHTNING", "LIGHTNING", "FIRE" ]
+          [ "LIGHTNING", "EARTH", "LIGHTNING", "FIRE" ],
+          [ "FIRE", "WATER", "LIGHTNING", "LIGHTNING" ],
+          [ "FIRE", "LIGHTNING", "EARTH", "FIRE" ]
         ],
         "answerIndex": 2
       },
       {
         "combos": [
           [ "WATER", "EARTH", "WATER", "EARTH" ],
-          [ "EARTH", "EARTH", "WATER", "WATER" ],
-          [ "EARTH", "WATER", "WATER", "EARTH" ],
-          [ "WATER", "WATER", "WATER", "EARTG" ]
+          [ "EARTH", "FIRE", "WATER", "WATER" ],
+          [ "LIGHTNING", "WATER", "WATER", "EARTH" ],
+          [ "WATER", "WATER", "FIRE", "EARTH" ]
         ],
         "answerIndex": 0
       }
@@ -186,17 +186,17 @@
       {
         "combos": [
           [ "FIRE", "FIRE", "FIRE", "FIRE", "WATER" ],
-          [ "WATER", "FIRE", "FIRE", "FIRE", "FIRE" ],
+          [ "WATER", "FIRE", "LIGHTNING", "FIRE", "FIRE" ],
           [ "LIGHTNING", "EARTH", "FIRE", "WATER", "EARTH" ],
           [ "FIRE", "FIRE", "WATER", "WATER", "EARTH" ]
         ],
-        "answerIndex": 4
+        "answerIndex": 3
       },
       {
         "combos": [
           [ "LIGHTNING", "LIGHTNING", "WATER", "WATER", "LIGHTNING" ],
           [ "WATER", "WATER", "FIRE", "FIRE", "LIGHTNING" ],
-          [ "LIGHTING", "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTING" ],
+          [ "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTNING", "LIGHTNING" ],
           [ "WATER", "FIRE", "EARTH", "WATER", "LIGHTNING" ]
         ],
         "answerIndex": 0
@@ -204,7 +204,7 @@
       {
         "combos": [
           [ "FIRE", "LIGHTNING", "WATER", "EARTH", "FIRE" ],
-          [ "WATER", "EARTH", "FIRE", "LIGHTING", "LIGHTING" ],
+          [ "WATER", "EARTH", "FIRE", "LIGHTNING", "LIGHTNING" ],
           [ "FIRE", "EARTH", "WATER", "WATER", "FIRE" ],
           [ "WATER", "WATER", "EARTH", "EARTH", "LIGHTNING" ]
         ],
@@ -214,8 +214,8 @@
         "combos": [
           [ "WATER", "WATER", "WATER", "FIRE", "FIRE" ],
           [ "FIRE", "FIRE", "WATER", "LIGHTNING", "WATER" ],
-          [ "LIGHTING", "LIGHTNING", "EARTH", "EARTH", "FIRE" ],
-          [ "FIRE", "LIGHTING", "WATER", "FIRE", "WATER" ]
+          [ "LIGHTNING", "LIGHTNING", "EARTH", "EARTH", "FIRE" ],
+          [ "FIRE", "LIGHTNING", "WATER", "FIRE", "WATER" ]
         ],
         "answerIndex": 3
       },

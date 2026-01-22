@@ -1,9 +1,0 @@
-Participant ID: 0
-
---- SECTION: 1 ----
-
-Chosen answer: 1 [INCORRECT]
-
-Question: 1
- Tested Combination: [FIRE,WATER,LIGHTNING,]
-

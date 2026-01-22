@@ -1,8 +1,0 @@
-Participant ID: 0
-
---- SECTION: 1 ----
-
-Reaction Time: 6.04
-
-Chosen answer: 0 [CORRECT]
-
