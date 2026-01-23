@@ -21,47 +21,9 @@ public class OrbController : OrbAutoController
     [SerializeField]
     private Image[] _uiIconPositions = new Image[SNSData.MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
 
-    //private Dictionary<Elements, Sprite> _uiIcons = new Dictionary<Elements, Sprite>();
-
-    /*[SerializeField]
-    private List<Elements> _keys = new List<Elements>();
-
-    [SerializeField]
-    private List<Sprite> _values = new List<Sprite>();*/
-
+    
     [SerializeField]
     private ElementIconMapTemplate _iconData = null; //holds the scriptable object data container for ui icon maps.
-/*
-    [SerializeField]
-    private Transform _spawnPoint = null; //holds the spawn point of the VFX projectiles
-
-    [SerializeField]
-    private GameObject _projectile = null; //holds a prefab for a basic projectile
-
-    [SerializeField]
-    private GameObject _childProjectile = null; //holds a prefab for a basic projectile
-
-    [SerializeField]
-    private GameObject _turret = null;*/
-
-    /*//projectile modifiers
-    [SerializeField]
-    private float _buddyProjectileDistance = 1f; //states how far apart duplicate projectiles should be spawned (for water modifier)
-
-    //projectile modifiers
-    [SerializeField]
-    private float _projectileSpeedIncrease = 0.25f; //states how far apart duplicate projectiles should be spawned (for water modifier)
-
-    [SerializeField]
-    private int _AOEBaseDensity = 1; //states how many projectiles should be spawned in the circular AOE attack
-
-    [SerializeField]
-    private int _AOEDensityIncrease = 1; //states how many additional projectiles should be spawned in the circular AOE attack
-
-    [SerializeField]
-    private float _AOESpawnRadius = 1f; //spawn radius of AOE attack*/
-    /*private float _AOELevel = 0; //altered by Earth
-    private float _projectileTargets = 1; //altered by Fire*/
 
     private int[] _uniqueElementCounts; //keeps a count of the number of duplicate elements in a combo
 
@@ -71,23 +33,18 @@ public class OrbController : OrbAutoController
     [SerializeField]
     private int _id = 0;
 
-    
+
+    public delegate void SNSCombination(List<Elements> elements);
+    public static event SNSCombination combinationLoaded;
+
+
     /*#if VERSION_SNS
         private EntityArchetype _comboArchedtype1 = EntityManager.CreateArchetype(typeof(SNSElementComponent));
     #endif*/
 
     void Start()
     {
-        //Create Icon Dictionary
-        //_uiIcons.Clear();
-
-       /* if (_keys.Count != _values.Count)
-            throw new System.Exception(string.Format("there are {0} keys and {1} values on application start. Make sure that both key and value types are serializable " +
-                "and have the same number of elements."));
-
-        for (int i = 0; i < _keys.Count; i++)
-            _uiIcons.Add(_keys[i], _values[i]);*/
-
+       
         _uniqueElementCounts = new int[SNSData.NUM_ELEMENTS - 1];
 
         _uniqueElementCounts[(int)Elements.FIRE] = 0; //number of extra targets a projectile can hit
@@ -224,6 +181,8 @@ public class OrbController : OrbAutoController
         //_dataRecorder.WriteComboToFile(_currentCombo);
 
         //empties combination and resets counters
+
+        combinationLoaded?.Invoke(_currentCombo);
         _nextComboIndex = 0;
         _currentCombo.Clear();
         ClearDuplicateArray();

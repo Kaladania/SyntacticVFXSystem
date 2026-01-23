@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Mode_Quiz_Identification.unity
     guid: 1d558183a5b5cd3439a8f289ef8be04e
   - enabled: 1
-    path: Assets/Scenes/ModeSandbox.unity
+    path: Assets/Scenes/Mode_Sandbox.unity
     guid: 4dcc93ce32d594c41a3adf768895b05c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 38ac15c929e1be048ba54d2a4a20d3e3, type: 2}
