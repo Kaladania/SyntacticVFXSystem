@@ -36,10 +36,6 @@ public class ProjectileMovement : MonoBehaviour
             newPosition += (_direction * (_projectileSpeed * Time.deltaTime));
             transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
         }
-        else
-        {
-            Debug.Log("WARNING! Projectile is static. Speed is set to '0'");
-        }
 
         //Destroy the object if there is no renderer or the object has gone offscreen
         if (_renderer != null && !_renderer.isVisible)

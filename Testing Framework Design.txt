@@ -1,0 +1,21 @@
+Should have an interface convert SNS data to string formats for the data loader to use (instead of coding it into the data loader)
+
+
+1. Load combination from JSON
+2. JSON Parser returns a list of element combos (List<List<Element>>)
+3. Sends List via Event to GameManager
+4. Game Manager keeps track of what test is current happening and sends the current test combination to ComboSpawner
+5.Combo Spawner Recieves event and Generates the VFX
+	5b. UI Manger Recieves event and loads correct UI elements
+6. Combo Spawner starts Co-routine to continuously spawn projectile and sends an event to the UIManager
+7. UI Manager receives event, starts countdown and records initial time
+8. UI Mananger records answer time, stops countdown and sends the data via an event to the Game Manager
+9. Game Manager records data via the Data Recorder
+10. Repeat Steps 4-9 until all sections are done
+
+Need:
+
+JSON Parser,
+Game Manager,
+Combos Spawner,
+UI Manager7

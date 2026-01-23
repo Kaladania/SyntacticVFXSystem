@@ -1,75 +1,41 @@
 using SnSECS;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Unity.Entities;
-using Unity.Entities.UniversalDelegates;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.VFX;
-using static UnityEditor.Rendering.FilterWindow;
-using static UnityEngine.Rendering.DebugUI;
 
-
-public class OrbController : MonoBehaviour
+public enum ControlType
 {
-    public const int MAX_COMBO_LIMIT = 5; //states the maximum number of elements that can be added to a combination
-    public const int NUM_ELEMENTS = 5; //states the maximum number of elements that can be added to a combination
+    AUTOMATIC,
+    MANUAL
+}
+
+public class OrbController : OrbAutoController
+{
+    
     private int _nextComboIndex = 0; //holds the position of the next element to be added
     private List<Elements> _currentCombo = new List<Elements>(); //holds the current combination of elements
 
     [SerializeField]
-    private Image[] _uiIconPositions = new Image[MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
+    private Image[] _uiIconPositions = new Image[SNSData.MAX_COMBO_LIMIT]; //holds the spawn positions of the icons
 
-    private Dictionary<Elements, Sprite> _uiIcons = new Dictionary<Elements, Sprite>();
-
+    
     [SerializeField]
-    private List<Elements> _keys = new List<Elements>();
-
-    [SerializeField]
-    private List<Sprite> _values = new List<Sprite>();
-
-    [SerializeField]
-    private VisualEffectAsset _vfx = new VisualEffectAsset(); //TURN INTO A LIST/ECS SYSTEM. Holds the templated VFX systems
-
-    [SerializeField]
-    private Transform _spawnPoint; //holds the spawn point of the VFX projectiles
-
-    [SerializeField]
-    private GameObject _projectile; //holds a prefab for a basic projectile
-
-    [SerializeField]
-    private GameObject _childProjectile; //holds a prefab for a basic projectile
-
-    [SerializeField]
-    private GameObject _turret;
-
-    [SerializeField]
-    private GameObject _turretSpawnPoint;
-
-    //projectile modifiers
-    [SerializeField]
-    private float _buddyProjectileDistance = 1f; //states how far apart duplicate projectiles should be spawned (for water modifier)
-
-    //projectile modifiers
-    [SerializeField]
-    private float _projectileSpeedIncrease = 0.25f; //states how far apart duplicate projectiles should be spawned (for water modifier)
-
-    [SerializeField]
-    private int _AOEBaseDensity = 1; //states how many projectiles should be spawned in the circular AOE attack
-
-    [SerializeField]
-    private int _AOEDensityIncrease = 1; //states how many additional projectiles should be spawned in the circular AOE attack
-
-    [SerializeField]
-    private float _AOESpawnRadius = 1f; //spawn radius of AOE attack
-    /*private float _AOELevel = 0; //altered by Earth
-    private float _projectileTargets = 1; //altered by Fire*/
+    private ElementIconMapTemplate _iconData = null; //holds the scriptable object data container for ui icon maps.
 
     private int[] _uniqueElementCounts; //keeps a count of the number of duplicate elements in a combo
+
+    [SerializeField]
+    private DataRecorder.Recorder _dataRecorder = null;
+
+    [SerializeField]
+    private int _id = 0;
+
+
+    public delegate void SNSCombination(List<Elements> elements);
+    public static event SNSCombination combinationLoaded;
 
 
     /*#if VERSION_SNS
@@ -78,24 +44,20 @@ public class OrbController : MonoBehaviour
 
     void Start()
     {
-        //Create Icon Dictionary
-        _uiIcons.Clear();
-
-        if (_keys.Count != _values.Count)
-            throw new System.Exception(string.Format("there are {0} keys and {1} values on application start. Make sure that both key and value types are serializable " +
-                "and have the same number of elements."));
-
-        for (int i = 0; i < _keys.Count; i++)
-            _uiIcons.Add(_keys[i], _values[i]);
-
-        _uniqueElementCounts = new int[NUM_ELEMENTS - 1];
+       
+        _uniqueElementCounts = new int[SNSData.NUM_ELEMENTS - 1];
 
         _uniqueElementCounts[(int)Elements.FIRE] = 0; //number of extra targets a projectile can hit
         _uniqueElementCounts[(int)Elements.WATER] = 0; //number of extra projectiles to spawn
         _uniqueElementCounts[(int)Elements.EARTH] = 0; //density level of AOE
         _uniqueElementCounts[(int)Elements.LIGHTNING] = 0; //level of speed increase
 
+        if (_dataRecorder == null)
+        {
+            Debug.LogError("ERROR! Data recorder reference is null. Creating a new runtime data recorder");
 
+            _dataRecorder = new DataRecorder.Recorder();
+        }
 
         //Create SNS Element Entity Archetype
 
@@ -154,9 +116,9 @@ public class OrbController : MonoBehaviour
     {
 
         
-        if (_nextComboIndex >= MAX_COMBO_LIMIT)
+        if (_nextComboIndex >= SNSData.MAX_COMBO_LIMIT)
         {
-            _nextComboIndex = MAX_COMBO_LIMIT;
+            _nextComboIndex = SNSData.MAX_COMBO_LIMIT;
             //LoadCombination(); //Automatically generates a system once all the combination slots have been filled
         }
         else
@@ -164,7 +126,7 @@ public class OrbController : MonoBehaviour
             _currentCombo.Add(element); //adds the paramter to the combination list
 
             //Updates the UI to show the icon for the current added element
-            _uiIconPositions[_nextComboIndex].sprite = _uiIcons[element];
+            _uiIconPositions[_nextComboIndex].sprite = _iconData.GetUIIcon(element);
             _uiIconPositions[_nextComboIndex].gameObject.SetActive(true);
 
             _nextComboIndex++;
@@ -191,7 +153,7 @@ public class OrbController : MonoBehaviour
             _currentCombo.RemoveAt(lastIndex); //removes the last element in the list
 
             //Updates the UI to hide the icon for the last added element
-            _uiIconPositions[lastIndex].sprite = _uiIcons[Elements.NONE];
+            _uiIconPositions[lastIndex].sprite = _iconData.GetUIIcon(Elements.NONE);
             _uiIconPositions[lastIndex].gameObject.SetActive(false);
 
             _nextComboIndex--;
@@ -206,7 +168,7 @@ public class OrbController : MonoBehaviour
         Debug.Log("Combination Loaded");
 
 #if VERSION_SNS
-        CreateSpell(GenerateVFX());
+        CreateProjectile(GenerateVFX());
 #elif VERSION_SNS_PROC
 
         VisualEffectAsset vfx = GenerateVFX();
@@ -215,8 +177,12 @@ public class OrbController : MonoBehaviour
 #else
         SpawnVFX(_vfx);
 #endif
+        //writes the combo to the data collection file
+        //_dataRecorder.WriteComboToFile(_currentCombo);
 
         //empties combination and resets counters
+
+        combinationLoaded?.Invoke(_currentCombo);
         _nextComboIndex = 0;
         _currentCombo.Clear();
         ClearDuplicateArray();
@@ -224,7 +190,7 @@ public class OrbController : MonoBehaviour
         //resets icon images and visibility
         foreach (Image icon in _uiIconPositions)
         {
-            icon.sprite = _uiIcons[Elements.NONE];
+            icon.sprite = _iconData.GetUIIcon(Elements.NONE);
             icon.gameObject.SetActive(false);
         }
     }
@@ -267,6 +233,13 @@ public class OrbController : MonoBehaviour
 
     private void CreateSpell(List<VisualEffectAsset> generatedVFXs)
     {
+        
+        //loads the SNS VFX and uses it to spawn a projectile used for the spell
+        CreateProjectile(generatedVFXs);
+
+        #region [COMMENTED OUT] Code to add spell modifiers (such as double projectiles)
+        /*
+        
         //records a count of the number of duplicate elements in a combo
 
         //if there are more than 2 elements in the combination, water modifier gets an extra point
@@ -282,9 +255,7 @@ public class OrbController : MonoBehaviour
         }
 
 
-        //loads the SNS VFX and uses it to spawn a projectile used for the spell
-        GameObject projectile = CreateProjectile(generatedVFXs);
-
+        
         if (projectile != null)
         {
             ProjectileMovement controller = projectile.GetComponent<ProjectileMovement>();
@@ -317,8 +288,8 @@ public class OrbController : MonoBehaviour
             {
                 newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
 
-                /*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
-                     projectile.transform.position.z);*/
+                *//*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
+                     projectile.transform.position.z);*//*
                 GameObject childProjectile = Instantiate(projectile, newSpawnPosition, Quaternion.identity);
 
                 controller = childProjectile.GetComponent<ProjectileMovement>();
@@ -354,8 +325,8 @@ public class OrbController : MonoBehaviour
                 {
                     newSpawnPosition.x += (_buddyProjectileDistance * (1 * i));
 
-                    /*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
-                         projectile.transform.position.z);*/
+                    *//*Vector3 newPosition = new Vector3((projectile.transform.position.x + (_buddyProjectileDistance * (1 * i))), projectile.transform.position.y,
+                         projectile.transform.position.z);*//*
                     GameObject childProjectile = Instantiate(projectile, newSpawnPosition, Quaternion.identity);
 
                     controller = childProjectile.GetComponent<ProjectileMovement>();
@@ -371,19 +342,22 @@ public class OrbController : MonoBehaviour
 
                 }
             }
-        }
+        }*/
+        #endregion
     }
 
     /// <summary>
-    /// Spawns the particle system in-game
+    /// Combines the list of VFX systems to create a PCG VFX
     /// </summary>
     /// <param name="vfxToSpawn">The generated particle system to spawn</param>
-    private GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
+    public GameObject CreateProjectile(List<VisualEffectAsset> generatedVFXs)
     {
         GameObject projectile = null;
 
+
         if (_spawnPoint != null && generatedVFXs != null)
         {
+            Vector3 childSpawnPointPosition = _childProjectile.transform.position;
             projectile = Instantiate(_projectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
 
             VisualEffect baseVfx = projectile.GetComponent<VisualEffect>();
@@ -406,14 +380,16 @@ public class OrbController : MonoBehaviour
 
             if (controller != null)
             {
-                controller.Direction = transform.forward;
+                controller.Direction = transform.right;
             }
 
             //loops through the rest of the array and adds the child VFX (trial + ambience)
             for (int i = 1; i < generatedVFXs.Count; i++)
             {
-                GameObject childObject = Instantiate(_childProjectile, _spawnPoint.position, UnityEngine.Quaternion.identity);
+                GameObject childObject = Instantiate(_childProjectile, _spawnPoint.position + _childProjectile.transform.position, UnityEngine.Quaternion.identity);
+                
                 childObject.transform.parent = projectile.transform;
+                //childObject.transform.localPosition = new Vector3(childPosition.x, childObject.transform.position.y, childObject.transform.position.z);
 
                 VisualEffect childVFX = childObject.GetComponent<VisualEffect>();
 

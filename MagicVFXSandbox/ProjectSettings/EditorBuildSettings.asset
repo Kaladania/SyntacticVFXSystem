@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Mode_Quiz_Reaction.unity
+    guid: 9bde30e7d596c8b409e8fc222ec6adf0
+  - enabled: 1
+    path: Assets/Scenes/Mode_Quiz_Identification.unity
+    guid: 1d558183a5b5cd3439a8f289ef8be04e
+  - enabled: 1
+    path: Assets/Scenes/Mode_Sandbox.unity
+    guid: 4dcc93ce32d594c41a3adf768895b05c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 38ac15c929e1be048ba54d2a4a20d3e3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

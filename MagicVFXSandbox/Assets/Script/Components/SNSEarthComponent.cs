@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using Unity.Entities;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.VFX;
+
+namespace SnSECS
+{
+    /// <summary>
+    /// Holds the visual effect paramters for a given element
+    /// </summary>
+    public struct SNSEarthComponet : ISharedComponentData, IEquatable<SNSEarthComponet>
+    {
+
+        public HashSet<ElementType> _types; //type of element
+        public VisualEffectAsset _head; //element projectile head
+        public VisualEffectAsset _trail; //element projectile trail
+        public VisualEffectAsset _ambience; //element projectile ambience
+
+        public float _scale; //the size of the effect
+        public float _speed; //speed of the effect
+        public float _density; //density of the effect
+        public Color _colour; //effect colour
+
+        /// <summary>
+        /// Constructs the component with it's default values
+        /// </summary>
+        /// <param name="elementType"></param>
+        public SNSEarthComponet(ElementType elementType)
+        {
+            _types = new HashSet<ElementType>();
+
+            if (elementType != ElementType.NONE)
+            {
+                _types.Add(elementType);
+            }
+
+            _head = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Head_Earth.vfx", typeof(VisualEffectAsset));
+            _trail = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Tail_Earth.vfx", typeof(VisualEffectAsset));
+            _ambience = (VisualEffectAsset)AssetDatabase.LoadAssetAtPath("Assets/Systems/Base_Ambience_Earth.vfx", typeof(VisualEffectAsset));
+
+            _scale = 1;
+            _speed = 1;
+            _density = 1;
+            _colour = Color.white;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is SNSEarthComponet componet && Equals(componet);
+        }
+
+        public bool Equals(SNSEarthComponet other)
+        {
+            return _types == other._types &&
+                   EqualityComparer<VisualEffectAsset>.Default.Equals(_head, other._head) &&
+                   EqualityComparer<VisualEffectAsset>.Default.Equals(_trail, other._trail) &&
+                   EqualityComparer<VisualEffectAsset>.Default.Equals(_ambience, other._ambience);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_types, _head, _trail, _ambience);
+        }
+
+        public static bool operator ==(SNSEarthComponet left, SNSEarthComponet right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(SNSEarthComponet left, SNSEarthComponet right)
+        {
+            return !(left == right);
+        }
+    }
+}

@@ -1,15 +1,19 @@
 using System.Collections.Generic;
-using System.Threading;
-using Unity.Burst;
+using System.Linq;
 using Unity.Collections;
 using Unity.Entities;
-using UnityEngine;
+using Unity.VisualScripting;
 using UnityEngine.AddressableAssets;
 using UnityEngine.VFX;
-using static UnityEngine.ParticleSystem;
+
 
 namespace SnSECS
 {
+
+    //PRE-CONDITIONS:
+    //- Entity has the required components derrived from the type combo
+    //- Components where their element was featured multiple times have altered stats (so there is a limit of 1 component per element)
+
     /// <summary>
     /// Generates a layered SNS system
     /// </summary>
@@ -19,87 +23,140 @@ namespace SnSECS
          
         public static List<VisualEffectAsset> GenerateSnS(Entity entity)
         {
+            //initalise variables
             var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-            //spawns an entity with the passed in prefab as it's game object
-            //Entity entity = entityManager.CreateEntity();
+            List<VisualEffectAsset> generatedVFXs = new List<VisualEffectAsset>();
 
-            var newEffectComponent = new SNSEffectComponent { };
-
-            var basicWaterComponent = new SNSWaterComponet { };
-            var basicFireComponent = new SNSFireComponent { };
+            SNSFireComponent tempFireComponent;
+            SNSWaterComponet tempWaterComponent;
+            SNSLightningComponet tempLightningComponent;
+            SNSEarthComponet tempEarthComponent;
 
             //grabs an array full of the type of components attached to the entity
             NativeArray<ComponentType> elementArray = entityManager.GetComponentTypes(entity, Allocator.Temp);
 
-            List<VisualEffectAsset> generatedVFXs = new List<VisualEffectAsset>();
+            //elementArray.Sort(new SnSDataComparer { });
 
-            //Starts at 1 because Unity stores automatically stores a 'simulate' flag at index 0
+            //Adds the specified asset to the list of assets to spawn
+            //Starts at 1 because Unity automatically stores a 'simulate' flag at index 0
             for (int i = 1; i < elementArray.Length; i++)
             {
-                /*EntityArchetype chunk = entityManager.GetChunk(entity).Archetype;
-                chunk.GetComponentTypes();*/
-
-                //assumes that the hashcodes of each type matches
-                //CHECK DEBUG - if not, find another way to compare the components
+               
+                //loads the correct VFX and alter's it's state depending on the component type at the current index
                 if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSFireComponent>())
                 {
-                    if (i == 1)
+                    tempFireComponent = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity);
+
+                    foreach (ElementType element in tempFireComponent._types)
                     {
-                        //newEffectComponent._head = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head;
-
-                        //VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
-
-                        /*if (baseVfx == null)
+                        switch (element)
                         {
-                            Debug.LogError("WARNING! Failed to find Visual Effect Component");
+                            case ElementType.BASE:
+
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._ambience);
+                                break;
+                            default:
+                                break;
                         }
-                        else
-                        {
-                            //Adds the particle system to the loaded projectile prefab
-                            baseVfx.visualEffectAsset = entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head; ;
-                        }*/
-
-                        //Adds the specified asset to the list of assets to spawn
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._head);
-
                     }
-                    else
-                    {
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSFireComponent>(entity)._trail);
-                        //TODO: TYPE-EXTRA stuff
-                    }
+
                 }
-                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSWaterComponet>())
                 {
-                    if (i == 1)
+                    tempWaterComponent = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity);
+
+                    foreach (ElementType element in tempWaterComponent._types)
                     {
-                        //newEffectComponent._head = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head;
-
-                        //VisualEffect baseVfx = gameObject.GetComponent<VisualEffect>();
-
-                        /*if (baseVfx == null)
+                        switch (element)
                         {
-                            Debug.LogError("WARNING! Failed to find Visual Effect Component");
+                            case ElementType.BASE:
+
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._ambience);
+                                break;
+                            default:
+                                break;
                         }
-                        else
-                        {
-                            //Adds the particle system to the loaded projectile prefab
-                            baseVfx.visualEffectAsset = entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head; ;
-                        }*/
-
-                        //Adds the specified asset to the list of assets to spawn
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._head);
                     }
-                    else
+
+                }
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSEarthComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                {
+                    tempEarthComponent = entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity);
+
+                    foreach (ElementType element in tempEarthComponent._types)
                     {
-                        generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSWaterComponet>(entity)._trail);
-                        //TODO: TYPE-EXTRA stuff
+                        switch (element)
+                        {
+                            case ElementType.BASE:
+
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSEarthComponet>(entity)._ambience);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
-                    
-                    /// IF COMPONENT TYPE IS FOUND, SPAWN THE SYSTEM ATTACHED [CURRENT PLAN IS TO USE A VISUAL EFFECT COMPONENT FOR EACH ELEMENT]
-                    /// TRY AND SEE IF THERES A WAY TO ADD A NODE CHAIN TO A VFX ASSET INSTEAD OF HAVING TO STORE THE ENTIRE ASSET
-                        /// (LIKE HOW YOU CAN REFERENCE A SPECIFIC CHAIN IN NIAGARA)
+                else if (elementArray[i].TypeIndex == TypeManager.GetTypeIndex<SNSLightningComponet>())  // elementArray[0].GetHashCode() == basicWaterComponent.GetHashCode())
+                {
+                    tempLightningComponent = entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity);
+
+                    foreach (ElementType element in tempLightningComponent._types)
+                    {
+                        switch (element)
+                        {
+                            case ElementType.BASE:
+
+                                //adds the base element to the front of the list (as the first asset ALWAYS needs to be the head)
+                                generatedVFXs.Insert(0, entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._head);
+                                break;
+
+                            case ElementType.EXTRA:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._trail);
+                                break;
+                            case ElementType.AMBIENCE:
+
+                                generatedVFXs.Add(entityManager.GetSharedComponentManaged<SNSLightningComponet>(entity)._ambience);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+
+                /// IF COMPONENT TYPE IS FOUND, SPAWN THE SYSTEM ATTACHED [CURRENT PLAN IS TO USE A VISUAL EFFECT COMPONENT FOR EACH ELEMENT]
+                /// TRY AND SEE IF THERES A WAY TO ADD A NODE CHAIN TO A VFX ASSET INSTEAD OF HAVING TO STORE THE ENTIRE ASSET
+                /// (LIKE HOW YOU CAN REFERENCE A SPECIFIC CHAIN IN NIAGARA)
             }
 
             #region (Commented Out) Code if want to load the assets here instead of via their components
@@ -164,13 +221,19 @@ namespace SnSECS
         }
 
 
+        /*private static VisualEffectAsset LoadVFXAsset(Elements element, ElementType type)
+        {
+
+        }
+*/
+
         /// <summary>
         /// Loads the corresponding VFX system for the given element and type
         /// </summary>
         /// <param name="element">element vfx to return</param>
         /// <param name="type">type of element vfx</param>
         /// <returns>The corresponding VFX asset</returns>
-        public static VisualEffectAsset LoadVFXAssets(Elements element, ElementType type)
+        private static VisualEffectAsset LoadVFXAssets(Elements element, ElementType type)
         {
             VisualEffectAsset assetToReturn = null;
 
@@ -237,6 +300,7 @@ namespace SnSECS
             return assetToReturn;
             
         }
+        
     }
 
 }
