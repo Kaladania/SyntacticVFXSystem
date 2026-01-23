@@ -137,8 +137,12 @@ namespace QuizManager
         /// <param name="elapsedTime"></param>
         public void RecordTime(double elapsedTime)
         {
-            _reactionTimeData._cumulativeReactionTimeMS += elapsedTime;
-            //_recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
+            //ignores any omitted results
+            if (elapsedTime != -1)
+            {
+                _reactionTimeData._cumulativeReactionTimeMS += elapsedTime;
+                //_recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
+            }
         }
 
         /// <summary>

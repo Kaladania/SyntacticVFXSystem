@@ -65,6 +65,7 @@ public class UIManger_BaseTest : MonoBehaviour
     private void Awake()
     {
         Stopwatch.countdownFinished += AttemptSpawn;
+        Stopwatch.stopwatchPaused += ForceDespawn;
         TestManager_Base.shutDownWorkers += CleanUp;
         //Stopwatch.stopwatchPaused += AttemptSpawn;
     }
@@ -159,19 +160,28 @@ public class UIManger_BaseTest : MonoBehaviour
             _buttonTexts[_currentChosenIndex].color = Color.black;
             
             _reactionTimeData._hits++;
-            Debug.Log($"Hits {_reactionTimeData._hits}");
   
             AttemptSpawn();
         }
         else
         {
             _reactionTimeData._misses++;
-            Debug.Log($"Misses {_reactionTimeData._misses}");
         }
 
         
 
 
+    }
+
+    void ForceDespawn(double elapsedTime)
+    {
+        if (elapsedTime == -1 && _characterSpawned)
+        {
+            _buttonTexts[_currentChosenIndex].text = "";
+            _buttonTexts[_currentChosenIndex].color = Color.black;
+
+            AttemptSpawn();
+        }
     }
 
     /// <summary>

@@ -11,6 +11,12 @@ public class Stopwatch : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _timerUI = null;
 
+    [SerializeField]
+    private double _reactionTimeMin = 0;
+
+    [SerializeField]
+    private double _reactionTimeMax = 1;
+
 
     private bool _timerActive = false; //states if the countdown timer should current be de-incrimenting
     private float _countdownTimeRemaining = 0.0f; //time in seconds
@@ -40,6 +46,13 @@ public class Stopwatch : MonoBehaviour
             UnityEngine.Debug.LogWarning("WARNING: Reference to Timer UI is null. Creating a new text mesh pro object");
         }
 
+        if (_reactionTimeMin > _reactionTimeMax)
+        {
+            double temp = _reactionTimeMax;
+            _reactionTimeMax = _reactionTimeMin;
+            _reactionTimeMin = temp;
+        }
+
     }
 
     // Update is called once per frame
@@ -58,6 +71,13 @@ public class Stopwatch : MonoBehaviour
             {
                 countdownFinished?.Invoke();
                 ResetCountdownTimer();
+            }
+        }
+        else
+        {
+            if ((Time.timeAsDouble - _startTime) * 1000 >=_reactionTimeMax )
+            {
+                PauseStopWatch();
             }
         }
     }
@@ -109,9 +129,20 @@ public class Stopwatch : MonoBehaviour
         //records the endtime and calculates the total elapsed time
         double endTime = Time.timeAsDouble;
         double elapsedTime = (endTime - _startTime) * 1000; //calculates the elapsed time in ms
-        elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
 
-        //Debug.Log($"Elapsed time: {elapsedTime}ms");
+        //disregards times under the minimum
+        if (_reactionTimeMin < elapsedTime && elapsedTime < _reactionTimeMax)
+        {
+            elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
+
+            //Debug.Log($"Elapsed time: {elapsedTime}ms");
+
+            
+        }
+        else
+        {
+            elapsedTime = -1; //marks the time as '-1' representing an "ommission"
+        }
 
         stopwatchPaused?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
 
