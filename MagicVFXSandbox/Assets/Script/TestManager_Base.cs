@@ -45,7 +45,12 @@ namespace QuizManager
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            TestManager._testerID = _testerID; //updates the ID for the identification test manager
+            //updates the ID for the identification test manager and sandbox manager
+            TestManager._testerID = _testerID;
+            TestManager_Sandbox._testerID = _testerID;
+
+
+
             if (_folderLocation == string.Empty)
             {
                 _folderLocation = "Assets/Testing Results/Reaction Test/";
@@ -141,7 +146,7 @@ namespace QuizManager
         /// </summary>
         public void SwitchToNextTest()
         {
-            SceneManager.LoadScene("Mode_Quiz_Identification");
+            SceneManager.LoadScene("Mode_Sandbox");
         }
     }
 }
