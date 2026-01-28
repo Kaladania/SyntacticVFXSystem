@@ -16,9 +16,9 @@ MonoBehaviour:
   - title: Base Loop
     position:
       serializedVersion: 2
-      x: 891
+      x: 893
       y: 15
-      width: 475
+      width: 477
       height: 2252
     contents:
     - model: {fileID: 8926484042661615177}
@@ -103,7 +103,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 25.8
+      m_SerializableObject: 50
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661615179}
-  m_UIPosition: {x: 917, y: 75}
+  m_UIPosition: {x: 918, y: 75}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -319,7 +319,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615220}
   - {fileID: 8926484042661615271}
   - {fileID: 8926484042661615298}
-  m_UIPosition: {x: 917, y: 363}
+  m_UIPosition: {x: 920, y: 363}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -802,7 +802,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615230}
   - {fileID: 8926484042661615256}
   dataType: 0
-  capacity: 100
+  capacity: 256
   stripCapacity: 1
   particlePerStripCount: 32
   needsComputeBounds: 0
@@ -1935,7 +1935,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 8926484042661615232}
   - {fileID: 8926484042661615239}
-  m_UIPosition: {x: 918, y: 1289}
+  m_UIPosition: {x: 920, y: 1403}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615246}
   - {fileID: 8926484042661615249}
   - {fileID: 8926484042661615252}
-  m_UIPosition: {x: 917, y: 1663}
+  m_UIPosition: {x: 918, y: 1663}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3314,7 +3314,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -4127,7 +4127,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -4182,7 +4182,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 25.8
+      m_SerializableObject: 50
     m_Space: -1
   m_Property:
     name: o
