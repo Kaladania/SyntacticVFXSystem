@@ -200,7 +200,9 @@ namespace QuizManager
         {
             if (elapsedTime == -1)
             {
+                _recorder.WriteToFile($"Reaction Time: OMITTED [N/A/]");
                 ChangeQuestion();
+                
             }
             else
             {

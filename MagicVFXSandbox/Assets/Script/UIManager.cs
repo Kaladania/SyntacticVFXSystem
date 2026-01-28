@@ -68,8 +68,8 @@ public class UIManager : MonoBehaviour
         CurrentQuestionData.scriptableObjectUpdated += SetupQuestionUI; //sets up event to load new combo when the question data scriptable object is updated
         TestManager.shutDownWorkers += Cleanup; //sets up event to disable all active UI elements once test is finished
 
-        Stopwatch.countdownFinished += SetupTest;
-        Stopwatch.stopwatchPaused += DisableButtons;
+        Stopwatch.countdownFinished += EnableButtons;
+        //Stopwatch.stopwatchPaused += DisableButtons;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -133,18 +133,10 @@ public class UIManager : MonoBehaviour
         }*/
     }
 
-    /// <summary>
-    /// Updates the timer display number
-    /// </summary>
-    void UpdateDisplayTime()
-    {
-        float seconds = Mathf.FloorToInt(_countdownTimeRemaining % 60);
-        _timerUI.text = seconds.ToString();
-    }
-
     void SetupTest()
     {
-        ResetCountdownTimer();
+        //ResetCountdownTimer();
+        _timerPanel.gameObject.SetActive(false);
         EnableButtons();
         _questionTextElement.text = _questionText;
         _stopwatch.StartStopWatch();
@@ -159,7 +151,7 @@ public class UIManager : MonoBehaviour
         //_countdownTimeRemaining = 0.0f;
         //_timerActive = false;
         //_timerUI.text = _countDownLength.ToString();
-        _stopwatch.PauseStopWatch();
+        //_stopwatch.PauseStopWatch();
 
     }
 
@@ -234,10 +226,11 @@ public class UIManager : MonoBehaviour
         if (_testStarted)
         {
             //EventSystem.current.SetSelectedGameObject(null);
-            SetCountdownTimer();
-            //_stopwatch.StartCountdown();
-            _questionTextElement.text = "";
-            DisableButtons(-1);
+            //SetCountdownTimer();
+            //_questionTextElement.text = "";
+            //DisableButtons(-1);
+
+            SetupTest();
         }
     }
 
@@ -317,7 +310,7 @@ public class UIManager : MonoBehaviour
     {
         _creditsPanel.SetActive(true);
         DisableButtons(-1);
-        _stopwatch.PauseStopWatch();
+        //_stopwatch.PauseStopWatch();
         ResetCountdownTimer();
     }
 }

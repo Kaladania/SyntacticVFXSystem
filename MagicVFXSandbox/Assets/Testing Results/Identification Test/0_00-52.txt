@@ -1,0 +1,159 @@
+Participant ID: 0
+
+--- SECTION: 0 ----
+
+- - QUESTION: 0
+Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+--- SECTION: 2 ----
+
+- - QUESTION: 0
+Tested Combination: [FIRE,FIRE,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 1
+Tested Combination: [LIGHTNING,LIGHTNING,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 2
+Tested Combination: [WATER,WATER,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 3
+Tested Combination: [EARTH,EARTH,]
+
+Reaction Time: 3339.51ms
+
+Chosen answer: 0 [CORRECT]
+
+- - QUESTION: 4
+Tested Combination: [FIRE,LIGHTNING,]
+
+Reaction Time: 705.02ms
+
+Chosen answer: 0 [CORRECT]
+
+- - QUESTION: 5
+Tested Combination: [EARTH,WATER,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 6
+Tested Combination: [WATER,LIGHTNING,]
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 7
+Tested Combination: [EARTH,FIRE,]
+
+Reaction Time: OMITTED [N/A/]
+
+--- SECTION: 3 ----
+
+- - QUESTION: 0
+Tested Combination: [WATER,WATER,FIRE,]
+
+Chosen answer: 0 [CORRECT]
+
+- - QUESTION: 1
+Tested Combination: [EARTH,EARTH,LIGHTNING,]
+
+Reaction Time: 699.54ms
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 2
+Tested Combination: [FIRE,WATER,FIRE,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 3
+Tested Combination: [FIRE,LIGHTNING,WATER,]
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 4
+Tested Combination: [EARTH,FIRE,LIGHTNING,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 5
+Tested Combination: [WATER,EARTH,FIRE,]
+
+Chosen answer: 0 [CORRECT]
+
+--- SECTION: 4 ----
+
+- - QUESTION: 0
+Tested Combination: [LIGHTNING,LIGHTNING,LIGHTNING,LIGHTNING,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 1
+Tested Combination: [EARTH,EARTH,EARTH,EARTH,]
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 2
+Tested Combination: [WATER,WATER,WATER,WATER,]
+
+Reaction Time: 484.2ms
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 3
+Tested Combination: [FIRE,FIRE,FIRE,FIRE,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 4
+Tested Combination: [FIRE,WATER,LIGHTNING,LIGHTNING,]
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 5
+Tested Combination: [WATER,EARTH,WATER,EARTH,]
+
+Reaction Time: OMITTED [N/A/]
+
+--- SECTION: 5 ----
+
+- - QUESTION: 0
+Tested Combination: [FIRE,FIRE,WATER,WATER,EARTH,]
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 1
+Tested Combination: [LIGHTNING,LIGHTNING,WATER,WATER,LIGHTNING,]
+
+Reaction Time: OMITTED [N/A/]
+
+- - QUESTION: 2
+Tested Combination: [WATER,EARTH,FIRE,LIGHTNING,LIGHTNING,]
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 3
+Tested Combination: [FIRE,LIGHTNING,WATER,FIRE,WATER,]
+
+Reaction Time: 423.51ms
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 4
+Tested Combination: [FIRE,EARTH,WATER,LIGHTNING,WATER,]
+
+Reaction Time: 446.12ms
+
+Chosen answer: 0 [INCORRECT]
+
+- - QUESTION: 5
+Tested Combination: [FIRE,LIGHTNING,LIGHTNING,WATER,EARTH,]
+
+Reaction Time: 451.9ms
+
+Chosen answer: 0 [INCORRECT]
+

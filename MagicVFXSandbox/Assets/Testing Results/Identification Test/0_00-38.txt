@@ -1,0 +1,93 @@
+Participant ID: 0
+
+--- SECTION: 0 ----
+
+- - QUESTION: 0
+Tested Combination: [FIRE,WATER,LIGHTNING,]
+
+--- SECTION: 2 ----
+
+- - QUESTION: 0
+Tested Combination: [FIRE,FIRE,]
+
+- - QUESTION: 1
+Tested Combination: [LIGHTNING,LIGHTNING,]
+
+- - QUESTION: 2
+Tested Combination: [WATER,WATER,]
+
+- - QUESTION: 3
+Tested Combination: [EARTH,EARTH,]
+
+- - QUESTION: 4
+Tested Combination: [FIRE,LIGHTNING,]
+
+- - QUESTION: 5
+Tested Combination: [EARTH,WATER,]
+
+- - QUESTION: 6
+Tested Combination: [WATER,LIGHTNING,]
+
+- - QUESTION: 7
+Tested Combination: [EARTH,FIRE,]
+
+--- SECTION: 3 ----
+
+- - QUESTION: 0
+Tested Combination: [WATER,WATER,FIRE,]
+
+- - QUESTION: 1
+Tested Combination: [EARTH,EARTH,LIGHTNING,]
+
+- - QUESTION: 2
+Tested Combination: [FIRE,WATER,FIRE,]
+
+- - QUESTION: 3
+Tested Combination: [FIRE,LIGHTNING,WATER,]
+
+- - QUESTION: 4
+Tested Combination: [EARTH,FIRE,LIGHTNING,]
+
+- - QUESTION: 5
+Tested Combination: [WATER,EARTH,FIRE,]
+
+--- SECTION: 4 ----
+
+- - QUESTION: 0
+Tested Combination: [LIGHTNING,LIGHTNING,LIGHTNING,LIGHTNING,]
+
+- - QUESTION: 1
+Tested Combination: [EARTH,EARTH,EARTH,EARTH,]
+
+- - QUESTION: 2
+Tested Combination: [WATER,WATER,WATER,WATER,]
+
+- - QUESTION: 3
+Tested Combination: [FIRE,FIRE,FIRE,FIRE,]
+
+- - QUESTION: 4
+Tested Combination: [FIRE,WATER,LIGHTNING,LIGHTNING,]
+
+- - QUESTION: 5
+Tested Combination: [WATER,EARTH,WATER,EARTH,]
+
+--- SECTION: 5 ----
+
+- - QUESTION: 0
+Tested Combination: [FIRE,FIRE,WATER,WATER,EARTH,]
+
+- - QUESTION: 1
+Tested Combination: [LIGHTNING,LIGHTNING,WATER,WATER,LIGHTNING,]
+
+- - QUESTION: 2
+Tested Combination: [WATER,EARTH,FIRE,LIGHTNING,LIGHTNING,]
+
+- - QUESTION: 3
+Tested Combination: [FIRE,LIGHTNING,WATER,FIRE,WATER,]
+
+- - QUESTION: 4
+Tested Combination: [FIRE,EARTH,WATER,LIGHTNING,WATER,]
+
+- - QUESTION: 5
+Tested Combination: [FIRE,LIGHTNING,LIGHTNING,WATER,EARTH,]
+
