@@ -19,6 +19,7 @@ public class Stopwatch : MonoBehaviour
 
 
     private bool _timerActive = false; //states if the countdown timer should current be de-incrimenting
+    private bool _stopwatchActive = false;
     private float _countdownTimeRemaining = 0.0f; //time in seconds
     private double _startTime = 0.0f; //records the start time of the question
 
@@ -73,7 +74,7 @@ public class Stopwatch : MonoBehaviour
                 ResetCountdownTimer();
             }
         }
-        else
+        else if (_stopwatchActive)
         {
             if ((Time.timeAsDouble - _startTime) * 1000 >=_reactionTimeMax )
             {
@@ -89,7 +90,7 @@ public class Stopwatch : MonoBehaviour
 
     public void StartStopWatch()
     {
-
+        _stopwatchActive = true;
         _startTime = Time.timeAsDouble;
     }
 
@@ -128,6 +129,7 @@ public class Stopwatch : MonoBehaviour
     {
         //records the endtime and calculates the total elapsed time
         double endTime = Time.timeAsDouble;
+        _stopwatchActive = false;
         double elapsedTime = (endTime - _startTime) * 1000; //calculates the elapsed time in ms
 
         //disregards times under the minimum

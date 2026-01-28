@@ -5356,6 +5356,7 @@ GameObject:
   - component: {fileID: 1680076153}
   - component: {fileID: 1680076154}
   - component: {fileID: 1680076155}
+  - component: {fileID: 1680076156}
   m_Layer: 0
   m_Name: GameManagerObject
   m_TagString: Untagged
@@ -5406,7 +5407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76fbeb2e8077194bb71dd5ecc36aa00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testerID: 0
   _recorder: {fileID: 1961338753}
   _currentQuestionData: {fileID: 11400000, guid: 742d7aca6b4532549989cb08218d98c3, type: 2}
   _questionsFilePath: Assets/SNSTestingQuestions.json
@@ -5455,6 +5455,23 @@ MonoBehaviour:
   _beginButton: {fileID: 503158559}
   _questionText: 'Select the matching icon combination:'
   _uninteractableColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  _stopwatch: {fileID: 0}
+--- !u!114 &1680076156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680076150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badfc7ee5a3c9be458954e645b6ec1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _countDownLength: 3
+  _timerUI: {fileID: 628801211}
+  _reactionTimeMin: 0
+  _reactionTimeMax: 1
 --- !u!1 &1707803808
 GameObject:
   m_ObjectHideFlags: 0

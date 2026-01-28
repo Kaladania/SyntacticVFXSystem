@@ -3408,6 +3408,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countDownLength: 3
   _timerUI: {fileID: 628801211}
+  _reactionTimeMin: 250
+  _reactionTimeMax: 1250
 --- !u!4 &992753408
 Transform:
   m_ObjectHideFlags: 0
@@ -5700,7 +5702,7 @@ MonoBehaviour:
   _recorder: {fileID: 1961338753}
   _folderLocation: Assets/Testing Results/Reaction Test/
   _reactionTimeData: {fileID: 11400000, guid: c05e4c0482dc90245ab1d309efbd4f2f, type: 2}
-  _testDurationSeconds: 60
+  _testDurationSeconds: 10
 --- !u!1 &1707803808
 GameObject:
   m_ObjectHideFlags: 0

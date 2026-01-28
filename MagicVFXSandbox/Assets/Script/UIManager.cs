@@ -57,6 +57,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Color _uninteractableColour = Color.gray;
 
+    [SerializeField]
+    Stopwatch _stopwatch = null;
+
     bool _testStarted = false;
 
 
@@ -64,22 +67,30 @@ public class UIManager : MonoBehaviour
     {
         CurrentQuestionData.scriptableObjectUpdated += SetupQuestionUI; //sets up event to load new combo when the question data scriptable object is updated
         TestManager.shutDownWorkers += Cleanup; //sets up event to disable all active UI elements once test is finished
+
+        Stopwatch.countdownFinished += SetupTest;
+        Stopwatch.stopwatchPaused += DisableButtons;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
-        //defaults the countdown length to 3 if the value is invalid
+
+        /*//defaults the countdown length to 3 if the value is invalid
         if (_countDownLength <= 0)
         {
             _countDownLength = 3;
         }
-
-        if (_timerUI == null)
+*/
+        /*if (_timerUI == null)
         {
             _timerUI = new TextMeshProUGUI();
             UnityEngine.Debug.LogWarning("WARNING: Reference to Timer UI is null. Creating a new text mesh pro object");
+        }
+*/
+        if (_stopwatch == null)
+        {
+            UnityEngine.Debug.LogError("ERROR: Reference to stopwatch is null");
         }
 
         if (_creditsPanel == null)
@@ -103,7 +114,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( _timerActive)
+        /*if ( _timerActive)
         {
             //incriments the timer while active
             if (_countdownTimeRemaining > 1)
@@ -119,7 +130,7 @@ public class UIManager : MonoBehaviour
                 _questionTextElement.text = _questionText;
                 _startTime = Time.timeAsDouble;
             }
-        }
+        }*/
     }
 
     /// <summary>
@@ -131,16 +142,25 @@ public class UIManager : MonoBehaviour
         _timerUI.text = seconds.ToString();
     }
 
+    void SetupTest()
+    {
+        ResetCountdownTimer();
+        EnableButtons();
+        _questionTextElement.text = _questionText;
+        _stopwatch.StartStopWatch();
+    }
+
     /// <summary>
     /// Resets countdown timer data and flags
     /// </summary>
     void ResetCountdownTimer()
     {
         _timerPanel.gameObject.SetActive(false);
-        _countdownTimeRemaining = 0.0f;
-        _timerActive = false;
-        _timerUI.text = _countDownLength.ToString();
-        
+        //_countdownTimeRemaining = 0.0f;
+        //_timerActive = false;
+        //_timerUI.text = _countDownLength.ToString();
+        _stopwatch.PauseStopWatch();
+
     }
 
     /// <summary>
@@ -148,9 +168,10 @@ public class UIManager : MonoBehaviour
     /// </summary>
     void SetCountdownTimer()
     {
-        _countdownTimeRemaining = _countDownLength;
+        _stopwatch.StartCountdown();
+        //_countdownTimeRemaining = _countDownLength;
         _timerPanel.gameObject.SetActive(true );
-        _timerActive = true;
+        //_timerActive = true;
     }
 
     /// <summary>
@@ -214,8 +235,9 @@ public class UIManager : MonoBehaviour
         {
             //EventSystem.current.SetSelectedGameObject(null);
             SetCountdownTimer();
+            //_stopwatch.StartCountdown();
             _questionTextElement.text = "";
-            DisableButtons();
+            DisableButtons(-1);
         }
     }
 
@@ -232,17 +254,21 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void DisableButtons()
+    void DisableButtons(double elapsedTime)
     {
-        ColorBlock colorBlock;
-        foreach (Button button in _buttons)
+        if (elapsedTime == -1 && _testStarted)
         {
-            button.interactable = false;
 
-            //darkens the inactive buttons
-            colorBlock = button.colors;
-            colorBlock.normalColor = _uninteractableColour;
-            button.colors = colorBlock;
+            ColorBlock colorBlock;
+            foreach (Button button in _buttons)
+            {
+                button.interactable = false;
+
+                //darkens the inactive buttons
+                colorBlock = button.colors;
+                colorBlock.normalColor = _uninteractableColour;
+                button.colors = colorBlock;
+            }
         }
     }
     void EnableButtons()
@@ -268,11 +294,13 @@ public class UIManager : MonoBehaviour
         if ( _testStarted )
         {
             //records the endtime and calculates the total elapsed time
-            double endTime = Time.timeAsDouble;
-            double elapsedTime = endTime - _startTime;
-            elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces
+            /* double endTime = Time.timeAsDouble;
+             double elapsedTime = endTime - _startTime;
+             elapsedTime = System.Math.Round(elapsedTime, 2); //rounds the millseconds to 2 decimal palces*/
 
-            timeRecorded?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
+            _stopwatch.PauseStopWatch();
+
+            //timeRecorded?.Invoke(elapsedTime); //triggers event to Test Manager that time has been recorded
 
             //UnityEngine.Debug.Log($"Gamelapsed time was: {elapsedTime} ");
 
@@ -288,7 +316,8 @@ public class UIManager : MonoBehaviour
     public void Cleanup()
     {
         _creditsPanel.SetActive(true);
-        DisableButtons();
+        DisableButtons(-1);
+        _stopwatch.PauseStopWatch();
         ResetCountdownTimer();
     }
 }

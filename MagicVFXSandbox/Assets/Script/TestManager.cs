@@ -56,6 +56,7 @@ namespace QuizManager
             }
 
             UIManager.timeRecorded += RecordTime;
+            Stopwatch.stopwatchPaused += RecordTime;
         }
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -197,7 +198,15 @@ namespace QuizManager
         /// <param name="elapsedTime"></param>
         public void RecordTime(double elapsedTime)
         {
-            _recorder.WriteToFile($"Reaction Time: {elapsedTime * 1000}ms");
+            if (elapsedTime == -1)
+            {
+                ChangeQuestion();
+            }
+            else
+            {
+                _recorder.WriteToFile($"Reaction Time: {elapsedTime}ms");
+            }
+               
         }
 
     }
