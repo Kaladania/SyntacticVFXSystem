@@ -10,56 +10,56 @@ Tested Combination: [FIRE,WATER,LIGHTNING,]
 - - QUESTION: 0
 Tested Combination: [FIRE,FIRE,]
 
-Reaction Time: 1375.89ms
+Reaction Time: 1070.76ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 1
 Tested Combination: [LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1318.49ms
+Reaction Time: 1023.17ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 2
 Tested Combination: [WATER,WATER,]
 
-Reaction Time: 1101.17ms
+Reaction Time: 1026.19ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 3
 Tested Combination: [EARTH,EARTH,]
 
-Reaction Time: 963.91ms
+Reaction Time: 987.74ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 4
 Tested Combination: [FIRE,LIGHTNING,]
 
-Reaction Time: 1507.45ms
+Reaction Time: 996.68ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 5
 Tested Combination: [EARTH,WATER,]
 
-Reaction Time: 1491.28ms
+Reaction Time: 1117.84ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 6
 Tested Combination: [WATER,LIGHTNING,]
 
-Reaction Time: 1581.81ms
+Reaction Time: 2285.26ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 7
 Tested Combination: [EARTH,FIRE,]
 
-Reaction Time: 1550.21ms
+Reaction Time: 1788.4ms
 
 Chosen answer: 0 [CORRECT]
 
@@ -68,86 +68,78 @@ Chosen answer: 0 [CORRECT]
 - - QUESTION: 0
 Tested Combination: [WATER,WATER,FIRE,]
 
-Reaction Time: 1639.8ms
-
-Chosen answer: 0 [CORRECT]
+Reaction Time: OMITTED [N/A/]
 
 - - QUESTION: 1
 Tested Combination: [EARTH,EARTH,LIGHTNING,]
 
-Reaction Time: 1815.12ms
-
-Chosen answer: 0 [INCORRECT]
+Reaction Time: OMITTED [N/A/]
 
 - - QUESTION: 2
 Tested Combination: [FIRE,WATER,FIRE,]
 
-Reaction Time: 1872.66ms
-
-Chosen answer: 1 [CORRECT]
+Reaction Time: OMITTED [N/A/]
 
 - - QUESTION: 3
 Tested Combination: [FIRE,LIGHTNING,WATER,]
 
-Reaction Time: 1911.44ms
-
-Chosen answer: 2 [CORRECT]
+Chosen answer: 0 [INCORRECT]
 
 - - QUESTION: 4
 Tested Combination: [EARTH,FIRE,LIGHTNING,]
 
-Reaction Time: 1784.69ms
+Reaction Time: 3449.51ms
 
-Chosen answer: 1 [INCORRECT]
+Chosen answer: 2 [CORRECT]
 
 - - QUESTION: 5
 Tested Combination: [WATER,EARTH,FIRE,]
 
-Reaction Time: 1453.62ms
+Reaction Time: 3619.73ms
 
-Chosen answer: 0 [CORRECT]
+Chosen answer: 2 [INCORRECT]
 
 --- SECTION: 4 ----
 
 - - QUESTION: 0
 Tested Combination: [LIGHTNING,LIGHTNING,LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1245.85ms
+Reaction Time: 2320.35ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 1
 Tested Combination: [EARTH,EARTH,EARTH,EARTH,]
 
-Reaction Time: 1485.94ms
+Reaction Time: 1163.01ms
 
 Chosen answer: 2 [CORRECT]
 
 - - QUESTION: 2
 Tested Combination: [WATER,WATER,WATER,WATER,]
 
-Reaction Time: 942.18ms
+Reaction Time: 1008ms
 
 Chosen answer: 3 [CORRECT]
 
 - - QUESTION: 3
 Tested Combination: [FIRE,FIRE,FIRE,FIRE,]
 
-Reaction Time: 905.25ms
+Reaction Time: 922.23ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 4
 Tested Combination: [FIRE,WATER,LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1758.14ms
+Reaction Time: 3230.63ms
 
-Chosen answer: 2 [CORRECT]
+Chosen answer: 3 [INCORRECT]
 
 - - QUESTION: 5
 Tested Combination: [WATER,EARTH,WATER,EARTH,]
 
-Reaction Time: 1795.32ms
+Reaction Time: 2310ms
 
 Chosen answer: 0 [CORRECT]
 
@@ -161,35 +153,31 @@ Reaction Time: OMITTED [N/A/]
 - - QUESTION: 1
 Tested Combination: [LIGHTNING,LIGHTNING,WATER,WATER,LIGHTNING,]
 
-Reaction Time: 1989.93ms
-
-Chosen answer: 0 [CORRECT]
+Reaction Time: OMITTED [N/A/]
 
 - - QUESTION: 2
 Tested Combination: [WATER,EARTH,FIRE,LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1625.07ms
+Reaction Time: 2366.07ms
 
-Chosen answer: 3 [INCORRECT]
+Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 3
 Tested Combination: [FIRE,LIGHTNING,WATER,FIRE,WATER,]
 
-Reaction Time: 1751.38ms
+Reaction Time: 2066.58ms
 
-Chosen answer: 1 [INCORRECT]
+Chosen answer: 3 [CORRECT]
 
 - - QUESTION: 4
 Tested Combination: [FIRE,EARTH,WATER,LIGHTNING,WATER,]
 
-Reaction Time: 1896.32ms
+Reaction Time: 3025.96ms
 
-Chosen answer: 1 [INCORRECT]
+Chosen answer: 3 [CORRECT]
 
 - - QUESTION: 5
 Tested Combination: [FIRE,LIGHTNING,LIGHTNING,WATER,EARTH,]
 
-Reaction Time: 3404.65ms
-
-Chosen answer: 2 [CORRECT]
+Reaction Time: OMITTED [N/A/]
 

@@ -46,8 +46,8 @@ namespace SnSECS
 
             Dictionary<Elements, ISharedComponentData> componentMap = new Dictionary<Elements, ISharedComponentData>();
 
-            const float scaleModifier = 0.2f;
-            const float speedModifier = 0.2f;
+            const float scaleModifier = 1.2f;
+            const float speedModifier = 1.2f;
             const float densityModifier = 2f;
 
             //adds the all specifed componets to the entity

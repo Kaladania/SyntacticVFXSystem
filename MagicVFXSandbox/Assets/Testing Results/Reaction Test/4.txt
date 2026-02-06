@@ -1,0 +1,7 @@
+Participant ID: 4
+
+Total Clicks: 200
+Hits: 184
+Misses: 16
+Average Reaction Time: 304.78685ms
+

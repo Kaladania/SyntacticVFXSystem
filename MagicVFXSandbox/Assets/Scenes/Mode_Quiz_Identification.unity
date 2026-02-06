@@ -152,8 +152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -142.39438}
-  m_SizeDelta: {x: 673.1, y: 66.06958}
+  m_AnchoredPosition: {x: 399.99997, y: -111.5194}
+  m_SizeDelta: {x: 673.1, y: 45.486267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3707705
 MonoBehaviour:
@@ -3438,8 +3438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -79.679794}
-  m_SizeDelta: {x: 673.1, y: 59.35958}
+  m_AnchoredPosition: {x: 399.99997, y: -69.38814}
+  m_SizeDelta: {x: 673.1, y: 38.776268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985041554
 MonoBehaviour:
@@ -5222,8 +5222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -203.43396}
-  m_SizeDelta: {x: 673.1, y: 56.009583}
+  m_AnchoredPosition: {x: 399.99997, y: -151.97568}
+  m_SizeDelta: {x: 673.1, y: 35.42627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607191331
 MonoBehaviour:
@@ -5652,8 +5652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -315.82355}
-  m_SizeDelta: {x: 673.1, y: 168.76958}
+  m_AnchoredPosition: {x: 399.99997, y: -243.78195}
+  m_SizeDelta: {x: 673.1, y: 148.18626}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807489042
 MonoBehaviour:
@@ -5675,16 +5675,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'If you''d like to learn more about "Syntactic VFX Systems", you can review
-    the following literature that inspired the concept:
-
-
-    [Source 1]
-
-    [Source
-    2]
-
-    [Source 3]'
+  m_text: "If you'd like to learn more about \"Syntactic VFX Systems\", you can review
+    the following literature that inspired the concept:\n\n- GCAP 2016: Systems Are
+    Everywhere - Aleissia Laidacker\r\n- Practical Procedural Generation for Everyone
+    - Kate Compton \n- Exploring the Tech and Design of 'Noita' - Petri Purho "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
