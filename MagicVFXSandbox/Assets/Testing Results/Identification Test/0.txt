@@ -10,56 +10,56 @@ Tested Combination: [FIRE,WATER,LIGHTNING,]
 - - QUESTION: 0
 Tested Combination: [FIRE,FIRE,]
 
-Reaction Time: 1375.89ms
+Reaction Time: 1039.22ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 1
 Tested Combination: [LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1318.49ms
+Reaction Time: 894.94ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 2
 Tested Combination: [WATER,WATER,]
 
-Reaction Time: 1101.17ms
+Reaction Time: 802.33ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 3
 Tested Combination: [EARTH,EARTH,]
 
-Reaction Time: 963.91ms
+Reaction Time: 876.21ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 4
 Tested Combination: [FIRE,LIGHTNING,]
 
-Reaction Time: 1507.45ms
+Reaction Time: 1168.47ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 5
 Tested Combination: [EARTH,WATER,]
 
-Reaction Time: 1491.28ms
+Reaction Time: 1006.63ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 6
 Tested Combination: [WATER,LIGHTNING,]
 
-Reaction Time: 1581.81ms
+Reaction Time: 1653.11ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 7
 Tested Combination: [EARTH,FIRE,]
 
-Reaction Time: 1550.21ms
+Reaction Time: 1322.33ms
 
 Chosen answer: 0 [CORRECT]
 
@@ -68,42 +68,42 @@ Chosen answer: 0 [CORRECT]
 - - QUESTION: 0
 Tested Combination: [WATER,WATER,FIRE,]
 
-Reaction Time: 1639.8ms
+Reaction Time: 2163.46ms
 
-Chosen answer: 0 [CORRECT]
+Chosen answer: 1 [INCORRECT]
 
 - - QUESTION: 1
 Tested Combination: [EARTH,EARTH,LIGHTNING,]
 
-Reaction Time: 1815.12ms
+Reaction Time: 2983.79ms
 
 Chosen answer: 0 [INCORRECT]
 
 - - QUESTION: 2
 Tested Combination: [FIRE,WATER,FIRE,]
 
-Reaction Time: 1872.66ms
+Reaction Time: 3350.37ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 3
 Tested Combination: [FIRE,LIGHTNING,WATER,]
 
-Reaction Time: 1911.44ms
+Reaction Time: 3038.87ms
 
 Chosen answer: 2 [CORRECT]
 
 - - QUESTION: 4
 Tested Combination: [EARTH,FIRE,LIGHTNING,]
 
-Reaction Time: 1784.69ms
+Reaction Time: 2434.86ms
 
-Chosen answer: 1 [INCORRECT]
+Chosen answer: 2 [CORRECT]
 
 - - QUESTION: 5
 Tested Combination: [WATER,EARTH,FIRE,]
 
-Reaction Time: 1453.62ms
+Reaction Time: 2254.46ms
 
 Chosen answer: 0 [CORRECT]
 
@@ -112,42 +112,42 @@ Chosen answer: 0 [CORRECT]
 - - QUESTION: 0
 Tested Combination: [LIGHTNING,LIGHTNING,LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1245.85ms
+Reaction Time: 1121.7ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 1
 Tested Combination: [EARTH,EARTH,EARTH,EARTH,]
 
-Reaction Time: 1485.94ms
+Reaction Time: 989.56ms
 
 Chosen answer: 2 [CORRECT]
 
 - - QUESTION: 2
 Tested Combination: [WATER,WATER,WATER,WATER,]
 
-Reaction Time: 942.18ms
+Reaction Time: 841.91ms
 
 Chosen answer: 3 [CORRECT]
 
 - - QUESTION: 3
 Tested Combination: [FIRE,FIRE,FIRE,FIRE,]
 
-Reaction Time: 905.25ms
+Reaction Time: 948.63ms
 
 Chosen answer: 1 [CORRECT]
 
 - - QUESTION: 4
 Tested Combination: [FIRE,WATER,LIGHTNING,LIGHTNING,]
 
-Reaction Time: 1758.14ms
+Reaction Time: 3339.38ms
 
 Chosen answer: 2 [CORRECT]
 
 - - QUESTION: 5
 Tested Combination: [WATER,EARTH,WATER,EARTH,]
 
-Reaction Time: 1795.32ms
+Reaction Time: 2058.74ms
 
 Chosen answer: 0 [CORRECT]
 
@@ -156,40 +156,17 @@ Chosen answer: 0 [CORRECT]
 - - QUESTION: 0
 Tested Combination: [FIRE,FIRE,WATER,WATER,EARTH,]
 
-Reaction Time: OMITTED [N/A/]
+Reaction Time: 2386.21ms
+
+Chosen answer: 0 [INCORRECT]
 
 - - QUESTION: 1
 Tested Combination: [LIGHTNING,LIGHTNING,WATER,WATER,LIGHTNING,]
 
-Reaction Time: 1989.93ms
+Reaction Time: 2364.67ms
 
 Chosen answer: 0 [CORRECT]
 
 - - QUESTION: 2
 Tested Combination: [WATER,EARTH,FIRE,LIGHTNING,LIGHTNING,]
-
-Reaction Time: 1625.07ms
-
-Chosen answer: 3 [INCORRECT]
-
-- - QUESTION: 3
-Tested Combination: [FIRE,LIGHTNING,WATER,FIRE,WATER,]
-
-Reaction Time: 1751.38ms
-
-Chosen answer: 1 [INCORRECT]
-
-- - QUESTION: 4
-Tested Combination: [FIRE,EARTH,WATER,LIGHTNING,WATER,]
-
-Reaction Time: 1896.32ms
-
-Chosen answer: 1 [INCORRECT]
-
-- - QUESTION: 5
-Tested Combination: [FIRE,LIGHTNING,LIGHTNING,WATER,EARTH,]
-
-Reaction Time: 3404.65ms
-
-Chosen answer: 2 [CORRECT]
 

@@ -3,6 +3,7 @@ using SnSECS;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,6 +26,12 @@ namespace QuizManager
 
         [SerializeField]
         private ReactionTimeContainerTemplate _reactionTimeData = null;
+
+        private double _SRT = 0;
+        private int srtCount = 20;
+
+        bool trackingSRT = true;
+        bool srtWriten = false;
 
         [SerializeField]
         private int _testDurationSeconds = 0;
@@ -129,6 +136,11 @@ namespace QuizManager
                 $"\nMisses: {_reactionTimeData._misses}" + $"\nAverage Reaction Time: {averageTimeMS}ms";
 
             _recorder.WriteToFile(stringToWrite);
+
+            if (!srtWriten)
+            {
+                _recorder.WriteToFile($"SRT: {_SRT / 20} \n");
+            }
         }
 
         /// <summary>
@@ -141,7 +153,25 @@ namespace QuizManager
             if (elapsedTime != -1)
             {
                 _reactionTimeData._cumulativeReactionTimeMS += elapsedTime;
-                //_recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
+                srtCount--;
+
+                if (trackingSRT)
+                {
+                    if (srtCount > 0)
+                    {
+                        _SRT += elapsedTime;
+
+                    }
+                    else
+                    {
+                        double SRT = _SRT / 20;
+                        string ToWrite = $"SRT: {SRT} \n";
+                        _recorder.WriteToFile(ToWrite);
+                        trackingSRT = false;
+                        srtWriten = true;
+                    }
+                    //_recorder.WriteToFile($"Reaction Time: {elapsedTime} seconds");
+                }
             }
         }
 

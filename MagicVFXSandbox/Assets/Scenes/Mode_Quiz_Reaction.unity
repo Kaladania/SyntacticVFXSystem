@@ -5698,7 +5698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47100247392e30a419c37e34b26c4e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testerID: 7
+  _testerID: 0
   _recorder: {fileID: 1961338753}
   _folderLocation: Assets/Testing Results/Reaction Test/
   _reactionTimeData: {fileID: 11400000, guid: c05e4c0482dc90245ab1d309efbd4f2f, type: 2}
